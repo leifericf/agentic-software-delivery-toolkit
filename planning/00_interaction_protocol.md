@@ -1,7 +1,7 @@
  
 # Interaction Protocol
 
-This document defines the intended "human <-> AI" interaction loop for all steps.
+This document defines the intended "human <-> AI" interaction loop for all planning steps.
 
 ## Goals
 - Feel like a natural dialogue.
@@ -16,7 +16,7 @@ This document defines the intended "human <-> AI" interaction loop for all steps
 4. Repeat until the step has enough clarity to produce the artifact.
 
 ## Question Format (Mandatory)
-Use `@steps/00_questions_format.md`.
+Use `@planning/00_questions_format.md`.
 
 ## Agent Message Style (Chat Mode)
 - Default: output only the numbered questions + choices.

@@ -10,7 +10,7 @@ Prevent structural improvisation.
 ## Output Boundary (STRICT)
 - Chat mode: questions + clarifications only. You may include one `Heard:` line. No summaries, no plans, no meta commentary.
   - If a progress indicator is necessary, output exactly one line: `Status: <5-12 words>`.
-  - Follow the interaction loop in `@steps/00_interaction_protocol.md`.
+  - Follow the interaction loop in `@planning/00_interaction_protocol.md`.
 - Artifact mode: output exactly one fenced code block containing the full artifact file contents, and nothing else.
   - Use `md` fences for this step.
 - Do not mix modes in the same message.
@@ -23,7 +23,7 @@ Prevent structural improvisation.
 - `artifacts/<project_slug>/04_decision_log.md`
 - `artifacts/<project_slug>/05_architecture_data_model.md`
 - `artifacts/<project_slug>/06_tech_stack.md`
-- `artifacts/<project_slug>/07_ux_design_guide.md` (if applicable; see `@steps/07_ux_design_guide.md`)
+- `artifacts/<project_slug>/07_ux_design_guide.md` (if applicable; see `@planning/07_ux_design_guide.md`)
 - `artifacts/<project_slug>/08_ai_operating_model.md`
 - `artifacts/<project_slug>/09_product_backlog.md`
 - `artifacts/<project_slug>/00_open_questions.md`
@@ -42,7 +42,7 @@ If there is any question under `## Open` with `Blocking: Yes` AND `Affects` incl
 When the user answers, incorporate the answers into `artifacts/<project_slug>/10_repo_blueprint.md` and move the question(s) from `## Open` to `## Resolved`.
 
 ## Instructions
-Ask questions using the format in `@steps/00_questions_format.md`:
+Ask questions using the format in `@planning/00_questions_format.md`:
 - Deployment target?
 - Hosting constraints?
 - Security posture?
@@ -51,7 +51,7 @@ Ask questions using the format in `@steps/00_questions_format.md`:
 Then design the repository.
 
 ## Decision Log Update (Mandatory)
-If this step introduces or finalizes any decisions, append one or more ADR entries to `artifacts/<project_slug>/04_decision_log.md` using the ADR template from `@steps/04_decision_log.md`.
+If this step introduces or finalizes any decisions, append one or more ADR entries to `artifacts/<project_slug>/04_decision_log.md` using the ADR template from `@planning/04_decision_log.md`.
 
 ## Output Artifact
 Produce:

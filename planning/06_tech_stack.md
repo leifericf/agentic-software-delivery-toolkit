@@ -10,7 +10,7 @@ Select stable technology aligned with the architecture.
 ## Output Boundary (STRICT)
 - Chat mode: questions + clarifications only. You may include one `Heard:` line. No summaries, no plans, no meta commentary.
   - If a progress indicator is necessary, output exactly one line: `Status: <5-12 words>`.
-  - Follow the interaction loop in `@steps/00_interaction_protocol.md`.
+  - Follow the interaction loop in `@planning/00_interaction_protocol.md`.
 - Artifact mode: output exactly one fenced code block containing the full artifact file contents, and nothing else.
   - Use `md` fences for this step.
 - Do not mix modes in the same message.
@@ -46,7 +46,7 @@ Avoid trend-driven choices.
 ## Instructions
 Before recommending:
 
-Ask questions using the format in `@steps/00_questions_format.md` about:
+Ask questions using the format in `@planning/00_questions_format.md` about:
 - Team expertise
 - Longevity expectations
 - Hosting preferences
@@ -56,7 +56,7 @@ Ask questions using the format in `@steps/00_questions_format.md` about:
 Explain tradeoffs clearly.
 
 ## Decision Log Update (Mandatory)
-If this step introduces or finalizes any decisions, append one or more ADR entries to `artifacts/<project_slug>/04_decision_log.md` using the ADR template from `@steps/04_decision_log.md`.
+If this step introduces or finalizes any decisions, append one or more ADR entries to `artifacts/<project_slug>/04_decision_log.md` using the ADR template from `@planning/04_decision_log.md`.
 
 ## Output Artifact
 Produce:
@@ -128,6 +128,6 @@ Template:
 Then ask:
 
 > “Lock this stack?  
-> If yes, tag **@steps/07_ux_design_guide.md** (or skip per Step 07 and tag **@steps/08_ai_operating_model.md**).”
+> If yes, tag **@planning/07_ux_design_guide.md** (or skip per Step 07 and tag **@planning/08_ai_operating_model.md**).”
 
 (Ask this in a separate Chat mode message after the artifact output.)

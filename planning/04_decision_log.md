@@ -10,7 +10,7 @@ Capture WHY decisions are made so future agents do not undo them.
 ## Output Boundary (STRICT)
 - Chat mode: questions + clarifications only. You may include one `Heard:` line. No summaries, no plans, no meta commentary.
   - If a progress indicator is necessary, output exactly one line: `Status: <5-12 words>`.
-  - Follow the interaction loop in `@steps/00_interaction_protocol.md`.
+  - Follow the interaction loop in `@planning/00_interaction_protocol.md`.
 - Artifact mode: output exactly one fenced code block containing the full artifact file contents, and nothing else.
   - Use `md` fences for this step.
 - Do not mix modes in the same message.
@@ -18,7 +18,7 @@ Capture WHY decisions are made so future agents do not undo them.
 ## Artifact Behavior
 This is an append-only, living document.
 
-It is created in this step and then updated as decisions are made in later steps.
+It is created in this step and then updated as decisions are made in later planning steps.
 
 Do not rewrite prior entries except to correct factual errors.
 
@@ -45,7 +45,7 @@ When the user answers, incorporate the answers into ADR(s) and move the question
 1. Review all prior artifacts.
 2. Extract decisions already made.
 3. Ask if any major decisions remain unresolved.
-4. Use the question format in `@steps/00_questions_format.md` to finalize them.
+4. Use the question format in `@planning/00_questions_format.md` to finalize them.
 
 ## Output Artifact
 Produce:
@@ -96,6 +96,6 @@ ADR template (copy/paste per entry):
 Then ask:
 
 > “Are decisions captured correctly?  
-> If yes, tag **@steps/05_architecture_data_model.md**.”
+> If yes, tag **@planning/05_architecture_data_model.md**.”
 
 (Ask this in a separate Chat mode message after the artifact output.)

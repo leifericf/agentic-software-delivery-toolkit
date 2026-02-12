@@ -56,4 +56,4 @@ Examples:
 ## Agent Loop (Chat Mode)
 - Ask up to 10 questions at a time.
 - After the user answers, ask the next smallest batch.
-- If helpful, add a single acknowledgement line before the next batch (see `@steps/00_interaction_protocol.md`).
+- If helpful, add a single acknowledgement line before the next batch (see `@planning/00_interaction_protocol.md`).

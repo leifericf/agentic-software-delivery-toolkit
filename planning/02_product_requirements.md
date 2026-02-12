@@ -16,7 +16,7 @@ Define WHAT must be built — not HOW.
 ## Output Boundary (STRICT)
 - Chat mode: questions + clarifications only. You may include one `Heard:` line. No summaries, no plans, no meta commentary.
   - If a progress indicator is necessary, output exactly one line: `Status: <5-12 words>`.
-  - Follow the interaction loop in `@steps/00_interaction_protocol.md`.
+  - Follow the interaction loop in `@planning/00_interaction_protocol.md`.
 - Artifact mode: output exactly one fenced code block containing the full artifact file contents, and nothing else.
   - Use `md` fences for this step.
 - Do not mix modes in the same message.
@@ -27,7 +27,7 @@ Define WHAT must be built — not HOW.
 - `artifacts/<project_slug>/00_open_questions.md`
 
 ## Input Gate (Mandatory)
-If any required input does not exist, tell the user to run the missing step(s) first to generate it (e.g. tag `@steps/01_problem_description.md`), then stop.
+If any required input does not exist, tell the user to run the missing step(s) first to generate it (e.g. tag `@planning/01_problem_description.md`), then stop.
 
 ## Open Questions Gate (Mandatory)
 Before drafting or revising the PRD, check `artifacts/<project_slug>/00_open_questions.md`.
@@ -39,7 +39,7 @@ When the user answers, incorporate the answers into `artifacts/<project_slug>/02
 ## Instructions
 1. Review the Problem Description first.
 2. Ask clarification questions where ambiguity exists.
-3. Ask questions using the format in `@steps/00_questions_format.md`.
+3. Ask questions using the format in `@planning/00_questions_format.md`.
 4. Identify contradictions.
 5. Highlight assumptions.
 
@@ -127,6 +127,6 @@ Produce a **production-grade PRD** using the template above.
 Then ask:
 
 > “Does the PRD reflect what should be built?  
-> If yes, tag **@steps/03_risk_assumption_review.md**.”
+> If yes, tag **@planning/03_risk_assumption_review.md**.”
 
 (Ask this in a separate Chat mode message after the artifact output.)

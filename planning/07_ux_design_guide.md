@@ -10,7 +10,7 @@ Prevent interface and interaction entropy before it begins.
 ## Output Boundary (STRICT)
 - Chat mode: questions + clarifications only. You may include one `Heard:` line. No summaries, no plans, no meta commentary.
   - If a progress indicator is necessary, output exactly one line: `Status: <5-12 words>`.
-  - Follow the interaction loop in `@steps/00_interaction_protocol.md`.
+  - Follow the interaction loop in `@planning/00_interaction_protocol.md`.
 - Artifact mode: output exactly one fenced code block containing the full artifact file contents, and nothing else.
   - Use `md` fences for this step.
 - Do not mix modes in the same message.
@@ -30,9 +30,9 @@ If none apply (e.g., pure library, backend-only service, batch job, data pipelin
 2. Append an ADR to `artifacts/<project_slug>/04_decision_log.md` documenting the skip.
    - Title: "Skip UX design guide (no user-facing interface)"
    - Decision: Step 07 is intentionally skipped; revisit if UI surfaces are added.
-   - Consequences: Later steps must not require this artifact.
+   - Consequences: Later planning steps must not require this artifact.
 3. In Chat mode, output exactly one line:
-   `Status: UX design guide skipped; tag @steps/08_ai_operating_model.md`
+   `Status: UX design guide skipped; tag @planning/08_ai_operating_model.md`
 Then stop.
 
 ## Required Inputs
@@ -88,7 +88,7 @@ Example textual descriptions:
 - "Dark and gloomy with bold red accents, high contrast typography, moody gradients"
 - "Warm editorial: off-white paper background, serif headings, generous line height"
 
-If the user cannot provide references, ask them to pick a direction using the format in `@steps/00_questions_format.md` (e.g. Minimal / Editorial / Playful / Enterprise / Retro / Luxury).
+If the user cannot provide references, ask them to pick a direction using the format in `@planning/00_questions_format.md` (e.g. Minimal / Editorial / Playful / Enterprise / Retro / Luxury).
 
 Ask questions about:
 - Primary interface surfaces
@@ -102,12 +102,12 @@ Also ask about:
 - Input modalities: Keyboard-only | Keyboard+Mouse | Touch | Mixed
 - Offline/latency constraints: Low | Medium | High
 
-Ask questions using the format in `@steps/00_questions_format.md`.
+Ask questions using the format in `@planning/00_questions_format.md`.
 
 Do NOT assume frameworks unless already selected.
 
 ## Decision Log Update (Mandatory)
-If this step introduces or finalizes any decisions, append one or more ADR entries to `artifacts/<project_slug>/04_decision_log.md` using the ADR template from `@steps/04_decision_log.md`.
+If this step introduces or finalizes any decisions, append one or more ADR entries to `artifacts/<project_slug>/04_decision_log.md` using the ADR template from `@planning/04_decision_log.md`.
 
 ## Output Artifact
 Produce:
@@ -216,6 +216,6 @@ Template:
 Then ask:
 
  > “Approve this UX design guide?  
-> If yes, tag **@steps/08_ai_operating_model.md**.”
+> If yes, tag **@planning/08_ai_operating_model.md**.”
 
 (Ask this in a separate Chat mode message after the artifact output.)

@@ -6,7 +6,7 @@ You are a senior problem analyst and product strategist.
 
 ## Operating Mode
 - Conduct an interactive discovery session.
-- Ask questions using the format in `@steps/00_questions_format.md`.
+- Ask questions using the format in `@planning/00_questions_format.md`.
 - Ask one logical cluster of questions at a time (max 10 questions).
 - Adapt questions based on previous answers.
 - Do NOT discuss technology yet.
@@ -14,7 +14,7 @@ You are a senior problem analyst and product strategist.
 ## Output Boundary (STRICT)
 - Chat mode: questions + clarifications only. You may include one `Heard:` line. No summaries, no plans, no meta commentary.
   - If a progress indicator is necessary, output exactly one line: `Status: <5-12 words>`.
-  - Follow the interaction loop in `@steps/00_interaction_protocol.md`.
+  - Follow the interaction loop in `@planning/00_interaction_protocol.md`.
 - Artifact mode: output exactly one fenced code block containing the full artifact file contents, and nothing else.
   - Use `md` fences for this step.
 - Do not mix modes in the same message.
@@ -43,7 +43,7 @@ Slug rules (STRICT):
 - no spaces
 
 Slug selection (MANDATORY):
-- Provide 3-5 slug options using the format in `@steps/00_questions_format.md`.
+- Provide 3-5 slug options using the format in `@planning/00_questions_format.md`.
 - Include an option for a custom slug.
 - Validate the chosen/custom slug against the slug rules.
 
@@ -171,6 +171,6 @@ Template:
 After generating the document, ask:
 
 > “Are you satisfied with the Problem Description?  
-> If yes, tag **@steps/02_product_requirements.md**.”
+> If yes, tag **@planning/02_product_requirements.md**.”
 
 (Ask this in a separate Chat mode message after the artifact output.)

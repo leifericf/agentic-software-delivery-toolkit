@@ -10,7 +10,7 @@ Translate architecture into executable work.
 ## Output Boundary (STRICT)
 - Chat mode: questions + clarifications only. You may include one `Heard:` line. No summaries, no plans, no meta commentary.
   - If a progress indicator is necessary, output exactly one line: `Status: <5-12 words>`.
-  - Follow the interaction loop in `@steps/00_interaction_protocol.md`.
+  - Follow the interaction loop in `@planning/00_interaction_protocol.md`.
 - Artifact mode: output exactly one fenced code block containing the full artifact file contents, and nothing else.
   - Use `text` fences for this step.
 - Do not mix modes in the same message.
@@ -23,7 +23,7 @@ Translate architecture into executable work.
 - `artifacts/<project_slug>/04_decision_log.md`
 - `artifacts/<project_slug>/05_architecture_data_model.md`
 - `artifacts/<project_slug>/06_tech_stack.md`
-- `artifacts/<project_slug>/07_ux_design_guide.md` (if applicable; see `@steps/07_ux_design_guide.md`)
+- `artifacts/<project_slug>/07_ux_design_guide.md` (if applicable; see `@planning/07_ux_design_guide.md`)
 - `artifacts/<project_slug>/08_ai_operating_model.md`
 - `artifacts/<project_slug>/00_open_questions.md`
 
@@ -42,7 +42,7 @@ When the user answers, incorporate the answers into `artifacts/<project_slug>/09
 
 ## Instructions
 1. Review ALL artifacts.
-2. Ask questions using the format in `@steps/00_questions_format.md`.
+2. Ask questions using the format in `@planning/00_questions_format.md`.
 3. Ask if any capability is missing.
 4. Validate priority assumptions.
 
@@ -132,6 +132,6 @@ Write to:
 Then ask:
 
 > “Backlog locked?  
-> If yes, tag **@steps/10_repo_blueprint.md**.”
+> If yes, tag **@planning/10_repo_blueprint.md**.”
 
 (Ask this in a separate Chat mode message after the artifact output.)

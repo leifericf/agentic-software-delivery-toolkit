@@ -1,5 +1,5 @@
 
-# AI System Design Prompting Framework
+# Leif's AI Prompting Toolkit
 
 ## Overview
 
@@ -37,7 +37,7 @@ The underlying pattern is the same:
 This framework "sells" time upfront in exchange for less churn later:
 - Fewer dead-end spikes and rewrites
 - Fewer "commit mistakes" caused by missing constraints
-- Cleaner decisions captured once, reused across steps
+- Cleaner decisions captured once, reused across the planning workflow
 - Less token burn from re-litigating basics every time you ask for help
 
 This framework prevents those mistakes by forcing a **deliberate design phase** before implementation.
@@ -102,7 +102,7 @@ Reusable prompt templates live in `prompts/`.
 
 Each step produces exactly one primary output document.
 
-Two shared, append-only artifacts are maintained across multiple steps:
+Two shared, append-only artifacts are maintained across multiple planning steps:
 - `artifacts/<project_slug>/00_project_meta.md`
 - `artifacts/<project_slug>/00_open_questions.md`
 - `artifacts/<project_slug>/04_decision_log.md`
@@ -126,7 +126,7 @@ Use these filenames (replace `<project_slug>` with a short, lowercase identifier
 - `artifacts/<project_slug>/09_product_backlog.md`
 - `artifacts/<project_slug>/10_repo_blueprint.md`
 
-Note: `artifacts/<project_slug>/04_decision_log.md` is an append-only log that should be updated as decisions are made in later steps. Use an ADR-style entry format for consistency.
+Note: `artifacts/<project_slug>/04_decision_log.md` is an append-only log that should be updated as decisions are made in later planning steps. Use an ADR-style entry format for consistency.
 
 ### Open Questions File (STRICT)
 All clarification questions live in a single file so the user can answer them in one place.
@@ -134,7 +134,7 @@ All clarification questions live in a single file so the user can answer them in
 When a question is answered AND incorporated into the relevant artifact(s), remove it from `## Open` by moving it to `## Resolved`.
 
 ### Open Questions Workflow (MANDATORY)
-Steps `@steps/02_product_requirements.md` through `@steps/10_repo_blueprint.md` must enforce this workflow.
+Planning steps `@planning/02_product_requirements.md` through `@planning/10_repo_blueprint.md` must enforce this workflow.
 
 Blocking rule:
 - If any question under `## Open` has `Blocking: Yes` AND the current step's output artifact is listed under `Affects`, stop and instruct the user to answer those question(s) in `artifacts/<project_slug>/00_open_questions.md`.
@@ -214,20 +214,20 @@ File template:
 
 ## Workflow
 
-Run the steps **in order**:
+Run the planning steps **in order**:
 
-1. `@steps/01_problem_description.md` — Problem Description  
-2. `@steps/02_product_requirements.md` — Product requirements  
-3. `@steps/03_risk_assumption_review.md` — Assumption Stress Test  
-4. `@steps/04_decision_log.md` — Decision Log  
-5. `@steps/05_architecture_data_model.md` — Architecture & Data Model  
-6. `@steps/06_tech_stack.md` — Technology Stack  
-7. `@steps/07_ux_design_guide.md` — UX design guide (UI surfaces)  
-8. `@steps/08_ai_operating_model.md` — AI Operating Model  
-9. `@steps/09_product_backlog.md` — Product Backlog  
-10. `@steps/10_repo_blueprint.md` — Repository Blueprint  
+1. `@planning/01_problem_description.md` — Problem Description  
+2. `@planning/02_product_requirements.md` — Product requirements  
+3. `@planning/03_risk_assumption_review.md` — Assumption Stress Test  
+4. `@planning/04_decision_log.md` — Decision Log  
+5. `@planning/05_architecture_data_model.md` — Architecture & Data Model  
+6. `@planning/06_tech_stack.md` — Technology Stack  
+7. `@planning/07_ux_design_guide.md` — UX design guide (UI surfaces)  
+8. `@planning/08_ai_operating_model.md` — AI Operating Model  
+9. `@planning/09_product_backlog.md` — Product Backlog  
+10. `@planning/10_repo_blueprint.md` — Repository Blueprint  
 
-**Do not skip steps.**  
+**Do not skip planning steps.**  
 Exception (rare): Step 07 may be intentionally skipped only when the project has no user-facing interface surfaces; record the skip as an ADR in `artifacts/<project_slug>/04_decision_log.md`.
 
 ---
@@ -238,13 +238,13 @@ Exception (rare): Step 07 may be intentionally skipped only when the project has
 If your AI tool supports file tagging:
 
 ```
-@steps/01_problem_description.md
+@planning/01_problem_description.md
 ```
 
 Then optionally add context:
 
 ```
-@steps/01_problem_description.md
+@planning/01_problem_description.md
 
 I want to build a platform for...
 ```
@@ -265,8 +265,8 @@ Each step is designed to be interactive.
 The AI will:
 
 - Ask structured questions
-- Prefer multiple-choice where possible (using `@steps/00_questions_format.md`)
-- Follow a tight interactive loop (see `@steps/00_interaction_protocol.md`)
+- Prefer multiple-choice where possible (using `@planning/00_questions_format.md`)
+- Follow a tight interactive loop (see `@planning/00_interaction_protocol.md`)
 - Surface assumptions
 - Challenge unclear thinking
 - Identify risks
@@ -275,7 +275,7 @@ The AI will:
 You should:
 
 - Answer concisely
-- When answering multiple-choice questions, reply with compact codes like `1A` or `3D:your note` (see `@steps/00_questions_format.md`)
+- When answering multiple-choice questions, reply with compact codes like `1A` or `3D:your note` (see `@planning/00_questions_format.md`)
 - Correct misunderstandings early
 - Push for simplicity
 - Avoid premature tech discussions
