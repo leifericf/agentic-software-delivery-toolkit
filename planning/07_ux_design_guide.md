@@ -104,7 +104,7 @@ Also ask about:
 
 Ask questions using the format in `@planning/00_questions_format.md`.
 
-Do NOT assume frameworks unless already selected.
+Do NOT assume toolkits unless already selected.
 
 ## Decision Log Update (Mandatory)
 If this step introduces or finalizes any decisions, append one or more ADR entries to `artifacts/<project_slug>/04_decision_log.md` using the ADR template from `@planning/04_decision_log.md`.

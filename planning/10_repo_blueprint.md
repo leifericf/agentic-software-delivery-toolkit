@@ -108,7 +108,7 @@ Template:
 - `format`: <optional>
 
 ## Documentation Structure
-- `README.md`: framework
+- `README.md`: toolkit
 - `artifacts/<project_slug>/`: design artifacts
 - `docs/`: <optional>
 

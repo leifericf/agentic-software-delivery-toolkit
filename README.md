@@ -16,7 +16,7 @@ It is based on a simple premise:
 
 Most AI-driven projects fail not because the models are weak — but because the **process is improvisational**.
 
-This framework replaces improvisation with a **repeatable, artifact-driven design pipeline**.
+This toolkit replaces improvisation with a **repeatable, artifact-driven design pipeline**.
 
 ---
 
@@ -36,13 +36,13 @@ The underlying pattern is the same:
 
 > If the AI doesn't have your real constraints and domain context, it will fill the gaps by guessing.
 
-This framework "sells" time upfront in exchange for less churn later:
+This toolkit "sells" time upfront in exchange for less churn later:
 - Fewer dead-end spikes and rewrites
 - Fewer "commit mistakes" caused by missing constraints
 - Cleaner decisions captured once, reused across the planning workflow
 - Less token burn from re-litigating basics every time you ask for help
 
-This framework prevents those mistakes by forcing a **deliberate design phase** before implementation.
+This toolkit prevents those mistakes by forcing a **deliberate design phase** before implementation.
 
 Think of it as:
 
@@ -340,7 +340,7 @@ At that point, generate the repository and begin coding.
 
 ## Who This Is For
 
-This framework is especially valuable for:
+This toolkit is especially valuable for:
 
 - AI-first development teams  
 - Solo builders  
