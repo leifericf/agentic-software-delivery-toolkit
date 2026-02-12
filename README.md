@@ -75,6 +75,14 @@ This creates a **human ↔ AI design loop**.
 
 ---
 
+## Standalone Prompts
+
+Reusable prompt templates live in `prompts/`.
+
+- `prompts/git_commit.md`
+
+---
+
 ## Artifacts and File Names
 
 Each step produces exactly one primary output document.
