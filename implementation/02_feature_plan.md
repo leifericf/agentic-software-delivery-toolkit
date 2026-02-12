@@ -41,7 +41,7 @@ Do not require exhaustive design.
 ## Open Questions Gate (Mandatory)
 Before producing the plan, check `artifacts/<project_slug>/00_open_questions.md`.
 
-If there is any `Blocking: Yes` question affecting this feature, stop and instruct the user to answer it.
+If there is any unchecked `[Blocking]` item affecting this feature, stop and instruct the user to answer it.
 
 ## Output Artifact
 Write to:

@@ -29,7 +29,7 @@ Do not ask the user to pick perfectly.
 ## Open Questions Gate (Mandatory)
 Before selecting, check `artifacts/<project_slug>/00_open_questions.md`.
 
-If there is any `Blocking: Yes` question affecting backlog selection or core scope, stop and tell the user to answer it.
+If there is any unchecked `[Blocking]` item that affects backlog selection or core scope, stop and tell the user to answer it.
 
 ## Questions (Mandatory)
 Ask using `@shared/questions_format.md`:

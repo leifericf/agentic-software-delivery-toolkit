@@ -44,9 +44,9 @@ Exception:
 ## Open Questions Gate (Mandatory)
 Before producing this artifact, check `artifacts/<project_slug>/00_open_questions.md`.
 
-If there is any question under `## Open` with `Blocking: Yes` AND `Affects` includes `artifacts/<project_slug>/09_product_backlog.md`, stop and tell the user to answer those question(s) in `artifacts/<project_slug>/00_open_questions.md`.
+If there is any unchecked item under `## Open` tagged `[Blocking]` whose `[Affects: ...]` includes `09_product_backlog.md`, stop and tell the user to answer it in `artifacts/<project_slug>/00_open_questions.md`.
 
-When the user answers, incorporate the answers into `artifacts/<project_slug>/09_product_backlog.md` and move the question(s) from `## Open` to `## Resolved`.
+When the user answers, incorporate the answer into `artifacts/<project_slug>/09_product_backlog.md` and move the item from `## Open` to `## Resolved` (mark it `[x]`).
 
 ## Instructions
 1. Review ALL artifacts.
@@ -54,7 +54,7 @@ When the user answers, incorporate the answers into `artifacts/<project_slug>/09
 3. Ask if any capability is missing.
 4. Validate priority assumptions.
 
-If anything is blocked by missing information, add a question to `artifacts/<project_slug>/00_open_questions.md` under `## Open` and stop.
+If anything is blocked by missing information, add an unchecked `[Blocking]` item under `## Open` in `artifacts/<project_slug>/00_open_questions.md` and stop.
 
 If producing the backlog requires making new decisions, stop and capture them as ADR(s) in `artifacts/<project_slug>/04_decision_log.md` first.
 

@@ -35,9 +35,9 @@ If any required input does not exist, tell the user to run the missing step(s) f
 ## Open Questions Gate (Mandatory)
 Before producing this artifact, check `artifacts/<project_slug>/00_open_questions.md`.
 
-If there is any question under `## Open` with `Blocking: Yes` AND `Affects` includes `artifacts/<project_slug>/03_risk_assumption_review.md`, stop and tell the user to answer those question(s) in `artifacts/<project_slug>/00_open_questions.md`.
+If there is any unchecked item under `## Open` tagged `[Blocking]` whose `[Affects: ...]` includes `03_risk_assumption_review.md`, stop and tell the user to answer it in `artifacts/<project_slug>/00_open_questions.md`.
 
-When the user answers, incorporate the answers into `artifacts/<project_slug>/03_risk_assumption_review.md` and move the question(s) from `## Open` to `## Resolved`.
+When the user answers, incorporate the answer into `artifacts/<project_slug>/03_risk_assumption_review.md` and move the item from `## Open` to `## Resolved` (mark it `[x]`).
 
 If new clarification questions are discovered, add them to `artifacts/<project_slug>/00_open_questions.md` under `## Open`.
 

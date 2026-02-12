@@ -30,7 +30,7 @@ Do not implement everything at once.
 ## Open Questions Gate (Mandatory)
 Before starting a chunk, check `artifacts/<project_slug>/00_open_questions.md`.
 
-If any `Blocking: Yes` question affects the work you are about to do, stop and ask the user to answer it.
+If any unchecked `[Blocking]` item affects the work you are about to do, stop and ask the user to answer it.
 
 ## Git Rules
 - Create a new local feature branch before making changes.

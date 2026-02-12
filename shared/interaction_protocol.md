@@ -45,7 +45,7 @@ Sometimes the fastest path is to include a small amount of chat text alongside a
 
 ## Handling "Can't answer / N/A"
 - Treat it as real information.
-- If the missing answer is required to proceed, create an entry in `artifacts/<project_slug>/00_open_questions.md` and stop.
+- If the missing answer is required to proceed, add an unchecked `[Blocking]` item to `artifacts/<project_slug>/00_open_questions.md` and stop.
 - If not required, continue by stating an assumption in the produced artifact and/or recording an ADR if it is a decision.
 
 ## Answer Parsing Expectations

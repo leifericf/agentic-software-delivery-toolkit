@@ -46,26 +46,19 @@ If it does not exist, initialize it with this minimal valid structure:
 
 ## Open
 
-### Q-001: <short title>
-- Blocking: Yes | No
-- Raised by: `@<step_template>.md`
-- Affects:
-  - `artifacts/<project_slug>/<artifact>.md`
-- Question: <question text>
-- Answer: <TBD>
+- [ ] [Blocking] [Affects: <artifact_filename>.md] <question> (Answer: TBD)
+- [ ] [Affects: <artifact_filename>.md] <question> (Answer: TBD)
 
 ## Resolved
 
-### Q-002: <short title>
-- Raised by: `@<step_template>.md`
-- Question: <question text>
-- Answer: <answer text>
-- Incorporated into:
-  - `artifacts/<project_slug>/<artifact>.md`
-- Date: YYYY-MM-DD
+- [x] [Affects: <artifact_filename>.md] <question> (Answer: <answer>) (Date: YYYY-MM-DD)
 ```
 
-If any clarification questions come up during this step, add them to `artifacts/<project_slug>/00_open_questions.md` under `## Open`.
+Notes:
+- Use `[Blocking]` only when you truly cannot proceed without the answer.
+- `Affects` should list artifact filenames (e.g. `02_product_requirements.md`, `05_architecture_data_model.md`).
+
+If any clarification questions come up during this step, add them as unchecked items under `## Open`.
 
 ## Project Slug + Artifact Bootstrapping (Mandatory)
 First, ask the user for a human-friendly project name.
