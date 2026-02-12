@@ -20,12 +20,16 @@ This document defines the intended "human <-> AI" interaction loop for all workf
 3. If answers are ambiguous or contradictory, ask the smallest possible follow-up batch.
 4. Repeat until the step has enough clarity to produce the artifact.
 
-## Question Format (Mandatory)
+## Question Format
 Use `@shared/questions_format.md`.
 
+- Default: Natural mode.
+- Use Structured mode when options are clear and speed/parseability matters.
+
 ## Agent Message Style (Chat Mode)
-- Default: output only the numbered questions + choices.
-- Optional: you may include exactly one short acknowledgement line *before* the questions when it improves flow.
+- Natural default: output only the numbered questions (choices optional).
+- Structured mode: output only the numbered questions + choices.
+- Optional (both modes): include exactly one short acknowledgement line *before* the questions when it improves flow.
   - Format: `Heard: <short, concrete restatement>`
   - Keep it under ~120 characters.
 - Do not add summaries, plans, or meta commentary.
