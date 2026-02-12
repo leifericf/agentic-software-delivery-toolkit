@@ -67,7 +67,7 @@ Use multiple choice.
 Do NOT assume frameworks unless already selected.
 
 ## Decision Log Update (Mandatory)
-If this step introduces or finalizes any decisions, append one or more ADR entries to `artifacts/<project_slug>/04_decision_log.md` using the ADR template from `@04_decision_log.md`.
+If this step introduces or finalizes any decisions, append one or more ADR entries to `artifacts/<project_slug>/04_decision_log.md` using the ADR template from `@steps/04_decision_log.md`.
 
 ## Output Artifact
 Produce:
@@ -163,4 +163,4 @@ Template:
 Then ask:
 
 > “Approve this design system?  
-> If yes, tag **@08_ai_operating_model.md**.”
+> If yes, tag **@steps/08_ai_operating_model.md**.”

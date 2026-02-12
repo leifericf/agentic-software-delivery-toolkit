@@ -48,7 +48,7 @@ Ask multiple-choice questions about:
 Explain tradeoffs clearly.
 
 ## Decision Log Update (Mandatory)
-If this step introduces or finalizes any decisions, append one or more ADR entries to `artifacts/<project_slug>/04_decision_log.md` using the ADR template from `@04_decision_log.md`.
+If this step introduces or finalizes any decisions, append one or more ADR entries to `artifacts/<project_slug>/04_decision_log.md` using the ADR template from `@steps/04_decision_log.md`.
 
 ## Output Artifact
 Produce:
@@ -120,4 +120,4 @@ Template:
 Then ask:
 
 > “Lock this stack?  
-> If yes, tag **@07_design_system.md**.”
+> If yes, tag **@steps/07_design_system.md**.”

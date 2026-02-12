@@ -114,4 +114,4 @@ Template:
 Then ask:
 
 > “Ready to lock decisions?  
-> If yes, tag **@04_decision_log.md**.”
+> If yes, tag **@steps/04_decision_log.md**.”

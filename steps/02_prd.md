@@ -19,7 +19,7 @@ Define WHAT must be built — not HOW.
 - `artifacts/<project_slug>/00_open_questions.md`
 
 ## Input Gate (Mandatory)
-If any required input does not exist, tell the user to run the missing step(s) first to generate it (e.g. tag `@01_problem_description.md`), then stop.
+If any required input does not exist, tell the user to run the missing step(s) first to generate it (e.g. tag `@steps/01_problem_description.md`), then stop.
 
 ## Open Questions Gate (Mandatory)
 Before drafting or revising the PRD, check `artifacts/<project_slug>/00_open_questions.md`.
@@ -119,4 +119,4 @@ Produce a **production-grade PRD** using the template above.
 Then ask:
 
 > “Does the PRD reflect what should be built?  
-> If yes, tag **@03_risk_assumption_review.md**.”
+> If yes, tag **@steps/03_risk_assumption_review.md**.”

@@ -120,4 +120,4 @@ Write to:
 Then ask:
 
 > “Backlog locked?  
-> If yes, tag **@10_repo_blueprint.md**.”
+> If yes, tag **@steps/10_repo_blueprint.md**.”

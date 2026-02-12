@@ -111,7 +111,7 @@ All clarification questions live in a single file so the user can answer them in
 When a question is answered AND incorporated into the relevant artifact(s), remove it from `## Open` by moving it to `## Resolved`.
 
 ### Open Questions Workflow (MANDATORY)
-Steps `@02_prd.md` through `@10_repo_blueprint.md` must enforce this workflow.
+Steps `@steps/02_prd.md` through `@steps/10_repo_blueprint.md` must enforce this workflow.
 
 Blocking rule:
 - If any question under `## Open` has `Blocking: Yes` AND the current step's output artifact is listed under `Affects`, stop and instruct the user to answer those question(s) in `artifacts/<project_slug>/00_open_questions.md`.
@@ -193,16 +193,16 @@ File template:
 
 Run the steps **in order**:
 
-1. `@01_problem_description.md` — Problem Description  
-2. `@02_prd.md` — PRD  
-3. `@03_risk_assumption_review.md` — Assumption Stress Test  
-4. `@04_decision_log.md` — Decision Log  
-5. `@05_architecture_data_model.md` — Architecture & Data Model  
-6. `@06_tech_stack.md` — Technology Stack  
-7. `@07_design_system.md` — Design System  
-8. `@08_ai_operating_model.md` — AI Operating Model  
-9. `@09_execution_backlog.md` — Execution Backlog  
-10. `@10_repo_blueprint.md` — Repository Blueprint  
+1. `@steps/01_problem_description.md` — Problem Description  
+2. `@steps/02_prd.md` — PRD  
+3. `@steps/03_risk_assumption_review.md` — Assumption Stress Test  
+4. `@steps/04_decision_log.md` — Decision Log  
+5. `@steps/05_architecture_data_model.md` — Architecture & Data Model  
+6. `@steps/06_tech_stack.md` — Technology Stack  
+7. `@steps/07_design_system.md` — Design System  
+8. `@steps/08_ai_operating_model.md` — AI Operating Model  
+9. `@steps/09_execution_backlog.md` — Execution Backlog  
+10. `@steps/10_repo_blueprint.md` — Repository Blueprint  
 
 **Do not skip steps.**  
 Skipping steps increases architectural risk.
@@ -215,13 +215,13 @@ Skipping steps increases architectural risk.
 If your AI tool supports file tagging:
 
 ```
-@01_problem_description.md
+@steps/01_problem_description.md
 ```
 
 Then optionally add context:
 
 ```
-@01_problem_description.md
+@steps/01_problem_description.md
 
 I want to build a platform for...
 ```

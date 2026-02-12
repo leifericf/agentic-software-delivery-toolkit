@@ -163,4 +163,4 @@ Template:
 After generating the document, ask:
 
 > “Are you satisfied with the Problem Description?  
-> If yes, tag **@02_prd.md**.”
+> If yes, tag **@steps/02_prd.md**.”

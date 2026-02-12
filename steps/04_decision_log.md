@@ -88,4 +88,4 @@ ADR template (copy/paste per entry):
 Then ask:
 
 > “Are decisions captured correctly?  
-> If yes, tag **@05_architecture_data_model.md**.”
+> If yes, tag **@steps/05_architecture_data_model.md**.”

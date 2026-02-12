@@ -37,7 +37,7 @@ Ask:
 Then design rules.
 
 ## Decision Log Update (Mandatory)
-If this step introduces or finalizes any decisions, append one or more ADR entries to `artifacts/<project_slug>/04_decision_log.md` using the ADR template from `@04_decision_log.md`.
+If this step introduces or finalizes any decisions, append one or more ADR entries to `artifacts/<project_slug>/04_decision_log.md` using the ADR template from `@steps/04_decision_log.md`.
 
 ## Output Artifact
 Write to:
@@ -104,4 +104,4 @@ Goal: Prevent over-engineering.
 Then ask:
 
 > “AI guardrails ready?  
-> If yes, tag **@09_execution_backlog.md**.”
+> If yes, tag **@steps/09_execution_backlog.md**.”
