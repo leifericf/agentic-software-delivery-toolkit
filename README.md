@@ -207,13 +207,13 @@ Run the steps **in order**:
 4. `@steps/04_decision_log.md` — Decision Log  
 5. `@steps/05_architecture_data_model.md` — Architecture & Data Model  
 6. `@steps/06_tech_stack.md` — Technology Stack  
-7. `@steps/07_ux_design_guide.md` — UX design guide  
+7. `@steps/07_ux_design_guide.md` — UX design guide (UI surfaces)  
 8. `@steps/08_ai_operating_model.md` — AI Operating Model  
 9. `@steps/09_product_backlog.md` — Product Backlog  
 10. `@steps/10_repo_blueprint.md` — Repository Blueprint  
 
 **Do not skip steps.**  
-Skipping steps increases architectural risk.
+Exception (rare): Step 07 may be intentionally skipped only when the project has no user-facing interface surfaces; record the skip as an ADR in `artifacts/<project_slug>/04_decision_log.md`.
 
 ---
 

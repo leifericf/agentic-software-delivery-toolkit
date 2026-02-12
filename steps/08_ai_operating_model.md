@@ -22,11 +22,14 @@ Create guardrails BEFORE AI writes code.
 - `artifacts/<project_slug>/04_decision_log.md`
 - `artifacts/<project_slug>/05_architecture_data_model.md`
 - `artifacts/<project_slug>/06_tech_stack.md`
-- `artifacts/<project_slug>/07_ux_design_guide.md`
+- `artifacts/<project_slug>/07_ux_design_guide.md` (if applicable; see `@steps/07_ux_design_guide.md`)
 - `artifacts/<project_slug>/00_open_questions.md`
 
 ## Input Gate (Mandatory)
 If any required input does not exist, tell the user to run the missing step(s) first to generate it, then stop.
+
+Exception:
+- `artifacts/<project_slug>/07_ux_design_guide.md` may be missing only if an ADR in `artifacts/<project_slug>/04_decision_log.md` documents that Step 07 was intentionally skipped due to no user-facing interface.
 
 ## Open Questions Gate (Mandatory)
 Before producing this artifact, check `artifacts/<project_slug>/00_open_questions.md`.
