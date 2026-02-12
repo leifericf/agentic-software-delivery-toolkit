@@ -25,6 +25,13 @@ Use an Architecture Decision Record (ADR) structure for each entry, and keep all
 ## Input Gate (Mandatory)
 If any required input does not exist, tell the user to run the missing step(s) first to generate it, then stop.
 
+## Open Questions Gate (Mandatory)
+Before writing ADRs, check `artifacts/<project_slug>/00_open_questions.md`.
+
+If there is any question under `## Open` with `Blocking: Yes` AND `Affects` includes `artifacts/<project_slug>/04_decision_log.md`, stop and tell the user to answer those question(s) in `artifacts/<project_slug>/00_open_questions.md`.
+
+When the user answers, incorporate the answers into ADR(s) and move the question(s) from `## Open` to `## Resolved`.
+
 ## Instructions
 1. Review all prior artifacts.
 2. Extract decisions already made.

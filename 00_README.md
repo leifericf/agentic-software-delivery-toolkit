@@ -108,6 +108,19 @@ All clarification questions live in a single file so the user can answer them in
 
 When a question is answered AND incorporated into the relevant artifact(s), remove it from `## Open` by moving it to `## Resolved`.
 
+### Open Questions Workflow (MANDATORY)
+Steps `@02_prd.md` through `@10_repo_blueprint.md` must enforce this workflow.
+
+Blocking rule:
+- If any question under `## Open` has `Blocking: Yes` AND the current step's output artifact is listed under `Affects`, stop and instruct the user to answer those question(s) in `artifacts/<project_slug>/00_open_questions.md`.
+
+Incorporation rule:
+- When the user provides an answer (in the file or in chat), the agent must:
+  1. Incorporate the answer into the relevant artifact(s) listed under `Affects`.
+  2. Move the question from `## Open` to `## Resolved`.
+  3. Add `Incorporated into:` and `Date: YYYY-MM-DD`.
+  4. Do not change the question ID.
+
 File template:
 
 ```md

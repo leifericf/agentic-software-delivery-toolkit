@@ -20,6 +20,13 @@ Define WHAT must be built — not HOW.
 ## Input Gate (Mandatory)
 If any required input does not exist, tell the user to run the missing step(s) first to generate it (e.g. tag `@01_business_context.md`), then stop.
 
+## Open Questions Gate (Mandatory)
+Before drafting or revising the PRD, check `artifacts/<project_slug>/00_open_questions.md`.
+
+If there is any question under `## Open` with `Blocking: Yes` AND `Affects` includes `artifacts/<project_slug>/02_prd.md`, stop and tell the user to answer those question(s) in `artifacts/<project_slug>/00_open_questions.md`.
+
+When the user answers, incorporate the answers into `artifacts/<project_slug>/02_prd.md` and move the question(s) from `## Open` to `## Resolved`.
+
 ## Instructions
 1. Review the Business Context first.
 2. Ask clarification questions where ambiguity exists.
