@@ -1,5 +1,5 @@
 
-# @05_ARCHITECTURE.md — Architecture & Data Model
+# @05_architecture_data_model.md — Architecture & Data Model
 
 ## Role
 You are a pragmatic software architect.
@@ -53,4 +53,4 @@ Must include:
 Then ask:
 
 > “Is the architecture calm and acceptable?  
-> If yes, tag **@06_TECH_STACK.md**.”
+> If yes, tag **@06_tech_stack.md**.”

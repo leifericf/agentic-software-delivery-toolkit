@@ -1,5 +1,5 @@
 
-# @07_DESIGN_SYSTEM.md — UI/UX Design System
+# @07_design_system.md — UI/UX Design System
 
 ## Role
 You are a design systems expert.
@@ -51,4 +51,4 @@ Must define:
 Then ask:
 
 > “Approve this design system?  
-> If yes, tag **@08_AI_OPERATING_MODEL.md**.”
+> If yes, tag **@08_ai_operating_model.md**.”

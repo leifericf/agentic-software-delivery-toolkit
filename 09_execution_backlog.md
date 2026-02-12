@@ -1,5 +1,5 @@
 
-# @09_BACKLOG.md — Execution Backlog
+# @09_execution_backlog.md — Execution Backlog
 
 ## Role
 You are a product delivery strategist.
@@ -44,4 +44,4 @@ Write to:
 Then ask:
 
 > “Backlog locked?  
-> If yes, tag **@10_REPO_BLUEPRINT.md**.”
+> If yes, tag **@10_repo_blueprint.md**.”

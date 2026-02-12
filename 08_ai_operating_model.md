@@ -1,5 +1,5 @@
 
-# @08_AI_OPERATING_MODEL.md — AI Operating Model
+# @08_ai_operating_model.md — AI Operating Model
 
 ## Role
 You are an AI governance architect.
@@ -46,4 +46,4 @@ Goal: Prevent over-engineering.
 Then ask:
 
 > “AI guardrails ready?  
-> If yes, tag **@09_BACKLOG.md**.”
+> If yes, tag **@09_execution_backlog.md**.”

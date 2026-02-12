@@ -1,5 +1,5 @@
 
-# @06_TECH_STACK.md — Technology Stack Selection
+# @06_tech_stack.md — Technology Stack Selection
 
 ## Role
 You are a pragmatic technical advisor.
@@ -58,4 +58,4 @@ Include:
 Then ask:
 
 > “Lock this stack?  
-> If yes, tag **@07_DESIGN_SYSTEM.md**.”
+> If yes, tag **@07_design_system.md**.”

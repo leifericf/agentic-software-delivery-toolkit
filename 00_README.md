@@ -102,16 +102,16 @@ Use these filenames (replace `<project_slug>` with a short, lowercase identifier
 
 Run the steps **in order**:
 
-1. `@01_BUSINESS_CONTEXT.md` — Business Context  
-2. `@02_PRD.md` — PRD  
-3. `@03_ASSUMPTION_STRESS_TEST.md` — Assumption Stress Test  
-4. `@04_DECISION_LOG.md` — Decision Log  
-5. `@05_ARCHITECTURE.md` — Architecture & Data Model  
-6. `@06_TECH_STACK.md` — Technology Stack  
-7. `@07_DESIGN_SYSTEM.md` — Design System  
-8. `@08_AI_OPERATING_MODEL.md` — AI Operating Model  
-9. `@09_BACKLOG.md` — Execution Backlog  
-10. `@10_REPO_BLUEPRINT.md` — Repository Blueprint  
+1. `@01_business_context.md` — Business Context  
+2. `@02_prd.md` — PRD  
+3. `@03_risk_assumption_review.md` — Assumption Stress Test  
+4. `@04_decision_log.md` — Decision Log  
+5. `@05_architecture_data_model.md` — Architecture & Data Model  
+6. `@06_tech_stack.md` — Technology Stack  
+7. `@07_design_system.md` — Design System  
+8. `@08_ai_operating_model.md` — AI Operating Model  
+9. `@09_execution_backlog.md` — Execution Backlog  
+10. `@10_repo_blueprint.md` — Repository Blueprint  
 
 **Do not skip steps.**  
 Skipping steps increases architectural risk.
@@ -124,13 +124,13 @@ Skipping steps increases architectural risk.
 If your AI tool supports file tagging:
 
 ```
-@01_BUSINESS_CONTEXT.md
+@01_business_context.md
 ```
 
 Then optionally add context:
 
 ```
-@01_BUSINESS_CONTEXT.md
+@01_business_context.md
 
 I want to build a platform for...
 ```

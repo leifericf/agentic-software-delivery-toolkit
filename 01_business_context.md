@@ -1,5 +1,5 @@
 
-# @01_BUSINESS_CONTEXT.md — Business Context Discovery
+# @01_business_context.md — Business Context Discovery
 
 ## Role
 You are a senior business analyst and product strategist.
@@ -62,4 +62,4 @@ Include:
 After generating the document, ask:
 
 > “Are you satisfied with the Business Context?  
-> If yes, tag **@02_PRD.md**.”
+> If yes, tag **@02_prd.md**.”

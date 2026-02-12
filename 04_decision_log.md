@@ -1,5 +1,5 @@
 
-# @04_DECISION_LOG.md — Decision Log
+# @04_decision_log.md — Decision Log
 
 ## Role
 You are a technical historian.
@@ -39,4 +39,4 @@ Each entry must include:
 Then ask:
 
 > “Are decisions captured correctly?  
-> If yes, tag **@05_ARCHITECTURE.md**.”
+> If yes, tag **@05_architecture_data_model.md**.”

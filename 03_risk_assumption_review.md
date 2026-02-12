@@ -1,5 +1,5 @@
 
-# @03_ASSUMPTION_STRESS_TEST.md — Assumption Stress Test
+# @03_risk_assumption_review.md — Assumption Stress Test
 
 ## Role
 You are a systems thinker specializing in failure analysis.
@@ -52,4 +52,4 @@ Include:
 Then ask:
 
 > “Ready to lock decisions?  
-> If yes, tag **@04_DECISION_LOG.md**.”
+> If yes, tag **@04_decision_log.md**.”

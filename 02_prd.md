@@ -1,5 +1,5 @@
 
-# @02_PRD.md — Product Requirements Document
+# @02_prd.md — Product Requirements Document
 
 ## Role
 You are a senior product manager.
@@ -17,7 +17,7 @@ Define WHAT must be built — not HOW.
 - `artifacts/<project_slug>/01_business_context.md`
 
 ## Input Gate (Mandatory)
-If any required input does not exist, tell the user to run the missing step(s) first to generate it (e.g. tag `@01_BUSINESS_CONTEXT.md`), then stop.
+If any required input does not exist, tell the user to run the missing step(s) first to generate it (e.g. tag `@01_business_context.md`), then stop.
 
 ## Instructions
 1. Review the Business Context first.
@@ -47,4 +47,4 @@ Produce a **production-grade PRD** containing:
 Then ask:
 
 > “Does the PRD reflect what should be built?  
-> If yes, tag **@03_ASSUMPTION_STRESS_TEST.md**.”
+> If yes, tag **@03_risk_assumption_review.md**.”
