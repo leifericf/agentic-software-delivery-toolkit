@@ -19,6 +19,33 @@ Prevent front-end entropy before it begins.
 If any required input does not exist, tell the user to run the missing step(s) first to generate it, then stop.
 
 ## Instructions
+First, collect visual references.
+
+Ask the user for 3-5 references that represent the intended look and feel.
+
+Accept:
+- URLs to existing websites
+- Links to product pages
+- Design system docs
+- Screenshot/image links
+
+Optionally, accept a short textual style description.
+
+Give examples so the user knows what "good" looks like.
+
+Example references:
+- https://linear.app
+- https://stripe.com
+- https://www.apple.com
+- https://www.notion.so
+
+Example textual descriptions:
+- "Light Nordic design with ample whitespace, muted neutrals, minimal borders"
+- "Dark and gloomy with bold red accents, high contrast typography, moody gradients"
+- "Warm editorial: off-white paper background, serif headings, generous line height"
+
+If the user cannot provide references, ask them to pick a direction from multiple choice (e.g. Minimal / Editorial / Playful / Enterprise / Retro / Luxury).
+
 Ask questions about:
 - Brand personality
 - Visual tone
