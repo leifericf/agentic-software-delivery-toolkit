@@ -108,7 +108,7 @@ Use these filenames (replace `<project_slug>` with a short, lowercase identifier
 - `artifacts/<project_slug>/06_tech_stack.md`
 - `artifacts/<project_slug>/07_design_system.md`
 - `artifacts/<project_slug>/08_ai_operating_model.md`
-- `artifacts/<project_slug>/09_execution_backlog.md`
+- `artifacts/<project_slug>/09_product_backlog.md`
 - `artifacts/<project_slug>/10_repo_blueprint.md`
 
 Note: `artifacts/<project_slug>/04_decision_log.md` is an append-only log that should be updated as decisions are made in later steps. Use an ADR-style entry format for consistency.
@@ -209,7 +209,7 @@ Run the steps **in order**:
 6. `@steps/06_tech_stack.md` — Technology Stack  
 7. `@steps/07_design_system.md` — Design System  
 8. `@steps/08_ai_operating_model.md` — AI Operating Model  
-9. `@steps/09_execution_backlog.md` — Execution Backlog  
+9. `@steps/09_product_backlog.md` — Product Backlog  
 10. `@steps/10_repo_blueprint.md` — Repository Blueprint  
 
 **Do not skip steps.**  

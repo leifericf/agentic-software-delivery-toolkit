@@ -1,5 +1,5 @@
 
-# Execution Backlog
+# Product Backlog
 
 ## Role
 You are a product delivery strategist.
@@ -32,9 +32,9 @@ If any required input does not exist, tell the user to run the missing step(s) f
 ## Open Questions Gate (Mandatory)
 Before producing this artifact, check `artifacts/<project_slug>/00_open_questions.md`.
 
-If there is any question under `## Open` with `Blocking: Yes` AND `Affects` includes `artifacts/<project_slug>/09_execution_backlog.md`, stop and tell the user to answer those question(s) in `artifacts/<project_slug>/00_open_questions.md`.
+If there is any question under `## Open` with `Blocking: Yes` AND `Affects` includes `artifacts/<project_slug>/09_product_backlog.md`, stop and tell the user to answer those question(s) in `artifacts/<project_slug>/00_open_questions.md`.
 
-When the user answers, incorporate the answers into `artifacts/<project_slug>/09_execution_backlog.md` and move the question(s) from `## Open` to `## Resolved`.
+When the user answers, incorporate the answers into `artifacts/<project_slug>/09_product_backlog.md` and move the question(s) from `## Open` to `## Resolved`.
 
 ## Instructions
 1. Review ALL artifacts.
@@ -118,11 +118,11 @@ No extra commentary.
 
 Produce:
 
-**Execution Backlog**
+**Product Backlog**
 
 Write to:
 
-`artifacts/<project_slug>/09_execution_backlog.md`
+`artifacts/<project_slug>/09_product_backlog.md`
 
 Then ask:
 

@@ -111,6 +111,6 @@ Goal: Prevent over-engineering.
 Then ask:
 
 > “AI guardrails ready?  
-> If yes, tag **@steps/09_execution_backlog.md**.”
+> If yes, tag **@steps/09_product_backlog.md**.”
 
 (Ask this in a separate Chat mode message after the artifact output.)
