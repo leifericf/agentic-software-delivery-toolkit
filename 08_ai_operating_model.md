@@ -9,7 +9,7 @@ Create guardrails BEFORE AI writes code.
 
 ## Required Inputs
 - `artifacts/<project_slug>/00_project_meta.md`
-- `artifacts/<project_slug>/01_business_context.md`
+- `artifacts/<project_slug>/01_problem_description.md`
 - `artifacts/<project_slug>/02_prd.md`
 - `artifacts/<project_slug>/03_risk_assumption_review.md`
 - `artifacts/<project_slug>/04_decision_log.md`

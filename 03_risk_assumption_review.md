@@ -9,7 +9,7 @@ Expose hidden risks BEFORE architecture begins.
 
 ## Required Inputs
 - `artifacts/<project_slug>/00_project_meta.md`
-- `artifacts/<project_slug>/01_business_context.md`
+- `artifacts/<project_slug>/01_problem_description.md`
 - `artifacts/<project_slug>/02_prd.md`
 - `artifacts/<project_slug>/00_open_questions.md`
 
@@ -72,7 +72,7 @@ Template:
 ## Metadata
 - Date: YYYY-MM-DD
 - Reviewed Artifacts:
-  - `artifacts/<project_slug>/01_business_context.md`
+  - `artifacts/<project_slug>/01_problem_description.md`
   - `artifacts/<project_slug>/02_prd.md`
 - Open Questions:
   - `artifacts/<project_slug>/00_open_questions.md`

@@ -92,7 +92,7 @@ Use these filenames (replace `<project_slug>` with a short, lowercase identifier
 
 - `artifacts/<project_slug>/00_project_meta.md`
 - `artifacts/<project_slug>/00_open_questions.md`
-- `artifacts/<project_slug>/01_business_context.md`
+- `artifacts/<project_slug>/01_problem_description.md`
 - `artifacts/<project_slug>/02_prd.md`
 - `artifacts/<project_slug>/03_risk_assumption_review.md`
 - `artifacts/<project_slug>/04_decision_log.md`
@@ -193,7 +193,7 @@ File template:
 
 Run the steps **in order**:
 
-1. `@01_business_context.md` — Business Context  
+1. `@01_problem_description.md` — Problem Description  
 2. `@02_prd.md` — PRD  
 3. `@03_risk_assumption_review.md` — Assumption Stress Test  
 4. `@04_decision_log.md` — Decision Log  
@@ -215,13 +215,13 @@ Skipping steps increases architectural risk.
 If your AI tool supports file tagging:
 
 ```
-@01_business_context.md
+@01_problem_description.md
 ```
 
 Then optionally add context:
 
 ```
-@01_business_context.md
+@01_problem_description.md
 
 I want to build a platform for...
 ```
@@ -263,7 +263,7 @@ When satisfied, tag the next step.
 
 By the end of the workflow you will have:
 
-- Business Context document  
+- Problem Description document  
 - PRD  
 - Risk Review  
 - Decision Log  
