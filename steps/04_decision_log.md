@@ -44,7 +44,7 @@ When the user answers, incorporate the answers into ADR(s) and move the question
 1. Review all prior artifacts.
 2. Extract decisions already made.
 3. Ask if any major decisions remain unresolved.
-4. Use multiple-choice to finalize them.
+4. Use the question format in `@steps/00_questions_format.md` to finalize them.
 
 ## Output Artifact
 Produce:

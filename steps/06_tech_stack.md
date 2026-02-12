@@ -45,7 +45,7 @@ Avoid trend-driven choices.
 ## Instructions
 Before recommending:
 
-Ask multiple-choice questions about:
+Ask questions using the format in `@steps/00_questions_format.md` about:
 - Team expertise
 - Longevity expectations
 - Hosting preferences

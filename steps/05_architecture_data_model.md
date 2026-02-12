@@ -47,7 +47,7 @@ Before designing:
 4. Clarify audit requirements.
 5. Clarify integration expectations.
 
-Use multiple-choice heavily.
+Ask questions using the format in `@steps/00_questions_format.md`.
 
 ## Decision Log Update (Mandatory)
 If this step introduces or finalizes any decisions, append one or more ADR entries to `artifacts/<project_slug>/04_decision_log.md` using the ADR template from `@steps/04_decision_log.md`.

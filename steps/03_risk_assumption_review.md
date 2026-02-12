@@ -44,7 +44,9 @@ Identify:
 - Organizational risks
 
 ## Question Style
-Use:
+Ask questions using the format in `@steps/00_questions_format.md`.
+
+Prefer:
 - Binary questions
 - Multiple-choice questions
 

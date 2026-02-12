@@ -250,7 +250,7 @@ Each step is designed to be interactive.
 The AI will:
 
 - Ask structured questions
-- Prefer multiple-choice where possible
+- Prefer multiple-choice where possible (using `@steps/00_questions_format.md`)
 - Surface assumptions
 - Challenge unclear thinking
 - Identify risks
@@ -259,6 +259,7 @@ The AI will:
 You should:
 
 - Answer concisely
+- When answering multiple-choice questions, reply with compact codes like `1A` or `3D:your note` (see `@steps/00_questions_format.md`)
 - Correct misunderstandings early
 - Push for simplicity
 - Avoid premature tech discussions

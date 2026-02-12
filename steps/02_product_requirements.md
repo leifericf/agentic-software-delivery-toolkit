@@ -38,7 +38,7 @@ When the user answers, incorporate the answers into `artifacts/<project_slug>/02
 ## Instructions
 1. Review the Problem Description first.
 2. Ask clarification questions where ambiguity exists.
-3. Use multiple-choice whenever possible.
+3. Ask questions using the format in `@steps/00_questions_format.md`.
 4. Identify contradictions.
 5. Highlight assumptions.
 

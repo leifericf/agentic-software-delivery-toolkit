@@ -39,7 +39,7 @@ If there is any question under `## Open` with `Blocking: Yes` AND `Affects` incl
 When the user answers, incorporate the answers into `artifacts/<project_slug>/08_ai_operating_model.md` and move the question(s) from `## Open` to `## Resolved`.
 
 ## Instructions
-Ask:
+Ask questions using the format in `@steps/00_questions_format.md`:
 - Which AI tools will be used?
 - Autonomy level?
 - Risk tolerance?

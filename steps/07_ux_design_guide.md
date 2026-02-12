@@ -87,10 +87,10 @@ Example textual descriptions:
 - "Dark and gloomy with bold red accents, high contrast typography, moody gradients"
 - "Warm editorial: off-white paper background, serif headings, generous line height"
 
-If the user cannot provide references, ask them to pick a direction from multiple choice (e.g. Minimal / Editorial / Playful / Enterprise / Retro / Luxury).
+If the user cannot provide references, ask them to pick a direction using the format in `@steps/00_questions_format.md` (e.g. Minimal / Editorial / Playful / Enterprise / Retro / Luxury).
 
 Ask questions about:
-- Primary interface surfaces (multiple choice)
+- Primary interface surfaces
 - Brand personality
 - Visual tone
 - Density preferences
@@ -101,7 +101,7 @@ Also ask about:
 - Input modalities: Keyboard-only | Keyboard+Mouse | Touch | Mixed
 - Offline/latency constraints: Low | Medium | High
 
-Use multiple choice.
+Ask questions using the format in `@steps/00_questions_format.md`.
 
 Do NOT assume frameworks unless already selected.
 

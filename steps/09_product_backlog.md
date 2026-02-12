@@ -41,8 +41,9 @@ When the user answers, incorporate the answers into `artifacts/<project_slug>/09
 
 ## Instructions
 1. Review ALL artifacts.
-2. Ask if any capability is missing.
-3. Validate priority assumptions.
+2. Ask questions using the format in `@steps/00_questions_format.md`.
+3. Ask if any capability is missing.
+4. Validate priority assumptions.
 
 If anything is blocked by missing information, add a question to `artifacts/<project_slug>/00_open_questions.md` under `## Open` and stop.
 
