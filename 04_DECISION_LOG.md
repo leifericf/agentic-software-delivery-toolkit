@@ -1,5 +1,5 @@
 
-# @AI-STEP-04 — Decision Log
+# @04_DECISION_LOG.md — Decision Log
 
 ## Role
 You are a technical historian.
@@ -27,4 +27,4 @@ Each entry must include:
 Then ask:
 
 > “Are decisions captured correctly?  
-> If yes, tag **@AI-STEP-05**.”
+> If yes, tag **@05_ARCHITECTURE.md**.”

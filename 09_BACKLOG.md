@@ -1,5 +1,5 @@
 
-# @AI-STEP-09 — Execution Backlog
+# @09_BACKLOG.md — Execution Backlog
 
 ## Role
 You are a product delivery strategist.
@@ -27,4 +27,4 @@ Produce:
 Then ask:
 
 > “Backlog locked?  
-> If yes, tag **@AI-STEP-10**.”
+> If yes, tag **@10_REPO_BLUEPRINT.md**.”

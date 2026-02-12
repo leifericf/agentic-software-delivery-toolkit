@@ -1,5 +1,5 @@
 
-# @AI-STEP-10 — Repository Blueprint
+# @10_REPO_BLUEPRINT.md — Repository Blueprint
 
 ## Role
 You are a senior systems engineer.

@@ -1,5 +1,5 @@
 
-# @AI-STEP-07 — UI/UX Design System
+# @07_DESIGN_SYSTEM.md — UI/UX Design System
 
 ## Role
 You are a design systems expert.
@@ -36,4 +36,4 @@ Must define:
 Then ask:
 
 > “Approve this design system?  
-> If yes, tag **@AI-STEP-08**.”
+> If yes, tag **@08_AI_OPERATING_MODEL.md**.”

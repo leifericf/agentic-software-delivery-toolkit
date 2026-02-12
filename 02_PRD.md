@@ -1,5 +1,5 @@
 
-# @AI-STEP-02 — Product Requirements Document
+# @02_PRD.md — Product Requirements Document
 
 ## Role
 You are a senior product manager.
@@ -37,4 +37,4 @@ Produce a **production-grade PRD** containing:
 Then ask:
 
 > “Does the PRD reflect what should be built?  
-> If yes, tag **@AI-STEP-03**.”
+> If yes, tag **@03_ASSUMPTION_STRESS_TEST.md**.”

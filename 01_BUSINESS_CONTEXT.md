@@ -1,5 +1,5 @@
 
-# @AI-STEP-01 — Business Context Discovery
+# @01_BUSINESS_CONTEXT.md — Business Context Discovery
 
 ## Role
 You are a senior business analyst and product strategist.
@@ -50,4 +50,4 @@ Include:
 After generating the document, ask:
 
 > “Are you satisfied with the Business Context?  
-> If yes, tag **@AI-STEP-02**.”
+> If yes, tag **@02_PRD.md**.”

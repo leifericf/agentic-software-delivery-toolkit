@@ -79,16 +79,16 @@ This creates a **human ↔ AI design loop**.
 
 Run the steps **in order**:
 
-1. `@AI-STEP-01` — Business Context  
-2. `@AI-STEP-02` — PRD  
-3. `@AI-STEP-03` — Assumption Stress Test  
-4. `@AI-STEP-04` — Decision Log  
-5. `@AI-STEP-05` — Architecture & Data Model  
-6. `@AI-STEP-06` — Technology Stack  
-7. `@AI-STEP-07` — Design System  
-8. `@AI-STEP-08` — AI Operating Model  
-9. `@AI-STEP-09` — Execution Backlog  
-10. `@AI-STEP-10` — Repository Blueprint  
+1. `@01_BUSINESS_CONTEXT.md` — Business Context  
+2. `@02_PRD.md` — PRD  
+3. `@03_ASSUMPTION_STRESS_TEST.md` — Assumption Stress Test  
+4. `@04_DECISION_LOG.md` — Decision Log  
+5. `@05_ARCHITECTURE.md` — Architecture & Data Model  
+6. `@06_TECH_STACK.md` — Technology Stack  
+7. `@07_DESIGN_SYSTEM.md` — Design System  
+8. `@08_AI_OPERATING_MODEL.md` — AI Operating Model  
+9. `@09_BACKLOG.md` — Execution Backlog  
+10. `@10_REPO_BLUEPRINT.md` — Repository Blueprint  
 
 **Do not skip steps.**  
 Skipping steps increases architectural risk.
@@ -101,13 +101,13 @@ Skipping steps increases architectural risk.
 If your AI tool supports file tagging:
 
 ```
-@AI-STEP-01
+@01_BUSINESS_CONTEXT.md
 ```
 
 Then optionally add context:
 
 ```
-@AI-STEP-01
+@01_BUSINESS_CONTEXT.md
 
 I want to build a platform for...
 ```

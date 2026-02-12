@@ -1,5 +1,5 @@
 
-# @AI-STEP-05 — Architecture & Data Model
+# @05_ARCHITECTURE.md — Architecture & Data Model
 
 ## Role
 You are a pragmatic software architect.
@@ -40,4 +40,4 @@ Must include:
 Then ask:
 
 > “Is the architecture calm and acceptable?  
-> If yes, tag **@AI-STEP-06**.”
+> If yes, tag **@06_TECH_STACK.md**.”
