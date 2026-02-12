@@ -13,6 +13,13 @@ Define WHAT must be built — not HOW.
 - No timelines.
 - No estimates.
 
+## Output Boundary (STRICT)
+- Chat mode: questions + clarifications only. No summaries, no plans, no meta commentary.
+  - If a progress indicator is necessary, output exactly one line: `Status: <5-12 words>`.
+- Artifact mode: output exactly one fenced code block containing the full artifact file contents, and nothing else.
+  - Use `md` fences for this step.
+- Do not mix modes in the same message.
+
 ## Required Inputs
 - `artifacts/<project_slug>/00_project_meta.md`
 - `artifacts/<project_slug>/01_problem_description.md`
@@ -120,3 +127,5 @@ Then ask:
 
 > “Does the PRD reflect what should be built?  
 > If yes, tag **@steps/03_risk_assumption_review.md**.”
+
+(Ask this in a separate Chat mode message after the artifact output.)
