@@ -1,17 +1,16 @@
-
 # Decision Log
 
 ## Role
 You are a technical historian.
 
 ## Objective
-Capture WHY decisions are made so future agents do not undo them.
+Capture decisions quickly so future agents do not undo them.
 
 ## Starting Point (Mandatory)
-Do not expect the user to write ADRs or provide exhaustive rationale up front.
+Do not expect the user to write formal decision docs.
 
 - Ask for rough decisions in plain language (bullets are fine).
-- Convert the answers into ADR entries and iterate until accurate.
+- Convert them into short table rows and iterate until accurate.
 
 ## Output Boundary (STRICT)
 - Chat mode: questions + clarifications only.
@@ -26,11 +25,8 @@ Do not expect the user to write ADRs or provide exhaustive rationale up front.
 ## Artifact Behavior
 This is an append-only, living document.
 
-It is created in this step and then updated as decisions are made in later planning steps.
-
-Do not rewrite prior entries except to correct factual errors.
-
-Use an Architecture Decision Record (ADR) structure for each entry, and keep all ADRs in this one file in chronological order.
+- Do not rewrite prior rows except to correct factual errors.
+- If a decision changes, append a new row that references the prior decision in plain language.
 
 ## Required Inputs
 - `artifacts/<project_slug>/00_project_meta.md`
@@ -43,11 +39,11 @@ Use an Architecture Decision Record (ADR) structure for each entry, and keep all
 If any required input does not exist, tell the user to run the missing step(s) first to generate it, then stop.
 
 ## Open Questions Gate (Mandatory)
-Before writing ADRs, check `artifacts/<project_slug>/00_open_questions.md`.
+Before updating the decision log, check `artifacts/<project_slug>/00_open_questions.md`.
 
 If there is any unchecked item under `## Open` tagged `[Blocking]` whose `[Affects: ...]` includes `04_decision_log.md`, stop and tell the user to answer it in `artifacts/<project_slug>/00_open_questions.md`.
 
-When the user answers, incorporate the answer into ADR(s) and move the item from `## Open` to `## Resolved` (mark it `[x]`).
+When the user answers, incorporate the answer into decision row(s) and move the item from `## Open` to `## Resolved` (mark it `[x]`).
 
 ## Instructions
 1. Review all prior artifacts.
@@ -66,44 +62,16 @@ Write to:
 
 File format (STRICT):
 
-1. The first line must be exactly: `# Decision Log (ADRs)`
-2. The second section must be: `## Index` (chronological list).
-3. When you add an ADR, also add a single index line under `## Index`.
-4. Index line format: `- ADR-###: <Title> (<Status>, YYYY-MM-DD)`
-5. Then ADR entries in chronological order.
-6. Each ADR is a single section starting with `## ADR-###: <Title>`.
-7. ADR IDs are sequential starting at `ADR-001`.
-8. Never reorder ADRs.
-9. If a decision changes, create a new ADR that supersedes the old one (do not edit the old ADR).
-
-ADR template (copy/paste per entry):
-
 ```md
-## ADR-###: <Title>
-- Status: Proposed | Accepted | Superseded
-- Date: YYYY-MM-DD
-- Owners: <optional>
-- Supersedes: ADR-### | <omit>
+# Decision Log
 
-### Context
-<What problem are we solving? What constraints matter?>
-
-### Decision
-<What did we decide?>
-
-### Consequences
-<What changes? What tradeoffs are we accepting?>
-
-### Alternatives Considered
-<What else did we consider and why not?>
-
-### References
-<Optional links to artifacts, docs, tickets>
+| Date | Decision | Why | Tradeoff |
+| --- | --- | --- | --- |
+| YYYY-MM-DD | <decision> | <why> | <tradeoff> |
 ```
 
 Then ask:
 
-> “Are decisions captured correctly?  
-> If yes, tag **@planning/05_architecture_data_model.md**.”
+> "Decisions captured correctly? If yes, tag **@planning/05_architecture_data_model.md**."
 
 (Ask this in a separate Chat mode message after the artifact output.)

@@ -105,9 +105,11 @@ Then initialize the artifacts directory and shared files:
 4. Create: `artifacts/<project_slug>/04_decision_log.md` with this minimal valid structure:
 
 ```md
-# Decision Log (ADRs)
+# Decision Log
 
-## Index
+| Date | Decision | Why | Tradeoff |
+| --- | --- | --- | --- |
+| YYYY-MM-DD | <decision> | <why> | <tradeoff> |
 ```
 
 ## Objective

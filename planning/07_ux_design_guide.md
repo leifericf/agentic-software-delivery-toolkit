@@ -35,10 +35,10 @@ Determine whether the project has any user-facing interface surfaces (now or in-
 
 If none apply (e.g., pure library, backend-only service, batch job, data pipeline):
 1. Do NOT produce `artifacts/<project_slug>/07_ux_design_guide.md`.
-2. Append an ADR to `artifacts/<project_slug>/04_decision_log.md` documenting the skip.
-   - Title: "Skip UX design guide (no user-facing interface)"
-   - Decision: Step 07 is intentionally skipped; revisit if UI surfaces are added.
-   - Consequences: Later planning steps must not require this artifact.
+2. Add a decision log row to `artifacts/<project_slug>/04_decision_log.md` documenting the skip.
+   - Decision: Skip UX design guide (no user-facing interface).
+   - Why: No UI surfaces are in-scope.
+   - Tradeoff: Less UX guidance if UI is added later; revisit Step 07.
 3. In Chat mode, output exactly one line:
    `Status: UX design guide skipped; tag @planning/08_ai_operating_model.md`
 Then stop.
@@ -115,7 +115,7 @@ Ask questions using the format in `@shared/questions_format.md`.
 Do NOT assume toolkits unless already selected.
 
 ## Decision Log Update (Mandatory)
-If this step introduces or finalizes any decisions, append one or more ADR entries to `artifacts/<project_slug>/04_decision_log.md` using the ADR template from `@planning/04_decision_log.md`.
+If this step introduces or finalizes any decisions, append one or more rows to `artifacts/<project_slug>/04_decision_log.md` using the table format from `@planning/04_decision_log.md`.
 
 ## Output Artifact
 Produce:

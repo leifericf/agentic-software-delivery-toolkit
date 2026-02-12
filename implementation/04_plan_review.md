@@ -30,7 +30,7 @@ Assume the plan has missing details.
 
 ## Instructions
 1. Ask the smallest set of questions needed to remove ambiguity.
-2. If answers imply new decisions, instruct the user that the agent will capture ADR(s) during execution.
+2. If answers imply new decisions, instruct the user that the agent will add decision log row(s) during execution.
 3. Revise the task plan accordingly.
 
 Then ask:

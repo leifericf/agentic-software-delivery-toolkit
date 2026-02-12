@@ -64,7 +64,7 @@ Ask questions using the format in `@shared/questions_format.md` about:
 Explain tradeoffs clearly.
 
 ## Decision Log Update (Mandatory)
-If this step introduces or finalizes any decisions, append one or more ADR entries to `artifacts/<project_slug>/04_decision_log.md` using the ADR template from `@planning/04_decision_log.md`.
+If this step introduces or finalizes any decisions, append one or more rows to `artifacts/<project_slug>/04_decision_log.md` using the table format from `@planning/04_decision_log.md`.
 
 ## Output Artifact
 Produce:
@@ -129,8 +129,8 @@ Template:
 - E2E: <short>
 
 ## Decisions
-- Related ADRs:
-  - ADR-###: <title>
+- Related decision log rows (optional):
+  - YYYY-MM-DD: <decision>
 ```
 
 Then ask:

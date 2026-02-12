@@ -40,7 +40,7 @@ Do not require the user to specify a full repo design up front.
 If any required input does not exist, tell the user to run the missing step(s) first to generate it, then stop.
 
 Exception:
-- `artifacts/<project_slug>/07_ux_design_guide.md` may be missing only if an ADR in `artifacts/<project_slug>/04_decision_log.md` documents that Step 07 was intentionally skipped due to no user-facing interface.
+- `artifacts/<project_slug>/07_ux_design_guide.md` may be missing only if a decision log row in `artifacts/<project_slug>/04_decision_log.md` documents that Step 07 was intentionally skipped due to no user-facing interface.
 
 ## Open Questions Gate (Mandatory)
 Before producing this artifact, check `artifacts/<project_slug>/00_open_questions.md`.
@@ -59,7 +59,7 @@ Ask questions using the format in `@shared/questions_format.md`:
 Then design the repository.
 
 ## Decision Log Update (Mandatory)
-If this step introduces or finalizes any decisions, append one or more ADR entries to `artifacts/<project_slug>/04_decision_log.md` using the ADR template from `@planning/04_decision_log.md`.
+If this step introduces or finalizes any decisions, append one or more rows to `artifacts/<project_slug>/04_decision_log.md` using the table format from `@planning/04_decision_log.md`.
 
 ## Output Artifact
 Produce:
@@ -121,8 +121,8 @@ Template:
 - `docs/`: <optional>
 
 ## Decisions
-- Related ADRs:
-  - ADR-###: <title>
+- Related decision log rows (optional):
+  - YYYY-MM-DD: <decision>
 ````
 
 Avoid unnecessary infrastructure.

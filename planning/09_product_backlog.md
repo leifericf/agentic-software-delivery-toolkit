@@ -39,7 +39,7 @@ Do not ask the user to pre-write a detailed backlog.
 If any required input does not exist, tell the user to run the missing step(s) first to generate it, then stop.
 
 Exception:
-- `artifacts/<project_slug>/07_ux_design_guide.md` may be missing only if an ADR in `artifacts/<project_slug>/04_decision_log.md` documents that Step 07 was intentionally skipped due to no user-facing interface.
+- `artifacts/<project_slug>/07_ux_design_guide.md` may be missing only if a decision log row in `artifacts/<project_slug>/04_decision_log.md` documents that Step 07 was intentionally skipped due to no user-facing interface.
 
 ## Open Questions Gate (Mandatory)
 Before producing this artifact, check `artifacts/<project_slug>/00_open_questions.md`.
@@ -56,7 +56,7 @@ When the user answers, incorporate the answer into `artifacts/<project_slug>/09_
 
 If anything is blocked by missing information, add an unchecked `[Blocking]` item under `## Open` in `artifacts/<project_slug>/00_open_questions.md` and stop.
 
-If producing the backlog requires making new decisions, stop and capture them as ADR(s) in `artifacts/<project_slug>/04_decision_log.md` first.
+If producing the backlog requires making new decisions, stop and capture them as decision log row(s) in `artifacts/<project_slug>/04_decision_log.md` first.
 
 ## Output Format (STRICT)
 

@@ -21,4 +21,4 @@ Optional steps (use when needed):
 ## Shared Rules
 
 - The agent keeps `artifacts/<project_slug>/00_open_questions.md` and `artifacts/<project_slug>/04_decision_log.md` up to date.
-- If requirements change during implementation, update the relevant artifacts and capture an ADR.
+- If requirements change during implementation, update the relevant artifacts and add a decision log row.
