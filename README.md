@@ -5,7 +5,7 @@ Workflows and prompt templates for planning and shipping software with LLM-power
 
 This repo is intentionally **pre-coding**: it helps you elicit constraints, make decisions explicit, and produce durable artifacts before you generate a codebase.
 
-Treat this as a starting point: fork it, use it on real projects, and adapt the templates as you learn what works for you.
+These templates emerged from many hours of experimentation across different LLMs and platforms and are intended to be mostly model-agnostic. Treat them as a starting point: fork this repo and adapt whatever you need as you learn what works for your team and project.
 
 ## What You Get
 
