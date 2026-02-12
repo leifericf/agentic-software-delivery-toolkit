@@ -14,6 +14,7 @@ Define WHAT must be built — not HOW.
 - No estimates.
 
 ## Required Inputs
+- `artifacts/<project_slug>/00_project_meta.md`
 - `artifacts/<project_slug>/01_business_context.md`
 - `artifacts/<project_slug>/00_open_questions.md`
 

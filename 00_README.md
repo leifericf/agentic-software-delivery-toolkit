@@ -80,6 +80,7 @@ This creates a **human ↔ AI design loop**.
 Each step produces exactly one primary output document.
 
 Two shared, append-only artifacts are maintained across multiple steps:
+- `artifacts/<project_slug>/00_project_meta.md`
 - `artifacts/<project_slug>/00_open_questions.md`
 - `artifacts/<project_slug>/04_decision_log.md`
 
@@ -89,17 +90,18 @@ Store outputs at:
 
 Use these filenames (replace `<project_slug>` with a short, lowercase identifier like `acme_billing`):
 
-0. `artifacts/<project_slug>/00_open_questions.md`
-1. `artifacts/<project_slug>/01_business_context.md`
-2. `artifacts/<project_slug>/02_prd.md`
-3. `artifacts/<project_slug>/03_risk_assumption_review.md`
-4. `artifacts/<project_slug>/04_decision_log.md`
-5. `artifacts/<project_slug>/05_architecture_data_model.md`
-6. `artifacts/<project_slug>/06_tech_stack.md`
-7. `artifacts/<project_slug>/07_design_system.md`
-8. `artifacts/<project_slug>/08_ai_operating_model.md`
-9. `artifacts/<project_slug>/09_execution_backlog.md`
-10. `artifacts/<project_slug>/10_repo_blueprint.md`
+- `artifacts/<project_slug>/00_project_meta.md`
+- `artifacts/<project_slug>/00_open_questions.md`
+- `artifacts/<project_slug>/01_business_context.md`
+- `artifacts/<project_slug>/02_prd.md`
+- `artifacts/<project_slug>/03_risk_assumption_review.md`
+- `artifacts/<project_slug>/04_decision_log.md`
+- `artifacts/<project_slug>/05_architecture_data_model.md`
+- `artifacts/<project_slug>/06_tech_stack.md`
+- `artifacts/<project_slug>/07_design_system.md`
+- `artifacts/<project_slug>/08_ai_operating_model.md`
+- `artifacts/<project_slug>/09_execution_backlog.md`
+- `artifacts/<project_slug>/10_repo_blueprint.md`
 
 Note: `artifacts/<project_slug>/04_decision_log.md` is an append-only log that should be updated as decisions are made in later steps. Use an ADR-style entry format for consistency.
 
@@ -145,6 +147,44 @@ File template:
 - Incorporated into:
   - `artifacts/<project_slug>/<artifact>.md`
 - Date: YYYY-MM-DD
+```
+
+### Project Meta File (STRICT)
+Lock the project identity once, then reference it everywhere.
+
+Project slug rules (STRICT):
+- lowercase snake_case
+- letters, numbers, underscores only
+- no spaces
+
+Slug generation guidance:
+- Derive from Project Name.
+- Prefer short and unambiguous.
+- Collapse multiple underscores.
+- Avoid trailing underscores.
+- If the project name is long, offer a shortened slug option.
+
+File template:
+
+```md
+# Project Meta
+
+## Identity
+- Project Name: <Project Name>
+- Project Slug: <project_slug>
+
+## Ownership
+- Owner: <name or role>
+
+## Dates
+- Started: YYYY-MM-DD
+
+## Links
+- Repository: <optional>
+- Docs: <optional>
+
+## Notes
+- <optional>
 ```
 
 ---

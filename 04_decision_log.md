@@ -17,6 +17,7 @@ Do not rewrite prior entries except to correct factual errors.
 Use an Architecture Decision Record (ADR) structure for each entry, and keep all ADRs in this one file in chronological order.
 
 ## Required Inputs
+- `artifacts/<project_slug>/00_project_meta.md`
 - `artifacts/<project_slug>/01_business_context.md`
 - `artifacts/<project_slug>/02_prd.md`
 - `artifacts/<project_slug>/03_risk_assumption_review.md`
