@@ -17,9 +17,9 @@ These templates emerged from many hours of experimentation across different LLMs
 ## Quickstart
 
 1. Fork this repo and make it your own.
-2. Start with `@planning/01_problem_description.md` in your agent chat (tag the file if your tool supports it, otherwise copy/paste its contents).
+2. Start with `@planning/01_describe_problem.md` in your agent chat (tag the file if your tool supports it, otherwise copy/paste its contents).
 3. Step 01 will capture your project name, define the project slug, and bootstrap `artifacts/<project_slug>/`.
-4. Proceed in order through `planning/10_repo_blueprint.md`.
+4. Proceed in order through `planning/10_design_repo_blueprint.md`.
 
 Note: the agent tracks open questions in `artifacts/<project_slug>/00_open_questions.md` and captures decisions in `artifacts/<project_slug>/04_decision_log.md`. You can paste answers into the open questions file and ask the agent to incorporate them into the relevant artifacts.
 

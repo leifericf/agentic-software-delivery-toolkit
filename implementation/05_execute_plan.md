@@ -55,5 +55,5 @@ Then ask:
 
 If the user wants a dedicated pass for automation or validation, they can optionally tag:
 
-- **@implementation/06_quality_gate.md**
-- **@implementation/07_user_validation.md**
+- **@implementation/06_run_quality_gate.md**
+- **@implementation/07_validate_with_user.md**

@@ -8,16 +8,16 @@ Start rough: you do not need to front-load detail. The agent should pull specifi
 
 Run these **in order**:
 
-1. `planning/01_problem_description.md`
-2. `planning/02_product_requirements.md`
-3. `planning/03_risk_assumption_review.md`
-4. `planning/04_decision_log.md`
-5. `planning/05_architecture_data_model.md`
-6. `planning/06_tech_stack.md`
-7. `planning/07_ux_design_guide.md` (skip only if there are no UI surfaces; the agent records the skip in the decision log)
-8. `planning/08_ai_operating_model.md`
-9. `planning/09_product_backlog.md`
-10. `planning/10_repo_blueprint.md`
+1. `planning/01_describe_problem.md`
+2. `planning/02_define_requirements.md`
+3. `planning/03_review_risks_assumptions.md`
+4. `planning/04_log_decisions.md`
+5. `planning/05_design_architecture_data_model.md`
+6. `planning/06_choose_tech_stack.md`
+7. `planning/07_design_ux_guide.md` (skip only if there are no UI surfaces; the agent records the skip in the decision log)
+8. `planning/08_define_ai_operating_model.md`
+9. `planning/09_create_product_backlog.md`
+10. `planning/10_design_repo_blueprint.md`
 
 ## Standard Artifact Set
 

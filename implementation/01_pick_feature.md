@@ -43,4 +43,4 @@ Then ask the user to choose a single story/feature to implement next (a story ID
 
 After the user chooses, instruct them to tag:
 
-> **@implementation/02_feature_plan.md**
+> **@implementation/02_plan_feature.md**
