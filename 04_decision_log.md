@@ -7,6 +7,13 @@ You are a technical historian.
 ## Objective
 Capture WHY decisions are made so future agents do not undo them.
 
+## Artifact Behavior
+This is an append-only, living document.
+
+It is created in this step and then updated as decisions are made in later steps.
+
+Do not rewrite prior entries except to correct factual errors.
+
 ## Required Inputs
 - `artifacts/<project_slug>/01_business_context.md`
 - `artifacts/<project_slug>/02_prd.md`
@@ -30,7 +37,9 @@ Write to:
 
 `artifacts/<project_slug>/04_decision_log.md`
 
-Each entry must include:
+Entry format (STRICT):
+
+- ID: `DL-###` (start at `DL-001`)
 - Decision
 - Alternatives considered
 - Why chosen
