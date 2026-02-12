@@ -24,6 +24,10 @@ Define WHAT must be built — not HOW.
 Iterate with the user until the scope is crisp and remembered easily.
 
 ## Output Artifact
+Write to:
+
+`artifacts/<project_slug>/02_prd.md`
+
 Produce a **production-grade PRD** containing:
 
 - Goals

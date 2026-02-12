@@ -24,6 +24,10 @@ Produce:
 
 **Execution Backlog**
 
+Write to:
+
+`artifacts/<project_slug>/09_execution_backlog.md`
+
 Then ask:
 
 > “Backlog locked?  

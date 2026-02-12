@@ -21,6 +21,10 @@ Produce:
 
 **Repository Blueprint**
 
+Write to:
+
+`artifacts/<project_slug>/10_repo_blueprint.md`
+
 Include:
 - Folder structure
 - Dependency strategy

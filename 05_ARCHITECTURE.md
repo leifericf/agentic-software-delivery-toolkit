@@ -29,6 +29,10 @@ Produce:
 
 **Architecture & Data Model Document**
 
+Write to:
+
+`artifacts/<project_slug>/05_architecture_data_model.md`
+
 Must include:
 - System shape
 - Domain boundaries

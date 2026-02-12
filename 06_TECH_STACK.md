@@ -33,6 +33,10 @@ Produce:
 
 **Technology Stack Specification**
 
+Write to:
+
+`artifacts/<project_slug>/06_tech_stack.md`
+
 Include:
 - Backend
 - Frontend approach

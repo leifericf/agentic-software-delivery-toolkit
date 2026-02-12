@@ -33,6 +33,10 @@ Produce a document:
 
 **Risk & Assumption Review**
 
+Write to:
+
+`artifacts/<project_slug>/03_risk_assumption_review.md`
+
 Include:
 - Confirmed truths
 - Open risks

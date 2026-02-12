@@ -16,6 +16,10 @@ Ask:
 Then design rules.
 
 ## Output Artifact
+Write to:
+
+`artifacts/<project_slug>/08_ai_operating_model.md`
+
 Produce an **AI Operating Framework** including:
 
 - AI Constitution

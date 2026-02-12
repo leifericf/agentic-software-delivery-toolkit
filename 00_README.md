@@ -75,6 +75,29 @@ This creates a **human ↔ AI design loop**.
 
 ---
 
+## Artifacts and File Names
+
+Each step produces exactly one output document.
+
+Store outputs at:
+
+`artifacts/<project_slug>/`
+
+Use these filenames (replace `<project_slug>` with a short, lowercase identifier like `acme_billing`):
+
+1. `artifacts/<project_slug>/01_business_context.md`
+2. `artifacts/<project_slug>/02_prd.md`
+3. `artifacts/<project_slug>/03_risk_assumption_review.md`
+4. `artifacts/<project_slug>/04_decision_log.md`
+5. `artifacts/<project_slug>/05_architecture_data_model.md`
+6. `artifacts/<project_slug>/06_tech_stack.md`
+7. `artifacts/<project_slug>/07_design_system.md`
+8. `artifacts/<project_slug>/08_ai_operating_model.md`
+9. `artifacts/<project_slug>/09_execution_backlog.md`
+10. `artifacts/<project_slug>/10_repo_blueprint.md`
+
+---
+
 ## Workflow
 
 Run the steps **in order**:

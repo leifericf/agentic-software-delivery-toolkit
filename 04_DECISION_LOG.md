@@ -18,6 +18,10 @@ Produce:
 
 **Decision Log**
 
+Write to:
+
+`artifacts/<project_slug>/04_decision_log.md`
+
 Each entry must include:
 - Decision
 - Alternatives considered

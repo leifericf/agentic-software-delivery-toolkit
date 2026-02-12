@@ -24,6 +24,10 @@ Produce:
 
 **UI/UX Design Manual**
 
+Write to:
+
+`artifacts/<project_slug>/07_design_system.md`
+
 Must define:
 - Design principles
 - Typography

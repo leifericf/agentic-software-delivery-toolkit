@@ -39,6 +39,10 @@ Produce:
 
 **Business Context Document**
 
+Write to:
+
+`artifacts/<project_slug>/01_business_context.md`
+
 Include:
 - Operational model
 - Key actors
