@@ -15,6 +15,7 @@ Define WHAT must be built — not HOW.
 
 ## Required Inputs
 - `artifacts/<project_slug>/01_business_context.md`
+- `artifacts/<project_slug>/00_open_questions.md`
 
 ## Input Gate (Mandatory)
 If any required input does not exist, tell the user to run the missing step(s) first to generate it (e.g. tag `@01_business_context.md`), then stop.
@@ -25,6 +26,10 @@ If any required input does not exist, tell the user to run the missing step(s) f
 3. Use multiple-choice whenever possible.
 4. Identify contradictions.
 5. Highlight assumptions.
+
+When you identify unclear requirements, add them to `artifacts/<project_slug>/00_open_questions.md` under `## Open`.
+
+Do not include an "Open Questions" section in the PRD.
 
 ## Interaction Pattern
 Iterate with the user until the scope is crisp and remembered easily.
@@ -99,8 +104,6 @@ Template:
 ## Assumptions
 - A-001: <assumption>
 
-## Open Questions
-- Q-001: <question>
 ```
 
 Produce a **production-grade PRD** using the template above.

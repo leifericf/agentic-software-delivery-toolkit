@@ -17,6 +17,7 @@ Prevent structural improvisation.
 - `artifacts/<project_slug>/07_design_system.md`
 - `artifacts/<project_slug>/08_ai_operating_model.md`
 - `artifacts/<project_slug>/09_execution_backlog.md`
+- `artifacts/<project_slug>/00_open_questions.md`
 
 ## Input Gate (Mandatory)
 If any required input does not exist, tell the user to run the missing step(s) first to generate it, then stop.

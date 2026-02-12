@@ -77,7 +77,11 @@ This creates a **human ↔ AI design loop**.
 
 ## Artifacts and File Names
 
-Each step produces exactly one output document.
+Each step produces exactly one primary output document.
+
+Two shared, append-only artifacts are maintained across multiple steps:
+- `artifacts/<project_slug>/00_open_questions.md`
+- `artifacts/<project_slug>/04_decision_log.md`
 
 Store outputs at:
 
@@ -85,6 +89,7 @@ Store outputs at:
 
 Use these filenames (replace `<project_slug>` with a short, lowercase identifier like `acme_billing`):
 
+0. `artifacts/<project_slug>/00_open_questions.md`
 1. `artifacts/<project_slug>/01_business_context.md`
 2. `artifacts/<project_slug>/02_prd.md`
 3. `artifacts/<project_slug>/03_risk_assumption_review.md`
@@ -97,6 +102,37 @@ Use these filenames (replace `<project_slug>` with a short, lowercase identifier
 10. `artifacts/<project_slug>/10_repo_blueprint.md`
 
 Note: `artifacts/<project_slug>/04_decision_log.md` is an append-only log that should be updated as decisions are made in later steps. Use an ADR-style entry format for consistency.
+
+### Open Questions File (STRICT)
+All clarification questions live in a single file so the user can answer them in one place.
+
+When a question is answered AND incorporated into the relevant artifact(s), remove it from `## Open` by moving it to `## Resolved`.
+
+File template:
+
+```md
+# Open Questions
+
+## Open
+
+### Q-001: <short title>
+- Blocking: Yes | No
+- Raised by: `@<step_template>.md`
+- Affects:
+  - `artifacts/<project_slug>/<artifact>.md`
+- Question: <question text>
+- Answer: <TBD>
+
+## Resolved
+
+### Q-002: <short title>
+- Raised by: `@<step_template>.md`
+- Question: <question text>
+- Answer: <answer text>
+- Incorporated into:
+  - `artifacts/<project_slug>/<artifact>.md`
+- Date: YYYY-MM-DD
+```
 
 ---
 

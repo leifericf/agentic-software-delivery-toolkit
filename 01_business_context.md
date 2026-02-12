@@ -19,6 +19,11 @@ If the user references prior artifacts, treat them as optional inputs.
 ## Input Gate (Mandatory)
 If a required input is missing, tell the user which step(s) must be run first to produce it, then stop.
 
+## Open Questions File (Mandatory)
+If `artifacts/<project_slug>/00_open_questions.md` does not exist, initialize it using the file template defined in `00_README.md`.
+
+If any clarification questions come up during this step, add them to `artifacts/<project_slug>/00_open_questions.md` under `## Open`.
+
 ## Objective
 Build a deep understanding of the real-world business before software design begins.
 

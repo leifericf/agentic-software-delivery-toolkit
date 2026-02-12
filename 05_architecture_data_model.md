@@ -12,6 +12,7 @@ Design a calm, evolvable system.
 - `artifacts/<project_slug>/02_prd.md`
 - `artifacts/<project_slug>/03_risk_assumption_review.md`
 - `artifacts/<project_slug>/04_decision_log.md`
+- `artifacts/<project_slug>/00_open_questions.md`
 
 ## Input Gate (Mandatory)
 If any required input does not exist, tell the user to run the missing step(s) first to generate it, then stop.

@@ -16,6 +16,7 @@ Translate architecture into executable work.
 - `artifacts/<project_slug>/06_tech_stack.md`
 - `artifacts/<project_slug>/07_design_system.md`
 - `artifacts/<project_slug>/08_ai_operating_model.md`
+- `artifacts/<project_slug>/00_open_questions.md`
 
 ## Input Gate (Mandatory)
 If any required input does not exist, tell the user to run the missing step(s) first to generate it, then stop.
@@ -24,6 +25,8 @@ If any required input does not exist, tell the user to run the missing step(s) f
 1. Review ALL artifacts.
 2. Ask if any capability is missing.
 3. Validate priority assumptions.
+
+If anything is blocked by missing information, add a question to `artifacts/<project_slug>/00_open_questions.md` under `## Open` and stop.
 
 If producing the backlog requires making new decisions, stop and capture them as ADR(s) in `artifacts/<project_slug>/04_decision_log.md` first.
 

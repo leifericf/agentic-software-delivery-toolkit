@@ -14,6 +14,7 @@ Prevent front-end entropy before it begins.
 - `artifacts/<project_slug>/04_decision_log.md`
 - `artifacts/<project_slug>/05_architecture_data_model.md`
 - `artifacts/<project_slug>/06_tech_stack.md`
+- `artifacts/<project_slug>/00_open_questions.md`
 
 ## Input Gate (Mandatory)
 If any required input does not exist, tell the user to run the missing step(s) first to generate it, then stop.
