@@ -20,7 +20,7 @@ If the user references prior artifacts, treat them as optional inputs.
 If a required input is missing, tell the user which step(s) must be run first to produce it, then stop.
 
 ## Open Questions File (Mandatory)
-After `project_slug` is locked, ensure `artifacts/<project_slug>/00_open_questions.md` exists (initialize it using the file template defined in `00_README.md` if needed).
+After `project_slug` is locked, ensure `artifacts/<project_slug>/00_open_questions.md` exists (initialize it using the file template defined in `README.md` if needed).
 
 If any clarification questions come up during this step, add them to `artifacts/<project_slug>/00_open_questions.md` under `## Open`.
 
@@ -42,8 +42,8 @@ Slug selection (MANDATORY):
 Then initialize the artifacts directory and shared files:
 
 1. Create: `artifacts/<project_slug>/`
-2. Create: `artifacts/<project_slug>/00_project_meta.md` using the file template in `00_README.md` (fill in Project Name and Project Slug)
-3. Create: `artifacts/<project_slug>/00_open_questions.md` using the file template in `00_README.md`
+2. Create: `artifacts/<project_slug>/00_project_meta.md` using the file template in `README.md` (fill in Project Name and Project Slug)
+3. Create: `artifacts/<project_slug>/00_open_questions.md` using the file template in `README.md`
 4. Create: `artifacts/<project_slug>/04_decision_log.md` with this minimal valid structure:
 
 ```md
