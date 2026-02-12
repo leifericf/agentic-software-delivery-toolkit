@@ -31,9 +31,9 @@ If any required input does not exist, tell the user to run the missing step(s) f
 ## Open Questions Gate (Mandatory)
 Before drafting or revising the PRD, check `artifacts/<project_slug>/00_open_questions.md`.
 
-If there is any question under `## Open` with `Blocking: Yes` AND `Affects` includes `artifacts/<project_slug>/02_prd.md`, stop and tell the user to answer those question(s) in `artifacts/<project_slug>/00_open_questions.md`.
+If there is any question under `## Open` with `Blocking: Yes` AND `Affects` includes `artifacts/<project_slug>/02_product_requirements.md`, stop and tell the user to answer those question(s) in `artifacts/<project_slug>/00_open_questions.md`.
 
-When the user answers, incorporate the answers into `artifacts/<project_slug>/02_prd.md` and move the question(s) from `## Open` to `## Resolved`.
+When the user answers, incorporate the answers into `artifacts/<project_slug>/02_product_requirements.md` and move the question(s) from `## Open` to `## Resolved`.
 
 ## Instructions
 1. Review the Problem Description first.
@@ -52,7 +52,7 @@ Iterate with the user until the scope is crisp and remembered easily.
 ## Output Artifact
 Write to:
 
-`artifacts/<project_slug>/02_prd.md`
+`artifacts/<project_slug>/02_product_requirements.md`
 
 ## Output Format (STRICT)
 The generated PRD must use this exact Markdown structure and headings, in this order.

@@ -101,7 +101,7 @@ Use these filenames (replace `<project_slug>` with a short, lowercase identifier
 - `artifacts/<project_slug>/00_project_meta.md`
 - `artifacts/<project_slug>/00_open_questions.md`
 - `artifacts/<project_slug>/01_problem_description.md`
-- `artifacts/<project_slug>/02_prd.md`
+- `artifacts/<project_slug>/02_product_requirements.md`
 - `artifacts/<project_slug>/03_risk_assumption_review.md`
 - `artifacts/<project_slug>/04_decision_log.md`
 - `artifacts/<project_slug>/05_architecture_data_model.md`
@@ -119,7 +119,7 @@ All clarification questions live in a single file so the user can answer them in
 When a question is answered AND incorporated into the relevant artifact(s), remove it from `## Open` by moving it to `## Resolved`.
 
 ### Open Questions Workflow (MANDATORY)
-Steps `@steps/02_prd.md` through `@steps/10_repo_blueprint.md` must enforce this workflow.
+Steps `@steps/02_product_requirements.md` through `@steps/10_repo_blueprint.md` must enforce this workflow.
 
 Blocking rule:
 - If any question under `## Open` has `Blocking: Yes` AND the current step's output artifact is listed under `Affects`, stop and instruct the user to answer those question(s) in `artifacts/<project_slug>/00_open_questions.md`.
@@ -202,7 +202,7 @@ File template:
 Run the steps **in order**:
 
 1. `@steps/01_problem_description.md` — Problem Description  
-2. `@steps/02_prd.md` — PRD  
+2. `@steps/02_product_requirements.md` — Product requirements  
 3. `@steps/03_risk_assumption_review.md` — Assumption Stress Test  
 4. `@steps/04_decision_log.md` — Decision Log  
 5. `@steps/05_architecture_data_model.md` — Architecture & Data Model  

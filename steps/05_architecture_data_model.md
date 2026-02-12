@@ -17,7 +17,7 @@ Design a calm, evolvable system.
 ## Required Inputs
 - `artifacts/<project_slug>/00_project_meta.md`
 - `artifacts/<project_slug>/01_problem_description.md`
-- `artifacts/<project_slug>/02_prd.md`
+- `artifacts/<project_slug>/02_product_requirements.md`
 - `artifacts/<project_slug>/03_risk_assumption_review.md`
 - `artifacts/<project_slug>/04_decision_log.md`
 - `artifacts/<project_slug>/00_open_questions.md`
@@ -79,7 +79,7 @@ Template:
 ## Metadata
 - Date: YYYY-MM-DD
 - Related:
-  - PRD: `artifacts/<project_slug>/02_prd.md`
+  - PRD: `artifacts/<project_slug>/02_product_requirements.md`
   - Decision Log: `artifacts/<project_slug>/04_decision_log.md`
   - Open Questions: `artifacts/<project_slug>/00_open_questions.md`
 
