@@ -34,15 +34,76 @@ Write to:
 
 `artifacts/<project_slug>/02_prd.md`
 
-Produce a **production-grade PRD** containing:
+## Output Format (STRICT)
+The generated PRD must use this exact Markdown structure and headings, in this order.
 
-- Goals
-- Users
-- Functional requirements
-- Non-functional requirements
-- Workflows
-- Success criteria
-- Explicit assumptions
+Required ID schemes:
+- Goals: `G-001`, `G-002`, ...
+- Personas/Users: `U-001`, `U-002`, ...
+- Functional requirements: `FR-001`, `FR-002`, ...
+- Non-functional requirements: `NFR-001`, `NFR-002`, ...
+- Workflows: `WF-001`, `WF-002`, ...
+- Assumptions: `A-001`, `A-002`, ...
+
+Template:
+
+```md
+# PRD: <Product/Project Name>
+
+## Metadata
+- Version: 0.1
+- Date: YYYY-MM-DD
+- Owner: <name or role>
+
+## Problem Statement
+<1-3 paragraphs>
+
+## Goals
+- G-001: <goal>
+
+## Non-Goals
+- <explicitly out of scope>
+
+## Users
+- U-001: <user type> (Primary | Secondary | Internal)
+
+## Scope
+<1-2 paragraphs>
+
+## Functional Requirements
+- FR-001: <title>
+  - Description: <1-3 sentences>
+  - Priority: Must | Should | Could
+  - Acceptance Criteria:
+    - AC-1: <criterion>
+    - AC-2: <criterion>
+
+## Non-Functional Requirements
+- NFR-001: <title>
+  - Target: <measurable target when possible>
+  - Priority: Must | Should | Could
+
+## Workflows
+- WF-001: <workflow name>
+  - Trigger: <what starts it>
+  - Steps:
+    1. <step>
+    2. <step>
+  - Success End State: <what "done" means>
+  - Failure States:
+    - <failure>
+
+## Success Criteria
+- <metric or observable outcome>
+
+## Assumptions
+- A-001: <assumption>
+
+## Open Questions
+- Q-001: <question>
+```
+
+Produce a **production-grade PRD** using the template above.
 
 Then ask:
 
