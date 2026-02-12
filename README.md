@@ -266,6 +266,7 @@ The AI will:
 
 - Ask structured questions
 - Prefer multiple-choice where possible (using `@steps/00_questions_format.md`)
+- Follow a tight interactive loop (see `@steps/00_interaction_protocol.md`)
 - Surface assumptions
 - Challenge unclear thinking
 - Identify risks
