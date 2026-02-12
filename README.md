@@ -1,119 +1,59 @@
 
 # Agentic Software Delivery Toolkit
 
-Workflows and prompt templates for planning and building software with LLM-powered agents.
+Workflows and prompt templates for planning and shipping software with LLM-powered agents.
 
-## Overview
+This repo is intentionally **pre-coding**: it helps you elicit constraints, make decisions explicit, and produce durable artifacts before you generate a codebase.
 
-This repository provides a **structured prompting workflow** for designing production-grade software systems with AI agents.
+Treat this as a starting point: fork it, use it on real projects, and adapt the templates as you learn what works for you.
 
-It is intentionally a **pre-coding workflow**.
-The goal is to help you define the problem, constraints, and context *before* implementation begins, so you waste less time (and fewer tokens) later undoing wrong assumptions, bad commits, and premature architecture.
+## What You Get
 
-It is based on a simple premise:
+- A step-by-step planning sequence in `planning/` (interactive templates).
+- A consistent artifact set written to `artifacts/<project_slug>/`.
+- Reusable standalone prompts in `prompts/`.
 
-> AI produces dramatically better systems when given structure, guardrails, and sequencing.
+## Quickstart
 
-Most AI-driven projects fail not because the models are weak — but because the **process is improvisational**.
+1. Fork this repo and make it your own.
+2. Start with `@planning/01_problem_description.md` in your agent chat (tag the file if your tool supports it, otherwise copy/paste its contents).
+3. Step 01 will capture your project name, define the project slug, and bootstrap `artifacts/<project_slug>/`.
+4. Proceed in order through `planning/10_repo_blueprint.md`.
 
-This toolkit replaces improvisation with a **repeatable, artifact-driven design pipeline**.
+Note: the agent tracks open questions in `artifacts/<project_slug>/00_open_questions.md` and captures decisions in `artifacts/<project_slug>/04_decision_log.md`. You can paste answers into the open questions file and ask the agent to incorporate them into the relevant artifacts.
 
----
+## Forking Guidance
 
-## Why This Exists
+- Rename steps, tweak questions, and delete anything you don't use.
+- Add your own templates for recurring work (reviews, incidents, migrations, onboarding).
+- Keep outputs consistent so your agents can find and reuse context across sessions.
 
-When building software with AI, the most common failure modes are:
+## Operating Principles
 
-- Starting with the tech stack too early  
-- Letting the AI invent architecture  
-- Skipping business context  
-- Over-engineering infrastructure  
-- Producing inconsistent documentation  
-- Allowing design entropy  
-- Jumping straight into code  
+- Sequence beats cleverness: the order of decisions matters.
+- Prefer durable simplicity: designs that still feel right in 5-10 years.
+- Put novelty in the product, keep infrastructure boring.
+- Capture decisions: undocumented decisions get re-litigated.
+- Constrain the agent: good outputs follow good constraints.
 
-The underlying pattern is the same:
+## Planning Steps
 
-> If the AI doesn't have your real constraints and domain context, it will fill the gaps by guessing.
+Run these **in order**:
 
-This toolkit "sells" time upfront in exchange for less churn later:
-- Fewer dead-end spikes and rewrites
-- Fewer "commit mistakes" caused by missing constraints
-- Cleaner decisions captured once, reused across the planning workflow
-- Less token burn from re-litigating basics every time you ask for help
+1. `planning/01_problem_description.md`
+2. `planning/02_product_requirements.md`
+3. `planning/03_risk_assumption_review.md`
+4. `planning/04_decision_log.md`
+5. `planning/05_architecture_data_model.md`
+6. `planning/06_tech_stack.md`
+7. `planning/07_ux_design_guide.md` (skip only if there are no UI surfaces; record the skip in the decision log)
+8. `planning/08_ai_operating_model.md`
+9. `planning/09_product_backlog.md`
+10. `planning/10_repo_blueprint.md`
 
-This toolkit prevents those mistakes by forcing a **deliberate design phase** before implementation.
+## Standard Artifact Set
 
-Think of it as:
-
-> Product thinking → System design → Execution structure → Code
-
-Not the other way around.
-
----
-
-## Core Philosophy
-
-### 1. Sequence Creates Quality
-Good systems are rarely accidents.  
-The order of decisions matters.
-
-### 2. Calm Systems Win
-Prefer simplicity that will still feel correct in 5–10 years.
-
-### 3. Boring Scales
-Innovation belongs in the product — not the infrastructure.
-
-### 4. Decisions Must Be Captured
-Undocumented decisions are eventually undone.
-
-### 5. Control the AI Environment
-AI agents behave according to the constraints you provide.
-
----
-
-## How the Framework Works
-
-Each template represents a **distinct design phase**.
-
-You do NOT run them all at once.
-
-Instead, you:
-
-1. Tag a step (or paste the template).
-2. Let the AI lead an interactive discovery session.
-3. Iterate until both parties are satisfied.
-4. Produce the artifact.
-5. Move to the next step.
-
-In this loop, the AI's job is to elicit your knowledge and constraints by asking structured questions, then capture/refine them into durable artifacts.
-
-This creates a **human ↔ AI design loop**.
-
----
-
-## Standalone Prompts
-
-Reusable prompt templates live in `prompts/`.
-
-- `prompts/git_commit.md`
-
----
-
-## Artifacts and File Names
-
-Each step produces exactly one primary output document.
-
-Two shared, append-only artifacts are maintained across multiple planning steps:
-- `artifacts/<project_slug>/00_project_meta.md`
-- `artifacts/<project_slug>/00_open_questions.md`
-- `artifacts/<project_slug>/04_decision_log.md`
-
-Store outputs at:
-
-`artifacts/<project_slug>/`
-
-Use these filenames (replace `<project_slug>` with a short, lowercase identifier like `acme_billing`):
+Each planning step produces one primary artifact in `artifacts/<project_slug>/`:
 
 - `artifacts/<project_slug>/00_project_meta.md`
 - `artifacts/<project_slug>/00_open_questions.md`
@@ -128,250 +68,18 @@ Use these filenames (replace `<project_slug>` with a short, lowercase identifier
 - `artifacts/<project_slug>/09_product_backlog.md`
 - `artifacts/<project_slug>/10_repo_blueprint.md`
 
-Note: `artifacts/<project_slug>/04_decision_log.md` is an append-only log that should be updated as decisions are made in later planning steps. Use an ADR-style entry format for consistency.
+## Standalone Prompts
 
-### Open Questions File (STRICT)
-All clarification questions live in a single file so the user can answer them in one place.
+Prompt templates you can use independently live in `prompts/`.
 
-When a question is answered AND incorporated into the relevant artifact(s), remove it from `## Open` by moving it to `## Resolved`.
+- `prompts/git_commit.md`
 
-### Open Questions Workflow (MANDATORY)
-Planning steps `@planning/02_product_requirements.md` through `@planning/10_repo_blueprint.md` must enforce this workflow.
+## Repo Layout
 
-Blocking rule:
-- If any question under `## Open` has `Blocking: Yes` AND the current step's output artifact is listed under `Affects`, stop and instruct the user to answer those question(s) in `artifacts/<project_slug>/00_open_questions.md`.
+- `planning/`: interactive templates (the main workflow)
+- `prompts/`: standalone prompts
+- `artifacts/`: project-specific outputs (directory included; contents ignored by default)
 
-Incorporation rule:
-- When the user provides an answer (in the file or in chat), the agent must:
-  1. Incorporate the answer into the relevant artifact(s) listed under `Affects`.
-  2. Move the question from `## Open` to `## Resolved`.
-  3. Add `Incorporated into:` and `Date: YYYY-MM-DD`.
-  4. Do not change the question ID.
+## License
 
-File template:
-
-```md
-# Open Questions
-
-## Open
-
-### Q-001: <short title>
-- Blocking: Yes | No
-- Raised by: `@<step_template>.md`
-- Affects:
-  - `artifacts/<project_slug>/<artifact>.md`
-- Question: <question text>
-- Answer: <TBD>
-
-## Resolved
-
-### Q-002: <short title>
-- Raised by: `@<step_template>.md`
-- Question: <question text>
-- Answer: <answer text>
-- Incorporated into:
-  - `artifacts/<project_slug>/<artifact>.md`
-- Date: YYYY-MM-DD
-```
-
-### Project Meta File (STRICT)
-Lock the project identity once, then reference it everywhere.
-
-Project slug rules (STRICT):
-- lowercase snake_case
-- letters, numbers, underscores only
-- no spaces
-
-Slug generation guidance:
-- Derive from Project Name.
-- Prefer short and unambiguous.
-- Collapse multiple underscores.
-- Avoid trailing underscores.
-- If the project name is long, offer a shortened slug option.
-
-File template:
-
-```md
-# Project Meta
-
-## Identity
-- Project Name: <Project Name>
-- Project Slug: <project_slug>
-
-## Ownership
-- Owner: <name or role>
-
-## Dates
-- Started: YYYY-MM-DD
-
-## Links
-- Repository: <optional>
-- Docs: <optional>
-
-## Notes
-- <optional>
-```
-
----
-
-## Workflow
-
-Run the planning steps **in order**:
-
-1. `@planning/01_problem_description.md` — Problem Description  
-2. `@planning/02_product_requirements.md` — Product requirements  
-3. `@planning/03_risk_assumption_review.md` — Assumption Stress Test  
-4. `@planning/04_decision_log.md` — Decision Log  
-5. `@planning/05_architecture_data_model.md` — Architecture & Data Model  
-6. `@planning/06_tech_stack.md` — Technology Stack  
-7. `@planning/07_ux_design_guide.md` — UX design guide (UI surfaces)  
-8. `@planning/08_ai_operating_model.md` — AI Operating Model  
-9. `@planning/09_product_backlog.md` — Product Backlog  
-10. `@planning/10_repo_blueprint.md` — Repository Blueprint  
-
-**Do not skip planning steps.**  
-Exception (rare): Step 07 may be intentionally skipped only when the project has no user-facing interface surfaces; record the skip as an ADR in `artifacts/<project_slug>/04_decision_log.md`.
-
----
-
-## How to Use
-
-### Option A — Tag the Template
-If your AI tool supports file tagging:
-
-```
-@planning/01_problem_description.md
-```
-
-Then optionally add context:
-
-```
-@planning/01_problem_description.md
-
-I want to build a platform for...
-```
-
-The AI will begin discovery automatically.
-
----
-
-### Option B — Copy/Paste
-Simply paste the template into your AI session and start.
-
----
-
-## Interaction Pattern
-
-Each step is designed to be interactive.
-
-The AI will:
-
-- Ask structured questions
-- Prefer multiple-choice where possible (using `@planning/00_questions_format.md`)
-- Follow a tight interactive loop (see `@planning/00_interaction_protocol.md`)
-- Surface assumptions
-- Challenge unclear thinking
-- Identify risks
-- Produce a document
-
-You should:
-
-- Answer concisely
-- When answering multiple-choice questions, reply with compact codes like `1A` or `3D:your note` (see `@planning/00_questions_format.md`)
-- Correct misunderstandings early
-- Push for simplicity
-- Avoid premature tech discussions
-
-When satisfied, tag the next step.
-
----
-
-## Artifacts Produced
-
-By the end of the workflow you will have:
-
-- Problem Description document  
-- PRD  
-- Risk Review  
-- Decision Log  
-- Architecture  
-- Technology Stack  
-- Design Manual  
-- AI Governance Framework  
-- Structured Backlog  
-- Repository Blueprint  
-
-This is an unusually strong foundation for a greenfield system.
-
-Most teams never reach this level of clarity.
-
----
-
-## Important Rules
-
-### Do Not Start With Code
-The cost of redesigning architecture mid-build is enormous.
-
-### Do Not Let AI Invent Structure
-Structure should emerge from deliberate decisions.
-
-### Prefer Simplicity
-Every abstraction is future maintenance.
-
-### Challenge Complexity
-When the AI proposes something complex, ask:
-
-> “What is the simplest solution that would still be correct?”
-
----
-
-## When To Stop Designing
-
-You are ready to begin implementation when:
-
-- Architecture feels calm  
-- Tradeoffs are explicit  
-- Risks are understood  
-- The backlog is executable  
-
-At that point, generate the repository and begin coding.
-
----
-
-## Who This Is For
-
-This toolkit is especially valuable for:
-
-- AI-first development teams  
-- Solo builders  
-- Technical founders  
-- Product engineers  
-- Greenfield systems  
-- Internal tooling  
-
-It is less necessary for trivial prototypes.
-
----
-
-## Expected Outcome
-
-If followed carefully, this workflow dramatically increases the probability that you will build:
-
-- A stable system  
-- An evolvable architecture  
-- A coherent codebase  
-- A maintainable product  
-
-Instead of an improvised one.
-
----
-
-## Final Principle
-
-When uncertain, ask:
-
-> Does this decision make the system calmer — or more complicated?
-
-Choose calm.
-
-Calm systems endure.
+See `LICENSE`.

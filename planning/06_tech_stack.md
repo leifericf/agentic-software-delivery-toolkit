@@ -86,13 +86,13 @@ Template:
 
 ## Backend
 - Language/Runtime: <choice>
-- Framework: <choice>
+- Web toolkit: <choice>
 - API style: REST | GraphQL | RPC
 - Background jobs: <choice>
 
 ## Frontend
 - Approach: SPA | MPA | SSR | Static
-- Framework: <choice>
+- UI toolkit: <choice>
 - Styling: <choice>
 
 ## Data

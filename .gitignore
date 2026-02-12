@@ -223,7 +223,10 @@ BenchmarkDotNet.Artifacts/
 # .NET Core
 project.lock.json
 project.fragment.lock.json
-artifacts/
+# Planning outputs live in /artifacts. Keep the directory tracked, but ignore
+# generated contents by default.
+artifacts/*
+!artifacts/.gitkeep
 
 # ASP.NET Scaffolding
 ScaffoldingReadMe.txt
