@@ -22,6 +22,8 @@ Treat this as a starting point: fork it, use it on real projects, and adapt the 
 
 Note: the agent tracks open questions in `artifacts/<project_slug>/00_open_questions.md` and captures decisions in `artifacts/<project_slug>/04_decision_log.md`. You can paste answers into the open questions file and ask the agent to incorporate them into the relevant artifacts.
 
+You do not need to front-load detail: start Step 01 with a loose paragraph describing the problem; the agent will drive the back-and-forth to gather specifics.
+
 ## Forking Guidance
 
 - Rename steps, tweak questions, and delete anything you don't use.
@@ -46,7 +48,7 @@ Run these **in order**:
 4. `planning/04_decision_log.md`
 5. `planning/05_architecture_data_model.md`
 6. `planning/06_tech_stack.md`
-7. `planning/07_ux_design_guide.md` (skip only if there are no UI surfaces; record the skip in the decision log)
+7. `planning/07_ux_design_guide.md` (skip only if there are no UI surfaces; the agent records the skip in the decision log)
 8. `planning/08_ai_operating_model.md`
 9. `planning/09_product_backlog.md`
 10. `planning/10_repo_blueprint.md`

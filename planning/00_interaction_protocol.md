@@ -9,6 +9,11 @@ This document defines the intended "human <-> AI" interaction loop for all plann
 - Elicit the user's knowledge and constraints with minimal friction.
 - Avoid asking more questions than necessary.
 
+## Starting Point (User Guidance)
+- The user does not need to specify everything up front.
+- Prefer a rough first pass (often a single paragraph) and let the agent pull details via targeted questions.
+- The loop is intentional: rough input -> questions -> answers -> follow-ups -> artifact.
+
 ## Chat Loop (Mandatory)
 1. Ask a small batch of questions (max 10).
 2. Wait for the user's answers.
