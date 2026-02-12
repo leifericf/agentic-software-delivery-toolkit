@@ -96,7 +96,7 @@ Use these filenames (replace `<project_slug>` with a short, lowercase identifier
 9. `artifacts/<project_slug>/09_execution_backlog.md`
 10. `artifacts/<project_slug>/10_repo_blueprint.md`
 
-Note: `artifacts/<project_slug>/04_decision_log.md` is an append-only log that should be updated as decisions are made in later steps.
+Note: `artifacts/<project_slug>/04_decision_log.md` is an append-only log that should be updated as decisions are made in later steps. Use an ADR-style entry format for consistency.
 
 ---
 

@@ -14,6 +14,8 @@ It is created in this step and then updated as decisions are made in later steps
 
 Do not rewrite prior entries except to correct factual errors.
 
+Use an Architecture Decision Record (ADR) structure for each entry, and keep all ADRs in this one file in chronological order.
+
 ## Required Inputs
 - `artifacts/<project_slug>/01_business_context.md`
 - `artifacts/<project_slug>/02_prd.md`
@@ -37,13 +39,42 @@ Write to:
 
 `artifacts/<project_slug>/04_decision_log.md`
 
-Entry format (STRICT):
+File format (STRICT):
 
-- ID: `DL-###` (start at `DL-001`)
-- Decision
-- Alternatives considered
-- Why chosen
-- Long-term implication
+1. The first line must be exactly: `# Decision Log (ADRs)`
+2. The second section must be: `## Index` (chronological list).
+3. When you add an ADR, also add a single index line under `## Index`.
+4. Index line format: `- ADR-###: <Title> (<Status>, YYYY-MM-DD)`
+5. Then ADR entries in chronological order.
+6. Each ADR is a single section starting with `## ADR-###: <Title>`.
+7. ADR IDs are sequential starting at `ADR-001`.
+8. Never reorder ADRs.
+9. If a decision changes, create a new ADR that supersedes the old one (do not edit the old ADR).
+
+ADR template (copy/paste per entry):
+
+```md
+## ADR-###: <Title>
+- Status: Proposed | Accepted | Superseded
+- Date: YYYY-MM-DD
+- Owners: <optional>
+- Supersedes: ADR-### | <omit>
+
+### Context
+<What problem are we solving? What constraints matter?>
+
+### Decision
+<What did we decide?>
+
+### Consequences
+<What changes? What tradeoffs are we accepting?>
+
+### Alternatives Considered
+<What else did we consider and why not?>
+
+### References
+<Optional links to artifacts, docs, tickets>
+```
 
 Then ask:
 

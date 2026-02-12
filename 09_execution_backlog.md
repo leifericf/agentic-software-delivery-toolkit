@@ -25,7 +25,7 @@ If any required input does not exist, tell the user to run the missing step(s) f
 2. Ask if any capability is missing.
 3. Validate priority assumptions.
 
-If producing the backlog requires making new decisions, stop and capture them in `artifacts/<project_slug>/04_decision_log.md` first.
+If producing the backlog requires making new decisions, stop and capture them as ADR(s) in `artifacts/<project_slug>/04_decision_log.md` first.
 
 ## Output Format (STRICT)
 
