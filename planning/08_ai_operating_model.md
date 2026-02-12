@@ -14,12 +14,14 @@ Do not require the user to define a full policy up front.
 - Use questions to turn preferences into enforceable rules.
 
 ## Output Boundary (STRICT)
-- Chat mode: questions + clarifications only. You may include one `Heard:` line. No summaries, no plans, no meta commentary.
+- Chat mode: questions + clarifications only.
+  - Optional: one `Heard:` line and/or a brief recap (1-3 bullets) before the questions.
+  - No plans, no meta commentary. Avoid long summaries.
   - If a progress indicator is necessary, output exactly one line: `Status: <5-12 words>`.
   - Follow the interaction loop in `@shared/interaction_protocol.md`.
-- Artifact mode: output exactly one fenced code block containing the full artifact file contents, and nothing else.
+- Artifact mode: output exactly one fenced code block containing the full artifact file contents.
   - Use `md` fences for this step.
-- Do not mix modes in the same message.
+- Mixed output is allowed when it reduces friction (e.g. brief recap + artifact, or 1-3 final questions + draft artifact).
 
 ## Required Inputs
 - `artifacts/<project_slug>/00_project_meta.md`

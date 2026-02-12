@@ -29,10 +29,19 @@ Use `@shared/questions_format.md`.
 ## Agent Message Style (Chat Mode)
 - Natural default: output only the numbered questions (choices optional).
 - Structured mode: output only the numbered questions + choices.
-- Optional (both modes): include exactly one short acknowledgement line *before* the questions when it improves flow.
-  - Format: `Heard: <short, concrete restatement>`
-  - Keep it under ~120 characters.
-- Do not add summaries, plans, or meta commentary.
+- Optional preface (both modes):
+  - `Heard: <short, concrete restatement>` (one line), and/or
+  - a brief recap (1-3 bullets) when it reduces re-asking or confusion.
+  - Keep the preface under ~6 lines total.
+- Do not add plans or meta commentary.
+- Avoid long summaries. If you include a recap, keep it factual and short.
+
+## Mixed Chat + Artifact Output
+Sometimes the fastest path is to include a small amount of chat text alongside an artifact.
+
+- Allowed: a brief recap (1-3 bullets) outside the code block.
+- Allowed: a small final question batch (1-3 questions) above the artifact when it avoids an extra round-trip.
+- If you include an artifact, keep its full contents in exactly one fenced code block.
 
 ## Handling "Can't answer / N/A"
 - Treat it as real information.
