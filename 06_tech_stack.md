@@ -58,13 +58,63 @@ Write to:
 
 `artifacts/<project_slug>/06_tech_stack.md`
 
-Include:
-- Backend
-- Frontend approach
-- Database
-- Infra posture
-- Dependency philosophy
-- Testing posture
+## Output Format (STRICT)
+Write the artifact using this exact Markdown structure and headings, in this order.
+
+Template:
+
+```md
+# Technology Stack: <Project Name>
+
+## Metadata
+- Date: YYYY-MM-DD
+- Related:
+  - Architecture: `artifacts/<project_slug>/05_architecture_data_model.md`
+  - Decision Log: `artifacts/<project_slug>/04_decision_log.md`
+
+## Stack Summary
+<5-10 bullets max>
+
+## Backend
+- Language/Runtime: <choice>
+- Framework: <choice>
+- API style: REST | GraphQL | RPC
+- Background jobs: <choice>
+
+## Frontend
+- Approach: SPA | MPA | SSR | Static
+- Framework: <choice>
+- Styling: <choice>
+
+## Data
+- Primary database: <choice>
+- Migrations: <choice>
+- Search/indexing: <choice or ->
+- Caching: <choice or ->
+
+## Infrastructure Posture
+- Hosting: <choice>
+- Environments: Local | Dev | Staging | Prod
+- Deployment style: <choice>
+
+## Observability
+- Logging: <choice>
+- Metrics: <choice>
+- Tracing: <choice or ->
+
+## Dependency Philosophy
+- Policy: <short>
+- Update cadence: <short>
+
+## Testing Posture
+- Unit: <short>
+- Integration: <short>
+- E2E: <short>
+
+## Decisions
+- Related ADRs:
+  - ADR-###: <title>
+```
 
 Then ask:
 

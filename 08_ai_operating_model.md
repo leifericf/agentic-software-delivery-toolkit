@@ -43,14 +43,60 @@ Write to:
 
 `artifacts/<project_slug>/08_ai_operating_model.md`
 
-Produce an **AI Operating Framework** including:
+## Output Format (STRICT)
+Write the artifact using this exact Markdown structure and headings, in this order.
 
-- AI Constitution
-- File editing rules
-- Boundary enforcement
-- Complexity limits
-- AI Definition of Done
-- Prompt templates for implementation
+Template:
+
+```md
+# AI Operating Model: <Project Name>
+
+## Metadata
+- Date: YYYY-MM-DD
+- Owner: <name or role>
+
+## Tools
+- Allowed tools:
+  - <tool>
+- Disallowed tools:
+  - <tool>
+
+## Autonomy Model
+- Default mode: Advisory | Pair | Autonomous
+- Allowed actions without asking:
+  - <action>
+- Actions that require explicit approval:
+  - <action>
+
+## AI Constitution
+- <principle>
+
+## File Editing Rules
+- Allowed directories: <paths>
+- Forbidden files/patterns: <patterns>
+- Edit approach: Small diffs | Large diffs
+
+## Boundary Enforcement
+- What the AI must not do: <bullets>
+- Escalation triggers: <bullets>
+
+## Complexity Limits
+- Maximum services/components before re-justification: <number>
+- Default to: Monolith | Modular monolith | Services
+
+## AI Definition of Done
+- <check>
+
+## Prompt Templates
+### Implementation Task
+<template text>
+
+### Code Review
+<template text>
+
+### Debugging
+<template text>
+```
 
 Goal: Prevent over-engineering.
 

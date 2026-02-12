@@ -56,13 +56,72 @@ Write to:
 
 `artifacts/<project_slug>/01_business_context.md`
 
-Include:
-- Operational model
-- Key actors
-- Constraints
-- Risks
-- Unknowns
-- Simplification opportunities
+## Output Format (STRICT)
+Write the artifact using this exact Markdown structure and headings, in this order.
+
+ID schemes:
+- Actors: `ACT-001`, `ACT-002`, ...
+- Workflows: `WF-001`, `WF-002`, ...
+- Constraints: `C-001`, `C-002`, ...
+- Risks: `R-001`, `R-002`, ...
+- Unknowns: `U-001`, `U-002`, ...
+- Simplifications: `S-001`, `S-002`, ...
+
+Template:
+
+```md
+# Business Context: <Project Name>
+
+## Metadata
+- Project Slug: <project_slug>
+- Date: YYYY-MM-DD
+- Owner: <name or role>
+
+## Summary
+<5-10 bullet points max>
+
+## Operational Model
+<How the business operates day-to-day>
+
+## Key Actors
+- ACT-001: <actor name>
+  - Type: Customer | Internal | Partner | Vendor | Regulator
+  - Goals: <short>
+  - Responsibilities: <short>
+
+## Core Workflows
+- WF-001: <workflow name>
+  - Trigger: <what starts it>
+  - Steps:
+    1. <step>
+    2. <step>
+  - Success End State: <what "done" means>
+  - Failure States:
+    - <failure>
+
+## Constraints
+- C-001: <constraint>
+  - Source: Legal | Policy | Org | Budget | Timeline | Market | Operational
+  - Notes: <short>
+
+## Risks
+- R-001: <risk>
+  - Likelihood: Low | Medium | High
+  - Impact: Low | Medium | High
+  - Mitigation: <short>
+
+## Unknowns
+- U-001: <unknown>
+  - Why it matters: <short>
+  - Suggested question: <short>
+
+## Simplification Opportunities
+- S-001: <simplification>
+  - Why it helps: <short>
+
+## References
+- `artifacts/<project_slug>/00_open_questions.md`
+```
 
 After generating the document, ask:
 

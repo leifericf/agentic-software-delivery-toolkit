@@ -77,14 +77,87 @@ Write to:
 
 `artifacts/<project_slug>/07_design_system.md`
 
-Must define:
-- Design principles
-- Typography
-- Color system
-- Layout rules
-- Component strategy
-- Interaction patterns
-- UI Definition of Done
+## Output Format (STRICT)
+Write the artifact using this exact Markdown structure and headings, in this order.
+
+Template:
+
+```md
+# UI/UX Design Manual: <Project Name>
+
+## Metadata
+- Date: YYYY-MM-DD
+- Related:
+  - PRD: `artifacts/<project_slug>/02_prd.md`
+  - Tech Stack: `artifacts/<project_slug>/06_tech_stack.md`
+
+## Visual References
+- Reference 1: <URL or description>
+- Reference 2: <URL or description>
+- Reference 3: <URL or description>
+- Reference 4: <optional>
+- Reference 5: <optional>
+- Textual direction: <optional>
+
+## Design Principles
+- <principle>
+
+## Accessibility
+- Target: WCAG 2.1 AA | WCAG 2.2 AA | Other
+- Keyboard: Required | Optional
+- Color contrast: Required | Optional
+
+## Typography
+- Font families:
+  - Sans: <name>
+  - Serif: <optional>
+  - Mono: <optional>
+- Type scale:
+  - H1: <size/weight/line-height>
+  - H2: <size/weight/line-height>
+  - Body: <size/weight/line-height>
+- Usage rules: <short>
+
+## Color System
+- Brand colors:
+  - Primary: <hex>
+  - Secondary: <hex>
+- Semantic colors:
+  - Success: <hex>
+  - Warning: <hex>
+  - Danger: <hex>
+  - Info: <hex>
+- Neutrals:
+  - Background: <hex>
+  - Surface: <hex>
+  - Text: <hex>
+
+## Layout Rules
+- Grid/container: <short>
+- Spacing scale: <e.g. 4, 8, 12, 16, 24, 32>
+- Density: Compact | Comfortable | Spacious
+
+## Components
+- Buttons: <variants + rules>
+- Inputs: <variants + rules>
+- Navigation: <pattern>
+- Tables/Lists: <pattern>
+- Modals/Dialogs: <pattern>
+- Empty states: <pattern>
+
+## Interaction Patterns
+- Loading states: <short>
+- Errors: <short>
+- Confirmations: <short>
+- Forms: <validation rules>
+
+## Content Style
+- Voice: <short>
+- Terminology: <short>
+
+## UI Definition of Done
+- <check>
+```
 
 Then ask:
 

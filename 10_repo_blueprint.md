@@ -50,14 +50,60 @@ Write to:
 
 `artifacts/<project_slug>/10_repo_blueprint.md`
 
-Include:
-- Folder structure
-- Dependency strategy
-- Environment model
-- Containerization approach
-- CI outline
-- Command surface
-- Documentation structure
+## Output Format (STRICT)
+Write the artifact using this exact Markdown structure and headings, in this order.
+
+Template:
+
+````md
+# Repository Blueprint: <Project Name>
+
+## Metadata
+- Date: YYYY-MM-DD
+- Target: <deployment target>
+
+## Repository Structure
+```text
+<tree>
+```
+
+## Dependency Strategy
+- Policy: <short>
+- Monorepo vs polyrepo: <choice>
+
+## Environment Model
+- Environments: Local | Dev | Staging | Prod
+- Configuration sources: <.env/secret manager/etc>
+- Required environment variables:
+  - `VAR_NAME`: <purpose>
+
+## Containerization
+- Approach: Docker | None | Other
+- Notes: <short>
+
+## CI Outline
+- Lint: <command>
+- Typecheck: <command>
+- Test: <command>
+- Build: <command>
+- Security checks: <optional>
+
+## Command Surface
+- `dev`: <what it does>
+- `test`: <what it does>
+- `lint`: <what it does>
+- `build`: <what it does>
+- `format`: <optional>
+
+## Documentation Structure
+- `00_README.md`: framework
+- `artifacts/<project_slug>/`: design artifacts
+- `docs/`: <optional>
+
+## Decisions
+- Related ADRs:
+  - ADR-###: <title>
+````
 
 Avoid unnecessary infrastructure.
 

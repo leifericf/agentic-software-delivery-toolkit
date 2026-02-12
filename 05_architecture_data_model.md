@@ -53,13 +53,84 @@ Write to:
 
 `artifacts/<project_slug>/05_architecture_data_model.md`
 
-Must include:
-- System shape
-- Domain boundaries
-- Data model
-- Integrity strategy
-- Evolution strategy
-- Known tradeoffs
+## Output Format (STRICT)
+Write the artifact using this exact Markdown structure and headings, in this order.
+
+ID schemes:
+- Domains: `D-001`, `D-002`, ...
+- Components: `C-001`, `C-002`, ...
+- Entities: `ENT-001`, `ENT-002`, ...
+- Flows: `FL-001`, `FL-002`, ...
+- Tradeoffs: `TO-001`, `TO-002`, ...
+
+Template:
+
+```md
+# Architecture & Data Model: <Project Name>
+
+## Metadata
+- Date: YYYY-MM-DD
+- Related:
+  - PRD: `artifacts/<project_slug>/02_prd.md`
+  - Decision Log: `artifacts/<project_slug>/04_decision_log.md`
+  - Open Questions: `artifacts/<project_slug>/00_open_questions.md`
+
+## System Shape
+<1-2 paragraphs describing the overall shape>
+
+## Domain Boundaries
+- D-001: <domain>
+  - Responsibilities: <short>
+  - Owns Data: <yes/no + what>
+  - External Interfaces: <APIs/events/files/manual>
+
+## Components
+- C-001: <component name>
+  - Type: Service | Web App | Worker | Job | Library | External
+  - Responsibilities: <short>
+  - Depends On: <C-### list or ->
+  - Data Stores: <ENT-### list or ->
+
+## Key Flows
+- FL-001: <flow name>
+  - Trigger: <what starts it>
+  - Steps:
+    1. <step>
+    2. <step>
+  - Data touched: <ENT-### list>
+  - Failure handling: <short>
+
+## Data Model
+- ENT-001: <entity name>
+  - Purpose: <short>
+  - Key fields: <comma-separated>
+  - Relationships: <ENT-### relationship notes>
+  - Retention: <short>
+
+## Integrity Strategy
+- Invariants: <bullet list>
+- Idempotency: <short>
+- Concurrency: <short>
+
+## Audit and Compliance
+- Audit needs: <short>
+- PII handling: <short>
+
+## Integrations
+- <system>
+  - Direction: Inbound | Outbound
+  - Interface: API | Webhook | File | Manual
+  - Notes: <short>
+
+## Evolution Strategy
+- Versioning approach: <short>
+- Migration approach: <short>
+
+## Known Tradeoffs
+- TO-001: <tradeoff>
+  - Why chosen: <short>
+  - Cost: <short>
+```
 
 Then ask:
 

@@ -54,10 +54,61 @@ Write to:
 
 `artifacts/<project_slug>/03_risk_assumption_review.md`
 
-Include:
-- Confirmed truths
-- Open risks
-- Recommended simplifications
+## Output Format (STRICT)
+Write the artifact using this exact Markdown structure and headings, in this order.
+
+ID schemes:
+- Confirmed truths: `T-001`, `T-002`, ...
+- Risks: `R-001`, `R-002`, ...
+- Assumptions: `A-001`, `A-002`, ...
+- Simplifications: `S-001`, `S-002`, ...
+
+Template:
+
+```md
+# Risk & Assumption Review: <Project Name>
+
+## Metadata
+- Date: YYYY-MM-DD
+- Reviewed Artifacts:
+  - `artifacts/<project_slug>/01_business_context.md`
+  - `artifacts/<project_slug>/02_prd.md`
+- Open Questions:
+  - `artifacts/<project_slug>/00_open_questions.md`
+
+## Confirmed Truths
+- T-001: <statement>
+  - Evidence: <what supports this>
+
+## Key Risks
+- R-001: <risk>
+  - Category: Product | Technical | Data | Security | Legal | Operational | Org
+  - Likelihood: Low | Medium | High
+  - Impact: Low | Medium | High
+  - Mitigation: <short>
+  - Owner: <role>
+  - Related:
+    - Artifacts: <optional list>
+    - Questions: <optional Q-### list>
+
+## Dangerous Assumptions
+- A-001: <assumption>
+  - Why dangerous: <short>
+  - How to validate: <short>
+  - If false, what breaks: <short>
+
+## Scope Creep Watchlist
+- <potential creep>
+
+## Over-Engineering Traps
+- <trap>
+  - Simplest safe alternative: <short>
+
+## Recommended Simplifications
+- S-001: <simplification>
+  - Tradeoff: <what we lose>
+  - Why acceptable: <short>
+```
 
 Then ask:
 
