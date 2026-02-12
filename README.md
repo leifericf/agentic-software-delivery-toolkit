@@ -5,6 +5,9 @@
 
 This repository provides a **structured prompting workflow** for designing production-grade software systems with AI agents.
 
+It is intentionally a **pre-coding workflow**.
+The goal is to help you define the problem, constraints, and context *before* implementation begins, so you waste less time (and fewer tokens) later undoing wrong assumptions, bad commits, and premature architecture.
+
 It is based on a simple premise:
 
 > AI produces dramatically better systems when given structure, guardrails, and sequencing.
@@ -26,6 +29,16 @@ When building software with AI, the most common failure modes are:
 - Producing inconsistent documentation  
 - Allowing design entropy  
 - Jumping straight into code  
+
+The underlying pattern is the same:
+
+> If the AI doesn't have your real constraints and domain context, it will fill the gaps by guessing.
+
+This framework "sells" time upfront in exchange for less churn later:
+- Fewer dead-end spikes and rewrites
+- Fewer "commit mistakes" caused by missing constraints
+- Cleaner decisions captured once, reused across steps
+- Less token burn from re-litigating basics every time you ask for help
 
 This framework prevents those mistakes by forcing a **deliberate design phase** before implementation.
 
@@ -70,6 +83,8 @@ Instead, you:
 3. Iterate until both parties are satisfied.
 4. Produce the artifact.
 5. Move to the next step.
+
+In this loop, the AI's job is to elicit your knowledge and constraints by asking structured questions, then capture/refine them into durable artifacts.
 
 This creates a **human ↔ AI design loop**.
 
