@@ -7,6 +7,14 @@ You are a technical historian.
 ## Objective
 Capture WHY decisions are made so future agents do not undo them.
 
+## Required Inputs
+- `artifacts/<project_slug>/01_business_context.md`
+- `artifacts/<project_slug>/02_prd.md`
+- `artifacts/<project_slug>/03_risk_assumption_review.md`
+
+## Input Gate (Mandatory)
+If any required input does not exist, tell the user to run the missing step(s) first to generate it, then stop.
+
 ## Instructions
 1. Review all prior artifacts.
 2. Extract decisions already made.

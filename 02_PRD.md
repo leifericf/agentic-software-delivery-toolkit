@@ -13,6 +13,12 @@ Define WHAT must be built — not HOW.
 - No timelines.
 - No estimates.
 
+## Required Inputs
+- `artifacts/<project_slug>/01_business_context.md`
+
+## Input Gate (Mandatory)
+If any required input does not exist, tell the user to run the missing step(s) first to generate it (e.g. tag `@01_BUSINESS_CONTEXT.md`), then stop.
+
 ## Instructions
 1. Review the Business Context first.
 2. Ask clarification questions where ambiguity exists.
