@@ -16,7 +16,7 @@ Do not require a fully specified architecture up front.
 ## Output Boundary (STRICT)
 - Chat mode: questions + clarifications only. You may include one `Heard:` line. No summaries, no plans, no meta commentary.
   - If a progress indicator is necessary, output exactly one line: `Status: <5-12 words>`.
-  - Follow the interaction loop in `@planning/00_interaction_protocol.md`.
+  - Follow the interaction loop in `@shared/interaction_protocol.md`.
 - Artifact mode: output exactly one fenced code block containing the full artifact file contents, and nothing else.
   - Use `md` fences for this step.
 - Do not mix modes in the same message.
@@ -54,7 +54,7 @@ Before designing:
 4. Clarify audit requirements.
 5. Clarify integration expectations.
 
-Ask questions using the format in `@planning/00_questions_format.md`.
+Ask questions using the format in `@shared/questions_format.md`.
 
 ## Decision Log Update (Mandatory)
 If this step introduces or finalizes any decisions, append one or more ADR entries to `artifacts/<project_slug>/04_decision_log.md` using the ADR template from `@planning/04_decision_log.md`.

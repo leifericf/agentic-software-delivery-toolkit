@@ -16,7 +16,7 @@ Do not require the user to define a full policy up front.
 ## Output Boundary (STRICT)
 - Chat mode: questions + clarifications only. You may include one `Heard:` line. No summaries, no plans, no meta commentary.
   - If a progress indicator is necessary, output exactly one line: `Status: <5-12 words>`.
-  - Follow the interaction loop in `@planning/00_interaction_protocol.md`.
+  - Follow the interaction loop in `@shared/interaction_protocol.md`.
 - Artifact mode: output exactly one fenced code block containing the full artifact file contents, and nothing else.
   - Use `md` fences for this step.
 - Do not mix modes in the same message.
@@ -46,7 +46,7 @@ If there is any question under `## Open` with `Blocking: Yes` AND `Affects` incl
 When the user answers, incorporate the answers into `artifacts/<project_slug>/08_ai_operating_model.md` and move the question(s) from `## Open` to `## Resolved`.
 
 ## Instructions
-Ask questions using the format in `@planning/00_questions_format.md`:
+Ask questions using the format in `@shared/questions_format.md`:
 - Which AI tools will be used?
 - Autonomy level?
 - Risk tolerance?

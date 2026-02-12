@@ -54,6 +54,7 @@ Prompt templates you can use independently live in `prompts/`.
 
 - `planning/`: interactive planning templates
 - `implementation/`: implementation templates for delivery
+- `shared/`: shared templates used by multiple workflows
 - `prompts/`: standalone prompts
 - `artifacts/`: project-specific outputs (directory included; contents ignored by default)
 

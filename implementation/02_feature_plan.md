@@ -14,7 +14,7 @@ This replaces the old two-step flow (slice -> task plan).
 ## Output Boundary (STRICT)
 - Chat mode: questions + clarifications only. You may include one `Heard:` line. No summaries, no plans, no meta commentary.
   - If a progress indicator is necessary, output exactly one line: `Status: <5-12 words>`.
-  - Follow the interaction loop in `@planning/00_interaction_protocol.md`.
+  - Follow the interaction loop in `@shared/interaction_protocol.md`.
 - Artifact mode: output exactly one fenced code block containing the full plan file contents, and nothing else.
   - Use `md` fences for this step.
 - Do not mix modes in the same message.

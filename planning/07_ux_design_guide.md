@@ -16,7 +16,7 @@ Do not require detailed UI specs up front.
 ## Output Boundary (STRICT)
 - Chat mode: questions + clarifications only. You may include one `Heard:` line. No summaries, no plans, no meta commentary.
   - If a progress indicator is necessary, output exactly one line: `Status: <5-12 words>`.
-  - Follow the interaction loop in `@planning/00_interaction_protocol.md`.
+  - Follow the interaction loop in `@shared/interaction_protocol.md`.
 - Artifact mode: output exactly one fenced code block containing the full artifact file contents, and nothing else.
   - Use `md` fences for this step.
 - Do not mix modes in the same message.
@@ -94,7 +94,7 @@ Example textual descriptions:
 - "Dark and gloomy with bold red accents, high contrast typography, moody gradients"
 - "Warm editorial: off-white paper background, serif headings, generous line height"
 
-If the user cannot provide references, ask them to pick a direction using the format in `@planning/00_questions_format.md` (e.g. Minimal / Editorial / Playful / Enterprise / Retro / Luxury).
+If the user cannot provide references, ask them to pick a direction using the format in `@shared/questions_format.md` (e.g. Minimal / Editorial / Playful / Enterprise / Retro / Luxury).
 
 Ask questions about:
 - Primary interface surfaces
@@ -108,7 +108,7 @@ Also ask about:
 - Input modalities: Keyboard-only | Keyboard+Mouse | Touch | Mixed
 - Offline/latency constraints: Low | Medium | High
 
-Ask questions using the format in `@planning/00_questions_format.md`.
+Ask questions using the format in `@shared/questions_format.md`.
 
 Do NOT assume toolkits unless already selected.
 

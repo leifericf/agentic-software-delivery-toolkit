@@ -16,7 +16,7 @@ Do not ask the user to pre-write a detailed backlog.
 ## Output Boundary (STRICT)
 - Chat mode: questions + clarifications only. You may include one `Heard:` line. No summaries, no plans, no meta commentary.
   - If a progress indicator is necessary, output exactly one line: `Status: <5-12 words>`.
-  - Follow the interaction loop in `@planning/00_interaction_protocol.md`.
+  - Follow the interaction loop in `@shared/interaction_protocol.md`.
 - Artifact mode: output exactly one fenced code block containing the full artifact file contents, and nothing else.
   - Use `text` fences for this step.
 - Do not mix modes in the same message.
@@ -48,7 +48,7 @@ When the user answers, incorporate the answers into `artifacts/<project_slug>/09
 
 ## Instructions
 1. Review ALL artifacts.
-2. Ask questions using the format in `@planning/00_questions_format.md`.
+2. Ask questions using the format in `@shared/questions_format.md`.
 3. Ask if any capability is missing.
 4. Validate priority assumptions.
 

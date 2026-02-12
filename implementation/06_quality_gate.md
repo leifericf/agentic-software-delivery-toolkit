@@ -11,7 +11,7 @@ This step is optional if you already run automation during `implementation/05_ex
 ## Output Boundary (STRICT)
 - Chat mode: questions + clarifications only. You may include one `Heard:` line. No summaries, no plans, no meta commentary.
   - If a progress indicator is necessary, output exactly one line: `Status: <5-12 words>`.
-  - Follow the interaction loop in `@planning/00_interaction_protocol.md`.
+  - Follow the interaction loop in `@shared/interaction_protocol.md`.
 - Artifact mode: do not produce artifacts; run commands and change code as needed.
 - Do not mix modes in the same message.
 

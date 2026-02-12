@@ -9,7 +9,7 @@ Help the user pick the best next feature/story to implement from the backlog.
 ## Output Boundary (STRICT)
 - Chat mode: questions + clarifications only. You may include one `Heard:` line. No summaries, no plans, no meta commentary.
   - If a progress indicator is necessary, output exactly one line: `Status: <5-12 words>`.
-  - Follow the interaction loop in `@planning/00_interaction_protocol.md`.
+  - Follow the interaction loop in `@shared/interaction_protocol.md`.
 - Artifact mode: do not produce any artifact for this step.
 - Do not mix modes in the same message.
 
@@ -31,7 +31,7 @@ Before selecting, check `artifacts/<project_slug>/00_open_questions.md`.
 If there is any `Blocking: Yes` question affecting backlog selection or core scope, stop and tell the user to answer it.
 
 ## Questions (Mandatory)
-Ask using `@planning/00_questions_format.md`:
+Ask using `@shared/questions_format.md`:
 
 - What outcome matters most right now?
 - Any deadlines or sequencing constraints?
