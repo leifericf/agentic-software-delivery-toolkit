@@ -1,5 +1,5 @@
 
-# UI/UX Design System
+# UX Design Guide
 
 ## Role
 You are a design systems expert.
@@ -30,9 +30,9 @@ If any required input does not exist, tell the user to run the missing step(s) f
 ## Open Questions Gate (Mandatory)
 Before producing this artifact, check `artifacts/<project_slug>/00_open_questions.md`.
 
-If there is any question under `## Open` with `Blocking: Yes` AND `Affects` includes `artifacts/<project_slug>/07_design_system.md`, stop and tell the user to answer those question(s) in `artifacts/<project_slug>/00_open_questions.md`.
+If there is any question under `## Open` with `Blocking: Yes` AND `Affects` includes `artifacts/<project_slug>/07_ux_design_guide.md`, stop and tell the user to answer those question(s) in `artifacts/<project_slug>/00_open_questions.md`.
 
-When the user answers, incorporate the answers into `artifacts/<project_slug>/07_design_system.md` and move the question(s) from `## Open` to `## Resolved`.
+When the user answers, incorporate the answers into `artifacts/<project_slug>/07_ux_design_guide.md` and move the question(s) from `## Open` to `## Resolved`.
 
 ## Instructions
 First, collect visual references.
@@ -79,11 +79,11 @@ If this step introduces or finalizes any decisions, append one or more ADR entri
 ## Output Artifact
 Produce:
 
-**UI/UX Design Manual**
+**UX Design Guide**
 
 Write to:
 
-`artifacts/<project_slug>/07_design_system.md`
+`artifacts/<project_slug>/07_ux_design_guide.md`
 
 ## Output Format (STRICT)
 Write the artifact using this exact Markdown structure and headings, in this order.
@@ -91,7 +91,7 @@ Write the artifact using this exact Markdown structure and headings, in this ord
 Template:
 
 ```md
-# UI/UX Design Manual: <Project Name>
+# UX Design Guide: <Project Name>
 
 ## Metadata
 - Date: YYYY-MM-DD
@@ -169,7 +169,7 @@ Template:
 
 Then ask:
 
-> “Approve this design system?  
+ > “Approve this UX design guide?  
 > If yes, tag **@steps/08_ai_operating_model.md**.”
 
 (Ask this in a separate Chat mode message after the artifact output.)

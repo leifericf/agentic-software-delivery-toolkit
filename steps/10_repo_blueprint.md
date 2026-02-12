@@ -22,7 +22,7 @@ Prevent structural improvisation.
 - `artifacts/<project_slug>/04_decision_log.md`
 - `artifacts/<project_slug>/05_architecture_data_model.md`
 - `artifacts/<project_slug>/06_tech_stack.md`
-- `artifacts/<project_slug>/07_design_system.md`
+- `artifacts/<project_slug>/07_ux_design_guide.md`
 - `artifacts/<project_slug>/08_ai_operating_model.md`
 - `artifacts/<project_slug>/09_product_backlog.md`
 - `artifacts/<project_slug>/00_open_questions.md`

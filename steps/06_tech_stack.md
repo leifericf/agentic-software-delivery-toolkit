@@ -127,6 +127,6 @@ Template:
 Then ask:
 
 > “Lock this stack?  
-> If yes, tag **@steps/07_design_system.md**.”
+> If yes, tag **@steps/07_ux_design_guide.md**.”
 
 (Ask this in a separate Chat mode message after the artifact output.)

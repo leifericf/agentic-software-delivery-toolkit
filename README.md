@@ -106,7 +106,7 @@ Use these filenames (replace `<project_slug>` with a short, lowercase identifier
 - `artifacts/<project_slug>/04_decision_log.md`
 - `artifacts/<project_slug>/05_architecture_data_model.md`
 - `artifacts/<project_slug>/06_tech_stack.md`
-- `artifacts/<project_slug>/07_design_system.md`
+- `artifacts/<project_slug>/07_ux_design_guide.md`
 - `artifacts/<project_slug>/08_ai_operating_model.md`
 - `artifacts/<project_slug>/09_product_backlog.md`
 - `artifacts/<project_slug>/10_repo_blueprint.md`
@@ -207,7 +207,7 @@ Run the steps **in order**:
 4. `@steps/04_decision_log.md` — Decision Log  
 5. `@steps/05_architecture_data_model.md` — Architecture & Data Model  
 6. `@steps/06_tech_stack.md` — Technology Stack  
-7. `@steps/07_design_system.md` — Design System  
+7. `@steps/07_ux_design_guide.md` — UX design guide  
 8. `@steps/08_ai_operating_model.md` — AI Operating Model  
 9. `@steps/09_product_backlog.md` — Product Backlog  
 10. `@steps/10_repo_blueprint.md` — Repository Blueprint  
