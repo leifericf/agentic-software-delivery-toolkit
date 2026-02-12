@@ -34,8 +34,11 @@ Do not require the user to define a full policy up front.
 - `artifacts/<project_slug>/07_ux_design_guide.md` (if applicable; see `@planning/07_design_ux_guide.md`)
 - `artifacts/<project_slug>/00_open_questions.md`
 
-## Input Gate (Mandatory)
-If any required input does not exist, tell the user to run the missing step(s) first to generate it, then stop.
+## Input Gate (Default)
+If a required input file does not exist:
+
+- Prefer to ask the user for the missing information directly (paste the artifact or summarize it in 3-7 bullets), then proceed.
+- If the missing context cannot be reconstructed safely, tell the user to run the missing step(s) first, then stop.
 
 Exception:
 - `artifacts/<project_slug>/07_ux_design_guide.md` may be missing only if a decision log row in `artifacts/<project_slug>/04_decision_log.md` documents that Step 07 was intentionally skipped due to no user-facing interface.

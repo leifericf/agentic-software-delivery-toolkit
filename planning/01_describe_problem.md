@@ -33,8 +33,8 @@ None.
 
 If the user references prior artifacts, treat them as optional inputs.
 
-## Input Gate (Mandatory)
-If a required input is missing, tell the user which step(s) must be run first to produce it, then stop.
+## Input Gate
+None.
 
 ## Open Questions File (Mandatory)
 After `project_slug` is locked, ensure `artifacts/<project_slug>/00_open_questions.md` exists.
@@ -145,13 +145,9 @@ Write to:
 ## Output Format (STRICT)
 Write the artifact using this exact Markdown structure and headings, in this order.
 
-ID schemes:
-- Actors: `ACT-001`, `ACT-002`, ...
-- Workflows: `WF-001`, `WF-002`, ...
-- Constraints: `C-001`, `C-002`, ...
-- Risks: `R-001`, `R-002`, ...
-- Unknowns: `U-001`, `U-002`, ...
-- Simplifications: `S-001`, `S-002`, ...
+Optional IDs (Recommended):
+- Use IDs only if you expect to reference items later or the list is long.
+- If used, prefer: `ACT-001`, `WF-001`, `C-001`, `R-001`, `U-001`, `S-001`.
 
 Template:
 
@@ -174,13 +170,13 @@ Template:
 <What changes if this problem is solved?>
 
 ## Stakeholders
-- ACT-001: <actor name>
+- <actor name>
   - Type: Customer | Internal | Partner | Vendor | Regulator
   - Goals: <short>
   - Responsibilities: <short>
 
 ## Current Workflows
-- WF-001: <workflow name>
+- <workflow name>
   - Trigger: <what starts it>
   - Steps:
     1. <step>
@@ -196,23 +192,23 @@ Template:
 - <thing we will not do>
 
 ## Constraints
-- C-001: <constraint>
+- <constraint>
   - Source: Legal | Policy | Org | Budget | Timeline | Market | Operational
   - Notes: <short>
 
 ## Risks
-- R-001: <risk>
+- <risk>
   - Likelihood: Low | Medium | High
   - Impact: Low | Medium | High
   - Mitigation: <short>
 
 ## Unknowns
-- U-001: <unknown>
+- <unknown>
   - Why it matters: <short>
   - Suggested question: <short>
 
 ## Simplification Opportunities
-- S-001: <simplification>
+- <simplification>
   - Why it helps: <short>
 
 ## References

@@ -35,8 +35,11 @@ Do not ask the user to pre-write a detailed backlog.
 - `artifacts/<project_slug>/08_ai_operating_model.md`
 - `artifacts/<project_slug>/00_open_questions.md`
 
-## Input Gate (Mandatory)
-If any required input does not exist, tell the user to run the missing step(s) first to generate it, then stop.
+## Input Gate (Default)
+If a required input file does not exist:
+
+- Prefer to ask the user for the missing information directly (paste the artifact or summarize it in 3-7 bullets), then proceed.
+- If the missing context cannot be reconstructed safely, tell the user to run the missing step(s) first, then stop.
 
 Exception:
 - `artifacts/<project_slug>/07_ux_design_guide.md` may be missing only if a decision log row in `artifacts/<project_slug>/04_decision_log.md` documents that Step 07 was intentionally skipped due to no user-facing interface.
@@ -67,15 +70,16 @@ Formatting rules:
 - Use blank lines between blocks.
 - No prose outside the blocks.
 
-ID rules:
-- Epic IDs are sequential: `E-001`, `E-002`, ...
-- Story IDs are sequential: `S-001`, `S-002`, ...
+ID rules (Recommended):
+- Prefer ID mode if the backlog is medium/large or will be referenced often.
+- In ID mode, Epic IDs are sequential: `E-001`, `E-002`, ...
+- In ID mode, Story IDs are sequential: `S-001`, `S-002`, ...
 
 Ordering rules:
 - Each Epic block is followed immediately by its Story blocks.
 - Do not interleave stories from different epics.
 
-Epic block template (STRICT):
+Mode A: Epic block template (ID mode) (STRICT):
 
 ```text
 EPIC E-###
@@ -85,7 +89,7 @@ Priority: P0 | P1 | P2
 Notes: <text or ->
 ```
 
-Story block template (STRICT):
+Mode A: Story block template (ID mode) (STRICT):
 
 ```text
 STORY S-###
@@ -125,6 +129,32 @@ Conditions of Done:
 - Verification email is sent
 - Verified users can sign in
 Notes: -
+```
+
+Mode B: Epic block template (Title mode) (STRICT):
+
+```text
+EPIC
+Title: <text>
+Outcome: <text>
+Priority: P0 | P1 | P2
+Notes: <text or ->
+```
+
+Mode B: Story block template (Title mode) (STRICT):
+
+```text
+STORY
+Epic: <epic title>
+Title: <text>
+User: <user type> | -
+Priority: P0 | P1 | P2
+Deps: - | <story title>, <story title>
+Conditions of Done:
+- <testable condition>
+- <testable condition>
+- <testable condition>
+Notes: <text or ->
 ```
 
 No extra commentary.

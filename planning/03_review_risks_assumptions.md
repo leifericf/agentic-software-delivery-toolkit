@@ -29,8 +29,11 @@ Do not ask the user to enumerate risks exhaustively.
 - `artifacts/<project_slug>/02_product_requirements.md`
 - `artifacts/<project_slug>/00_open_questions.md`
 
-## Input Gate (Mandatory)
-If any required input does not exist, tell the user to run the missing step(s) first to generate it, then stop.
+## Input Gate (Default)
+If a required input file does not exist:
+
+- Prefer to ask the user for the missing information directly (paste the artifact or summarize it in 3-7 bullets), then proceed.
+- If the missing context cannot be reconstructed safely, tell the user to run the missing step(s) first, then stop.
 
 ## Open Questions Gate (Mandatory)
 Before producing this artifact, check `artifacts/<project_slug>/00_open_questions.md`.
@@ -76,11 +79,9 @@ Write to:
 ## Output Format (STRICT)
 Write the artifact using this exact Markdown structure and headings, in this order.
 
-ID schemes:
-- Confirmed truths: `T-001`, `T-002`, ...
-- Risks: `R-001`, `R-002`, ...
-- Assumptions: `A-001`, `A-002`, ...
-- Simplifications: `S-001`, `S-002`, ...
+Optional IDs (Recommended):
+- Use IDs only if you expect to reference items later or the list is long.
+- If used, prefer: `T-001`, `R-001`, `A-001`, `S-001`.
 
 Template:
 
@@ -96,11 +97,11 @@ Template:
   - `artifacts/<project_slug>/00_open_questions.md`
 
 ## Confirmed Truths
-- T-001: <statement>
+- <statement>
   - Evidence: <what supports this>
 
 ## Key Risks
-- R-001: <risk>
+- <risk>
   - Category: Product | Technical | Data | Security | Legal | Operational | Org
   - Likelihood: Low | Medium | High
   - Impact: Low | Medium | High
@@ -108,10 +109,10 @@ Template:
   - Owner: <role>
   - Related:
     - Artifacts: <optional list>
-    - Questions: <optional Q-### list>
+    - Open questions: <optional list or ->
 
 ## Dangerous Assumptions
-- A-001: <assumption>
+- <assumption>
   - Why dangerous: <short>
   - How to validate: <short>
   - If false, what breaks: <short>
@@ -124,7 +125,7 @@ Template:
   - Simplest safe alternative: <short>
 
 ## Recommended Simplifications
-- S-001: <simplification>
+- <simplification>
   - Tradeoff: <what we lose>
   - Why acceptable: <short>
 ```

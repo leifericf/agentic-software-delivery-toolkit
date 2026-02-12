@@ -35,8 +35,11 @@ This is an append-only, living document.
 - `artifacts/<project_slug>/03_risk_assumption_review.md`
 - `artifacts/<project_slug>/00_open_questions.md`
 
-## Input Gate (Mandatory)
-If any required input does not exist, tell the user to run the missing step(s) first to generate it, then stop.
+## Input Gate (Default)
+If a required input file does not exist:
+
+- Prefer to ask the user for the missing information directly (paste the artifact or summarize it in 3-7 bullets), then proceed.
+- If the missing context cannot be reconstructed safely, tell the user to run the missing step(s) first, then stop.
 
 ## Open Questions Gate (Mandatory)
 Before updating the decision log, check `artifacts/<project_slug>/00_open_questions.md`.

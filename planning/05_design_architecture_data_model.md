@@ -31,8 +31,11 @@ Do not require a fully specified architecture up front.
 - `artifacts/<project_slug>/04_decision_log.md`
 - `artifacts/<project_slug>/00_open_questions.md`
 
-## Input Gate (Mandatory)
-If any required input does not exist, tell the user to run the missing step(s) first to generate it, then stop.
+## Input Gate (Default)
+If a required input file does not exist:
+
+- Prefer to ask the user for the missing information directly (paste the artifact or summarize it in 3-7 bullets), then proceed.
+- If the missing context cannot be reconstructed safely, tell the user to run the missing step(s) first, then stop.
 
 ## Open Questions Gate (Mandatory)
 Before producing this artifact, check `artifacts/<project_slug>/00_open_questions.md`.
@@ -73,12 +76,9 @@ Write to:
 ## Output Format (STRICT)
 Write the artifact using this exact Markdown structure and headings, in this order.
 
-ID schemes:
-- Domains: `D-001`, `D-002`, ...
-- Components: `C-001`, `C-002`, ...
-- Entities: `ENT-001`, `ENT-002`, ...
-- Flows: `FL-001`, `FL-002`, ...
-- Tradeoffs: `TO-001`, `TO-002`, ...
+Optional IDs (Recommended):
+- Use IDs only if you expect to reference items later or the doc is large.
+- If used, prefer: `D-001`, `C-001`, `ENT-001`, `FL-001`, `TO-001`.
 
 Template:
 
@@ -96,32 +96,32 @@ Template:
 <1-2 paragraphs describing the overall shape>
 
 ## Domain Boundaries
-- D-001: <domain>
+- <domain>
   - Responsibilities: <short>
   - Owns Data: <yes/no + what>
   - External Interfaces: <APIs/events/files/manual>
 
 ## Components
-- C-001: <component name>
+- <component name>
   - Type: Service | Web App | Worker | Job | Library | External
   - Responsibilities: <short>
-  - Depends On: <C-### list or ->
-  - Data Stores: <ENT-### list or ->
+  - Depends On: <list or ->
+  - Data Stores: <list or ->
 
 ## Key Flows
-- FL-001: <flow name>
+- <flow name>
   - Trigger: <what starts it>
   - Steps:
     1. <step>
     2. <step>
-  - Data touched: <ENT-### list>
+  - Data touched: <list>
   - Failure handling: <short>
 
 ## Data Model
-- ENT-001: <entity name>
+- <entity name>
   - Purpose: <short>
   - Key fields: <comma-separated>
-  - Relationships: <ENT-### relationship notes>
+  - Relationships: <relationship notes>
   - Retention: <short>
 
 ## Integrity Strategy
@@ -144,7 +144,7 @@ Template:
 - Migration approach: <short>
 
 ## Known Tradeoffs
-- TO-001: <tradeoff>
+- <tradeoff>
   - Why chosen: <short>
   - Cost: <short>
 ```

@@ -48,8 +48,8 @@ Write to:
 
 `artifacts/<project_slug>/tasks/plan-<feature_slug>.md`
 
-## Output Format (STRICT)
-Use this exact structure:
+## Output Format (Recommended)
+Use this structure (adjust as needed). Prefer clarity over ceremony.
 
 ```md
 # Plan: <Feature Name>
@@ -68,7 +68,7 @@ Use this exact structure:
 - Intended outcome: <short>
 
 ## Chunks
-- CH-001: <chunk name>
+- <chunk name> (optional: `CH-001: <chunk name>`)
   - User value: <short>
   - Scope: <short>
   - Ship criteria: <short, testable>
@@ -83,18 +83,17 @@ Use this exact structure:
 - Prefer small, reviewable commits that map to chunks.
 
 ## Tasks
-- [ ] 0.0 Create local feature branch
-  - [ ] 0.1 Create and checkout a new branch (e.g. `feature/<feature_slug>`)
+- [ ] Create and checkout a new branch (e.g. `feature/<feature_slug>`)
 
-- [ ] 1.0 CH-001: <chunk name>
-  - [ ] 1.1 <task>
-  - [ ] 1.2 <task>
-  - [ ] 1.3 Tests: <what to add>
+- [ ] Implement: <chunk name>
+  - [ ] <task>
+  - [ ] <task>
+  - [ ] Tests: <what to add>
 
-- [ ] 9.0 Quality gate
-  - [ ] 9.1 Run formatters
-  - [ ] 9.2 Run linters
-  - [ ] 9.3 Run tests
+- [ ] Quality gate
+  - [ ] Run formatters
+  - [ ] Run linters
+  - [ ] Run tests
 
 ## Open Questions
 - <any non-blocking questions to capture or ->
