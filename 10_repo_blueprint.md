@@ -1,5 +1,5 @@
 
-# @10_repo_blueprint.md — Repository Blueprint
+# Repository Blueprint
 
 ## Role
 You are a senior systems engineer.

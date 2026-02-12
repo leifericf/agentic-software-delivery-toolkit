@@ -1,5 +1,5 @@
 
-# @05_architecture_data_model.md — Architecture & Data Model
+# Architecture & Data Model
 
 ## Role
 You are a pragmatic software architect.

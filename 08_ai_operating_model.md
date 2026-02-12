@@ -1,5 +1,5 @@
 
-# @08_ai_operating_model.md — AI Operating Model
+# AI Operating Model
 
 ## Role
 You are an AI governance architect.

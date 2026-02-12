@@ -1,5 +1,5 @@
 
-# @07_design_system.md — UI/UX Design System
+# UI/UX Design System
 
 ## Role
 You are a design systems expert.

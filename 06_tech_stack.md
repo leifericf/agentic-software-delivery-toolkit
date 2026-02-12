@@ -1,5 +1,5 @@
 
-# @06_tech_stack.md — Technology Stack Selection
+# Technology Stack
 
 ## Role
 You are a pragmatic technical advisor.

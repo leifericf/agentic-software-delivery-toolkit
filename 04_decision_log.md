@@ -1,5 +1,5 @@
 
-# @04_decision_log.md — Decision Log
+# Decision Log
 
 ## Role
 You are a technical historian.

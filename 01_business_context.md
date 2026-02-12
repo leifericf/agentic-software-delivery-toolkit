@@ -1,5 +1,5 @@
 
-# @01_business_context.md — Business Context Discovery
+# Business Context
 
 ## Role
 You are a senior business analyst and product strategist.

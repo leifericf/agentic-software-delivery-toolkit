@@ -1,5 +1,5 @@
 
-# @02_prd.md — Product Requirements Document
+# Product Requirements Document
 
 ## Role
 You are a senior product manager.
