@@ -10,6 +10,7 @@ These templates emerged from many hours of experimentation across different LLMs
 ## What You Get
 
 - A step-by-step planning sequence in `planning/` (interactive templates).
+- An implementation workflow in `implementation/` for picking a feature, planning tasks, and delivering incrementally.
 - A consistent artifact set written to `artifacts/<project_slug>/`.
 - Reusable standalone prompts in `prompts/`.
 
@@ -38,37 +39,10 @@ You do not need to front-load detail: start Step 01 with a loose paragraph descr
 - Capture decisions: undocumented decisions get re-litigated.
 - Constrain the agent: good outputs follow good constraints.
 
-## Planning Steps
+## Workflows
 
-Run these **in order**:
-
-1. `planning/01_problem_description.md`
-2. `planning/02_product_requirements.md`
-3. `planning/03_risk_assumption_review.md`
-4. `planning/04_decision_log.md`
-5. `planning/05_architecture_data_model.md`
-6. `planning/06_tech_stack.md`
-7. `planning/07_ux_design_guide.md` (skip only if there are no UI surfaces; the agent records the skip in the decision log)
-8. `planning/08_ai_operating_model.md`
-9. `planning/09_product_backlog.md`
-10. `planning/10_repo_blueprint.md`
-
-## Standard Artifact Set
-
-Each planning step produces one primary artifact in `artifacts/<project_slug>/`:
-
-- `artifacts/<project_slug>/00_project_meta.md`
-- `artifacts/<project_slug>/00_open_questions.md`
-- `artifacts/<project_slug>/01_problem_description.md`
-- `artifacts/<project_slug>/02_product_requirements.md`
-- `artifacts/<project_slug>/03_risk_assumption_review.md`
-- `artifacts/<project_slug>/04_decision_log.md`
-- `artifacts/<project_slug>/05_architecture_data_model.md`
-- `artifacts/<project_slug>/06_tech_stack.md`
-- `artifacts/<project_slug>/07_ux_design_guide.md`
-- `artifacts/<project_slug>/08_ai_operating_model.md`
-- `artifacts/<project_slug>/09_product_backlog.md`
-- `artifacts/<project_slug>/10_repo_blueprint.md`
+- Planning: `planning/README.md`
+- Implementation: `implementation/README.md`
 
 ## Standalone Prompts
 
@@ -78,7 +52,8 @@ Prompt templates you can use independently live in `prompts/`.
 
 ## Repo Layout
 
-- `planning/`: interactive templates (the main workflow)
+- `planning/`: interactive planning templates
+- `implementation/`: implementation templates for delivery
 - `prompts/`: standalone prompts
 - `artifacts/`: project-specific outputs (directory included; contents ignored by default)
 
