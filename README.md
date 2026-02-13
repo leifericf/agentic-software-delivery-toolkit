@@ -1,9 +1,11 @@
 
 # Agentic Software Delivery Toolkit
 
-Workflows and prompt templates for planning and shipping software with LLM-powered agents.
+Workflows and prompt templates for planning and implementing software with LLM-powered agents.
 
-This repo is intentionally **pre-coding**: it helps you elicit constraints, make decisions explicit, and produce durable artifacts before you generate a codebase.
+The planning workflow is intentionally **pre-coding**: it helps you elicit constraints, make decisions explicit, and produce durable artifacts before you generate (or modify) a codebase.
+
+The implementation workflow then uses those artifacts to pick a feature, plan the work, and deliver incrementally.
 
 These templates emerged from many hours of experimentation across different LLMs and platforms and are intended to be mostly model-agnostic. Treat them as a starting point: fork this repo and adapt whatever you need as you learn what works for your team and project.
 
