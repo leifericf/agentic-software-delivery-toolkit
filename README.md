@@ -40,6 +40,8 @@ Sub-goals:
 
 Note: the agent tracks open questions in `artifacts/<project_slug>/00_open_questions.md` and captures decisions in `artifacts/<project_slug>/04_decision_log.md`. You can paste answers into the open questions file and ask the agent to incorporate them into the relevant artifacts.
 
+Tip: you can steer the agent's question style for the next turn by writing `Mode: natural`, `Mode: choice`, `Mode: binary`, or `Mode: creative`.
+
 You do not need to front-load detail: start Step 01 with a loose paragraph describing the problem; the agent will drive the back-and-forth to gather specifics.
 
 ## Forking Guidance
