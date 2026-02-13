@@ -33,14 +33,6 @@ You do not need to front-load detail: start Step 01 with a loose paragraph descr
 - Add your own templates for recurring work (reviews, incidents, migrations, onboarding).
 - Keep outputs consistent so your agents can find and reuse context across sessions.
 
-## Operating Principles
-
-- Sequence beats cleverness: the order of decisions matters.
-- Prefer durable simplicity: designs that still feel right in 5-10 years.
-- Put novelty in the product, keep infrastructure boring.
-- Capture decisions: undocumented decisions get re-litigated.
-- Constrain the agent: good outputs follow good constraints.
-
 ## Workflows
 
 - Planning: `planning/README.md`
