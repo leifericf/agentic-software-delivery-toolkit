@@ -35,7 +35,9 @@ Use Creative when:
 
 ### Rules
 - Provide 3-5 prefilled choices that are mutually exclusive and cover the main branches (include meaningful extremes when applicable).
-- Each choice must be on its own line.
+- The question must be on its own line.
+- Do not put any choices on the same line as the question.
+- Each choice must be on its own line under the question it belongs to.
 - Each choice must have a letter.
 - Each choice should be a short sentence: core value + clarifying hint.
 - Always include two additional lettered choices:

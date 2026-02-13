@@ -103,6 +103,7 @@ The agent should follow the override for that turn unless it would block progres
 ## Agent Message Style (Chat Mode)
 - Natural mode: output only the numbered questions (choices optional).
 - Choice/Binary mode: output only the numbered questions + choices/answer format.
+  - In Choice mode, list each choice on its own line under its question.
 - Optional preface (both modes):
   - `Heard: <short, concrete restatement>` (one line), and/or
   - a brief recap (1-3 bullets) when it reduces re-asking or confusion.
