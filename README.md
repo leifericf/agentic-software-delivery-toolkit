@@ -9,6 +9,21 @@ The implementation workflow then uses those artifacts to pick a feature, plan th
 
 These templates emerged from many hours of experimentation across different LLMs and platforms and are intended to be mostly model-agnostic. Treat them as a starting point: fork this repo and adapt whatever you need as you learn what works for your team and project.
 
+## Goals
+
+Main goal: help you reliably turn a fuzzy idea into shipped software by giving agents a clear workflow, durable context, and reusable templates that reduce repetition and cost.
+
+Sub-goals:
+
+- Make constraints and decisions explicit early (so you backtrack less).
+- Support incremental delivery: small, reviewable changes with clear next steps.
+- Produce reusable artifacts that persist across sessions and tools.
+- Provide templates for commonly performed tasks so you don't have to repeat yourself.
+- Codify hard-won software development experience into reusable workflows that guide agents toward higher quality output.
+- Lower the barrier to entry for vibe coding, especially for non-technical builders.
+- Optimize token usage (especially output tokens) to use models more economically.
+- Stay model-agnostic and easy to fork, remix, and extend.
+
 ## What You Get
 
 - A step-by-step planning sequence in `planning/` (interactive templates).
