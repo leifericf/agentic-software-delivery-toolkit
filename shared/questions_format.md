@@ -64,6 +64,7 @@ E) Can't answer / N/A
 ### Rules
 - Ask a yes/no question.
 - Accept: Y/y, N/n, DK (don't know), NA (case-insensitive).
+- Guardrail: if the goal/success criteria are not yet anchored, prefer 1 Natural anchor question first. Use Binary early mainly for true blockers, contradictions, or non-negotiable constraints.
 
 ### Format
 Example:

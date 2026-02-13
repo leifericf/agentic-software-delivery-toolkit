@@ -17,6 +17,32 @@ This document defines the intended "human <-> AI" interaction loop for all workf
 
 If the user provides little or no initial context, ask 1 broad Natural-mode question about the need/problem they want to solve.
 
+## Progressive Narrowing (Default)
+Default early-planning shape: Explore -> Define -> Converge.
+
+Explore (broad, low-assumption):
+- Anchor value: what would make this conversation useful?
+- Identify the core problem/challenge.
+- Define success (future-focused): if solved, what changes?
+
+Define (make it concrete):
+- Ask for a real example or walkthrough of "one instance" of the workflow.
+- Ask what they've already tried.
+- Identify constraints and non-negotiables.
+
+Converge (control scope and lock direction):
+- Ask anti-goals: what should NOT happen, what's off the table, what's unacceptable?
+- Ask prioritization: if we can only solve one thing next, what is it?
+- Confirm a short summary and proceed to the next deliverable.
+
+Default early-stage prompts (Natural):
+- "What would make this discussion valuable for you?"
+- "What's the biggest challenge you want to solve?"
+- "If this were solved, what would success look like?"
+- "Walk me through one real example of this happening."
+- "What have you already tried, and why didn't it work?"
+- "What should we avoid / what would be an unacceptable solution?"
+
 ## Open Questions Backlog (Mandatory)
 Before asking any new questions:
 - If `artifacts/<project_slug>/00_open_questions.md` exists, scan `## Open` for unanswered items.
@@ -26,7 +52,7 @@ Before asking any new questions:
 ## Chat Loop (Mandatory)
 1. Ask a small batch of questions (max 3).
 2. Wait for the user's answers.
-3. Reflect back what you heard in one short, factual paragraph (<= 280 characters).
+3. Reflect back what you heard in one short, factual paragraph (<= 280 characters) as the optional preface to the next question batch.
    - Exception: you can skip this if the user answered in a highly structured way (e.g. numbered answers with no ambiguity) and repeating it would add noise.
 4. If answers are ambiguous or contradictory, ask the smallest possible follow-up batch.
 5. Repeat until the step has enough clarity to produce the artifact.
@@ -58,6 +84,14 @@ Mode selection checklist (symptom -> move):
 - Many possible solution branches -> Choice to pick the path.
 - User provides a lot of narrative but no concrete facts -> Natural (one broad question) then Binary.
 - User repeatedly answers "not sure" -> one Creative question, then Binary/Choice.
+
+## Red Flags (Detect -> Redirect)
+If you detect:
+- Repetition without progress -> summarize in <= 280 chars, then ask a prioritization question (Choice or Natural).
+- Vague language ("fast", "easy", "secure") -> ask for one concrete example and one measurable definition.
+- Emotional overwhelm -> ask only 1 question; offer park/drop explicitly.
+- Disengagement (very short answers) -> ask what outcome they want from the conversation OR use Binary for the single biggest uncertainty.
+- Lack of ownership ("they should fix it") -> identify who decides, what constraints are real, and what the user can influence.
 
 ## User Control (Mode Overrides)
 The user may explicitly set how the next turn should behave:
