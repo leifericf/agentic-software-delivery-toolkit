@@ -58,6 +58,7 @@ You do not need to front-load detail: start Step 01 with a loose paragraph descr
 Prompt templates you can use independently live in `prompts/`.
 
 - `prompts/git_commit.md`
+- `prompts/git_merge.md`
 
 ## Repo Layout
 
