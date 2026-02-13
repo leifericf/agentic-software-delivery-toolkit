@@ -10,7 +10,7 @@ Translate architecture into executable work.
 ## Starting Point (Mandatory)
 Do not ask the user to pre-write a detailed backlog.
 
-- Draft epics/stories from the artifacts.
+- Draft a simple hierarchy of backlog items from the artifacts.
 - Use back-and-forth questions to confirm priorities, sequencing, and scope.
 
 ## Output Boundary (STRICT)
@@ -65,99 +65,37 @@ If producing the backlog requires making new decisions, stop and capture them as
 
 The generated backlog must be human-readable AND consistently structured.
 
-Formatting rules:
-- Use the exact block templates below.
-- Use blank lines between blocks.
-- No prose outside the blocks.
-
-ID rules (Recommended):
-- Prefer ID mode if the backlog is medium/large or will be referenced often.
-- In ID mode, Epic IDs are sequential: `E-001`, `E-002`, ...
-- In ID mode, Story IDs are sequential: `S-001`, `S-002`, ...
+Keep it simple:
+- A flat list of high-level items.
+- Under each high-level item, a flat list of lower-level items.
+- No IDs.
+- No special fields (no Outcome/User/Deps/Notes blocks).
+- Do not write Conditions of Done in the backlog; add them later when a lower-level item is selected for implementation.
+- Priority is inferred by order: higher in the list = higher priority.
 
 Ordering rules:
-- Each Epic block is followed immediately by its Story blocks.
-- Do not interleave stories from different epics.
+- Each high-level item appears once.
+- Each high-level item is followed immediately by its indented lower-level items.
+- Do not interleave lower-level items across different high-level items.
 
-Mode A: Epic block template (ID mode) (STRICT):
-
-```text
-EPIC E-###
-Title: <text>
-Outcome: <text>
-Priority: P0 | P1 | P2
-Notes: <text or ->
-```
-
-Mode A: Story block template (ID mode) (STRICT):
-
-```text
-STORY S-###
-Epic: E-###
-Title: <text>
-User: U-### | -
-Priority: P0 | P1 | P2
-Deps: - | S-###, S-###
-Conditions of Done:
-- <testable condition>
-- <testable condition>
-- <testable condition>
-Notes: <text or ->
-```
-
-Conditions of Done rules:
-- 3-7 bullet lines
-- Each bullet is a short, testable statement
+Format (STRICT):
+- Output exactly one markdown list.
+- High-level items are top-level list items.
+- Lower-level items are indented two spaces under their parent item.
+- No prose before/after the list.
 
 Example (format only):
 
 ```text
-EPIC E-001
-Title: Account onboarding
-Outcome: Users can sign up and start using the product
-Priority: P0
-Notes: -
+- Account onboarding
+  - Email signup
+  - Email verification
+  - Password reset
 
-STORY S-001
-Epic: E-001
-Title: Email signup
-User: U-001
-Priority: P0
-Deps: -
-Conditions of Done:
-- User can create an account with email + password
-- Verification email is sent
-- Verified users can sign in
-Notes: -
+- Billing
+  - Add payment method
+  - View invoices
 ```
-
-Mode B: Epic block template (Title mode) (STRICT):
-
-```text
-EPIC
-Title: <text>
-Outcome: <text>
-Priority: P0 | P1 | P2
-Notes: <text or ->
-```
-
-Mode B: Story block template (Title mode) (STRICT):
-
-```text
-STORY
-Epic: <epic title>
-Title: <text>
-User: <user type> | -
-Priority: P0 | P1 | P2
-Deps: - | <story title>, <story title>
-Conditions of Done:
-- <testable condition>
-- <testable condition>
-- <testable condition>
-Notes: <text or ->
-```
-
-No extra commentary.
 
 Produce:
 

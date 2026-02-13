@@ -37,6 +37,7 @@ Do not require exhaustive design.
 - Draft slices and tasks directly from the artifacts.
 - Ask only what is needed to avoid wrong assumptions.
 - Aim for 2-6 chunks; each chunk independently testable.
+- When you select a story from the backlog to implement, define its Conditions of Done in this plan (3-7 short, testable bullets).
 
 ## Open Questions Gate (Mandatory)
 Before producing the plan, check `artifacts/<project_slug>/00_open_questions.md`.
@@ -56,7 +57,7 @@ Use this structure (adjust as needed). Prefer clarity over ceremony.
 
 ## Metadata
 - Date: YYYY-MM-DD
-- Backlog item: <ID or name>
+- Backlog item: <epic/story name>
 - Feature slug: <feature_slug>
 - Related:
   - PRD: `artifacts/<project_slug>/02_product_requirements.md`
@@ -66,6 +67,11 @@ Use this structure (adjust as needed). Prefer clarity over ceremony.
 
 ## Context
 - Intended outcome: <short>
+
+## Conditions of Done
+- <short, testable condition>
+- <short, testable condition>
+- <short, testable condition>
 
 ## Chunks
 - <chunk name> (optional: `CH-001: <chunk name>`)
