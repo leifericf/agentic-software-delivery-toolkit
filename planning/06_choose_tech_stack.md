@@ -10,18 +10,11 @@ Select stable technology aligned with the architecture.
 ## Starting Point (Mandatory)
 Do not ask the user to research or pre-decide everything.
 
-- Collect constraints and preferences in rough terms.
-- Propose a short set of options and narrow via questions.
+- Collect rough constraints/preferences.
+- Propose a short option set; narrow via questions.
 
 ## Output Boundary (STRICT)
-- Chat mode: questions + clarifications only.
-  - Optional: one `Heard:` line and/or a brief recap (1-3 bullets) before the questions.
-  - No plans, no meta commentary. Avoid long summaries.
-  - If a progress indicator is necessary, output exactly one line: `Status: <5-12 words>`.
-  - Follow the interaction loop in `@shared/interaction_protocol.md`.
-- Artifact mode: output exactly one fenced code block containing the full artifact file contents.
-  - Use `md` fences for this step.
-- Mixed output is allowed when it reduces friction (e.g. brief recap + artifact, or 1-3 final questions + draft artifact).
+See `@shared/output_boundary.md` (Artifact: single `md` fenced block).
 
 ## Required Inputs
 - `artifacts/<project_slug>/00_project_meta.md`
@@ -33,17 +26,10 @@ Do not ask the user to research or pre-decide everything.
 - `artifacts/<project_slug>/00_open_questions.md`
 
 ## Input Gate (Default)
-If a required input file does not exist:
-
-- Prefer to ask the user for the missing information directly (paste the artifact or summarize it in 3-7 bullets), then proceed.
-- If the missing context cannot be reconstructed safely, tell the user to run the missing step(s) first, then stop.
+See `@shared/input_gate.md`.
 
 ## Open Questions Gate (Mandatory)
-Before producing this artifact, check `artifacts/<project_slug>/00_open_questions.md`.
-
-If there is any unchecked item under `## Open` tagged `[Blocking]` whose `[Affects: ...]` includes `06_tech_stack.md`, stop and tell the user to answer it in `artifacts/<project_slug>/00_open_questions.md`.
-
-When the user answers, incorporate the answer into `artifacts/<project_slug>/06_tech_stack.md` and move the item from `## Open` to `## Resolved` (mark it `[x]`).
+See `@shared/open_questions_gate.md` (Affects: `06_tech_stack.md`).
 
 ## Bias
 Favor:
@@ -55,9 +41,7 @@ Favor:
 Avoid trend-driven choices.
 
 ## Instructions
-Before recommending:
-
-Ask questions using the format in `@shared/questions_format.md` about:
+Before recommending, ask (via `@shared/questions_format.md`) about:
 - Team expertise
 - Longevity expectations
 - Hosting preferences
@@ -67,15 +51,10 @@ Ask questions using the format in `@shared/questions_format.md` about:
 Explain tradeoffs clearly.
 
 ## Decision Log Update (Mandatory)
-If this step introduces or finalizes any decisions, append one or more rows to `artifacts/<project_slug>/04_decision_log.md` using the table format from `@planning/04_log_decisions.md`.
+See `@shared/decision_log_update.md`.
 
 ## Output Artifact
-Produce:
-
-**Technology Stack Specification**
-
-Write to:
-
+Write:
 `artifacts/<project_slug>/06_tech_stack.md`
 
 ## Output Format (STRICT)

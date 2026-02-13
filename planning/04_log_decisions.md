@@ -9,24 +9,16 @@ Capture decisions quickly so future agents do not undo them.
 ## Starting Point (Mandatory)
 Do not expect the user to write formal decision docs.
 
-- Ask for rough decisions in plain language (bullets are fine).
-- Convert them into short table rows and iterate until accurate.
+- Ask for rough decisions in plain language (bullets fine).
+- Convert to short table rows; iterate until accurate.
 
 ## Output Boundary (STRICT)
-- Chat mode: questions + clarifications only.
-  - Optional: one `Heard:` line and/or a brief recap (1-3 bullets) before the questions.
-  - No plans, no meta commentary. Avoid long summaries.
-  - If a progress indicator is necessary, output exactly one line: `Status: <5-12 words>`.
-  - Follow the interaction loop in `@shared/interaction_protocol.md`.
-- Artifact mode: output exactly one fenced code block containing the full artifact file contents.
-  - Use `md` fences for this step.
-- Mixed output is allowed when it reduces friction (e.g. brief recap + artifact, or 1-3 final questions + draft artifact).
+See `@shared/output_boundary.md` (Artifact: single `md` fenced block).
 
 ## Artifact Behavior
-This is an append-only, living document.
-
-- Do not rewrite prior rows except to correct factual errors.
-- If a decision changes, append a new row that references the prior decision in plain language.
+Append-only living document.
+- Only change prior rows to fix factual errors.
+- If a decision changes, append a new row referencing the earlier one.
 
 ## Required Inputs
 - `artifacts/<project_slug>/00_project_meta.md`
@@ -36,17 +28,10 @@ This is an append-only, living document.
 - `artifacts/<project_slug>/00_open_questions.md`
 
 ## Input Gate (Default)
-If a required input file does not exist:
-
-- Prefer to ask the user for the missing information directly (paste the artifact or summarize it in 3-7 bullets), then proceed.
-- If the missing context cannot be reconstructed safely, tell the user to run the missing step(s) first, then stop.
+See `@shared/input_gate.md`.
 
 ## Open Questions Gate (Mandatory)
-Before updating the decision log, check `artifacts/<project_slug>/00_open_questions.md`.
-
-If there is any unchecked item under `## Open` tagged `[Blocking]` whose `[Affects: ...]` includes `04_decision_log.md`, stop and tell the user to answer it in `artifacts/<project_slug>/00_open_questions.md`.
-
-When the user answers, incorporate the answer into decision row(s) and move the item from `## Open` to `## Resolved` (mark it `[x]`).
+See `@shared/open_questions_gate.md` (Affects: `04_decision_log.md`).
 
 ## Instructions
 1. Review all prior artifacts.
@@ -55,12 +40,7 @@ When the user answers, incorporate the answer into decision row(s) and move the 
 4. Use the question format in `@shared/questions_format.md` to finalize them.
 
 ## Output Artifact
-Produce:
-
-**Decision Log**
-
-Write to:
-
+Write:
 `artifacts/<project_slug>/04_decision_log.md`
 
 File format (STRICT):

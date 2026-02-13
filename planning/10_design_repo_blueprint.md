@@ -10,18 +10,11 @@ Prevent structural improvisation.
 ## Starting Point (Mandatory)
 Do not require the user to specify a full repo design up front.
 
-- Start from rough constraints (deployment target, CI expectations, security posture).
-- Use questions to converge on a repo structure that matches the plan.
+- Start from rough constraints (deployment target, CI, security posture).
+- Converge on a repo structure that matches the plan.
 
 ## Output Boundary (STRICT)
-- Chat mode: questions + clarifications only.
-  - Optional: one `Heard:` line and/or a brief recap (1-3 bullets) before the questions.
-  - No plans, no meta commentary. Avoid long summaries.
-  - If a progress indicator is necessary, output exactly one line: `Status: <5-12 words>`.
-  - Follow the interaction loop in `@shared/interaction_protocol.md`.
-- Artifact mode: output exactly one fenced code block containing the full artifact file contents.
-  - Use `md` fences for this step.
-- Mixed output is allowed when it reduces friction (e.g. brief recap + artifact).
+See `@shared/output_boundary.md` (Artifact: single `md` fenced block).
 
 ## Required Inputs
 - `artifacts/<project_slug>/00_project_meta.md`
@@ -37,40 +30,22 @@ Do not require the user to specify a full repo design up front.
 - `artifacts/<project_slug>/00_open_questions.md`
 
 ## Input Gate (Default)
-If a required input file does not exist:
-
-- Prefer to ask the user for the missing information directly (paste the artifact or summarize it in 3-7 bullets), then proceed.
-- If the missing context cannot be reconstructed safely, tell the user to run the missing step(s) first, then stop.
+See `@shared/input_gate.md`.
 
 Exception:
 - `artifacts/<project_slug>/07_ux_design_guide.md` may be missing only if a decision log row in `artifacts/<project_slug>/04_decision_log.md` documents that Step 07 was intentionally skipped due to no user-facing interface.
 
 ## Open Questions Gate (Mandatory)
-Before producing this artifact, check `artifacts/<project_slug>/00_open_questions.md`.
-
-If there is any unchecked item under `## Open` tagged `[Blocking]` whose `[Affects: ...]` includes `10_repo_blueprint.md`, stop and tell the user to answer it in `artifacts/<project_slug>/00_open_questions.md`.
-
-When the user answers, incorporate the answer into `artifacts/<project_slug>/10_repo_blueprint.md` and move the item from `## Open` to `## Resolved` (mark it `[x]`).
+See `@shared/open_questions_gate.md` (Affects: `10_repo_blueprint.md`).
 
 ## Instructions
-Ask questions using the format in `@shared/questions_format.md`:
-- Deployment target?
-- Hosting constraints?
-- Security posture?
-- CI expectations?
-
-Then design the repository.
+Ask (via `@shared/questions_format.md`) about deployment target, hosting constraints, security posture, and CI expectations. Then design the repo.
 
 ## Decision Log Update (Mandatory)
-If this step introduces or finalizes any decisions, append one or more rows to `artifacts/<project_slug>/04_decision_log.md` using the table format from `@planning/04_log_decisions.md`.
+See `@shared/decision_log_update.md`.
 
 ## Output Artifact
-Produce:
-
-**Repository Blueprint**
-
-Write to:
-
+Write:
 `artifacts/<project_slug>/10_repo_blueprint.md`
 
 ## Output Format (STRICT)

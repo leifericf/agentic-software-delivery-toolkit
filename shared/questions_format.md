@@ -1,7 +1,7 @@
  
 # Question Modes (Natural / Choice / Binary / Creative)
 
-When a step asks the user questions, pick the mode that gets new information with the least friction.
+When you need user input, pick the mode that gets new information with the least friction.
 
 Default: Natural.
 
@@ -15,21 +15,13 @@ Default: Natural.
 
 ## When To Use Which
 
-Use Natural when:
-- You need context, motivations, or examples.
-- The user is already writing in full sentences.
-- Forced options would be premature or misleading.
+Natural: need context/motivation/examples; user is writing in sentences; options would be premature.
 
-Use Choice when:
-- You can offer clear, mutually exclusive branches.
-- You want fast, scannable answers that are easy to reference later.
+Choice: clear, mutually exclusive branches; you want fast, scannable answers.
 
-Use Binary when:
-- You want a fast clarification (yes/no), or to resolve contradictions.
+Binary: fast clarification (yes/no) or contradiction resolution.
 
-Use Creative when:
-- Progress is stalled (e.g. repeated "not sure", vague answers, circular discussion).
-- You want a fresh angle to surface unknown unknowns.
+Creative: progress is stalled ("not sure", vagueness, circular loop); you need a fresh angle.
 
 ## Choice Mode
 
@@ -48,16 +40,9 @@ Use Creative when:
 Example:
 
 1) Primary interface surface?
-A) Web. A browser-based UI is the primary surface.
-B) Desktop. A native app is the primary surface.
-C) CLI. The user mostly interacts via commands.
-D) Write your own answer
-E) Can't answer / N/A
-
-2) Pick a project slug.
-A) `acme_billing`. Short, explicit, and easy to type.
-B) `acme_finance_tools`. Broader; covers billing plus related finance workflows.
-C) `billing`. Very short; only use if the repo scope is truly narrow.
+A) Web. Browser UI is primary.
+B) Desktop. Native app is primary.
+C) CLI. Mostly commands.
 D) Write your own answer
 E) Can't answer / N/A
 
@@ -66,7 +51,7 @@ E) Can't answer / N/A
 ### Rules
 - Ask a yes/no question.
 - Accept: Y/y, N/n, DK (don't know), NA (case-insensitive).
-- Guardrail: if the goal/success criteria are not yet anchored, prefer 1 Natural anchor question first. Use Binary early mainly for true blockers, contradictions, or non-negotiable constraints.
+- Guardrail: if goals/success criteria are not anchored, ask 1 Natural anchor question first. Use Binary early mainly for blockers, contradictions, non-negotiables.
 
 ### Format
 Example:
@@ -82,7 +67,7 @@ Example:
 - Start with one broad question.
 - Add a second/third question only when it directly unblocks the next deliverable (artifact, decision, plan).
 - Use narrower follow-ups only when the prior answer is incomplete/ambiguous.
-- Include a "Can't answer / N/A" escape hatch when a missing answer would block progress.
+- If a missing answer would block progress, include a "Can't answer / N/A" escape hatch.
 
 ### Format
 Example:
@@ -98,8 +83,8 @@ Example:
 - Keep it relevant to the problem at hand.
 - Use inversion, analogy, or a constraint twist to unlock new information.
 - Light humor is allowed if it helps clarity and stays respectful.
-- If the runtime supports web browsing, you may do a brief search (1-3 queries) to find cross-domain analogs and ask a better question.
-  - Do not paste links or browsing output; only use it to shape the question.
+- If runtime supports browsing, you may do 1-3 queries for cross-domain analogs.
+  - Do not paste links/output; only use it to shape the question.
 - After the user answers, return to Natural/Binary/Choice.
 
 ### Format

@@ -9,14 +9,7 @@ Ask clarifying questions about the implementation plan and revise it based on th
 This step is optional. Use it when the task plan has unclear acceptance criteria, risky migrations, external dependencies, or any decision that would be expensive to change later.
 
 ## Output Boundary (STRICT)
-- Chat mode: questions + clarifications only.
-  - Optional: one `Heard:` line and/or a brief recap (1-3 bullets) before the questions.
-  - No plans, no meta commentary. Avoid long summaries.
-  - If a progress indicator is necessary, output exactly one line: `Status: <5-12 words>`.
-  - Follow the interaction loop in `@shared/interaction_protocol.md`.
-- Artifact mode: output exactly one fenced code block containing the updated task plan file contents.
-  - Use `md` fences for this step.
-- Mixed output is allowed when it reduces friction (e.g. brief recap + updated plan).
+See `@shared/output_boundary.md` (Artifact: single `md` fenced block).
 
 ## Required Inputs
 - `artifacts/<project_slug>/tasks/plan-<feature_slug>.md`

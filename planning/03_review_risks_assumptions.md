@@ -10,18 +10,11 @@ Expose hidden risks BEFORE architecture begins.
 ## Starting Point (Mandatory)
 Do not ask the user to enumerate risks exhaustively.
 
-- Surface likely risks and assumptions from the artifacts so far.
-- Use targeted questions to confirm, reject, or refine.
+- Pull likely risks/assumptions from existing artifacts.
+- Use targeted questions to confirm/reject/refine.
 
 ## Output Boundary (STRICT)
-- Chat mode: questions + clarifications only.
-  - Optional: one `Heard:` line and/or a brief recap (1-3 bullets) before the questions.
-  - No plans, no meta commentary. Avoid long summaries.
-  - If a progress indicator is necessary, output exactly one line: `Status: <5-12 words>`.
-  - Follow the interaction loop in `@shared/interaction_protocol.md`.
-- Artifact mode: output exactly one fenced code block containing the full artifact file contents.
-  - Use `md` fences for this step.
-- Mixed output is allowed when it reduces friction (e.g. brief recap + artifact, or 1-3 final questions + draft artifact).
+See `@shared/output_boundary.md` (Artifact: single `md` fenced block).
 
 ## Required Inputs
 - `artifacts/<project_slug>/00_project_meta.md`
@@ -30,19 +23,10 @@ Do not ask the user to enumerate risks exhaustively.
 - `artifacts/<project_slug>/00_open_questions.md`
 
 ## Input Gate (Default)
-If a required input file does not exist:
-
-- Prefer to ask the user for the missing information directly (paste the artifact or summarize it in 3-7 bullets), then proceed.
-- If the missing context cannot be reconstructed safely, tell the user to run the missing step(s) first, then stop.
+See `@shared/input_gate.md`.
 
 ## Open Questions Gate (Mandatory)
-Before producing this artifact, check `artifacts/<project_slug>/00_open_questions.md`.
-
-If there is any unchecked item under `## Open` tagged `[Blocking]` whose `[Affects: ...]` includes `03_risk_assumption_review.md`, stop and tell the user to answer it in `artifacts/<project_slug>/00_open_questions.md`.
-
-When the user answers, incorporate the answer into `artifacts/<project_slug>/03_risk_assumption_review.md` and move the item from `## Open` to `## Resolved` (mark it `[x]`).
-
-If new clarification questions are discovered, add them to `artifacts/<project_slug>/00_open_questions.md` under `## Open`.
+See `@shared/open_questions_gate.md` (Affects: `03_risk_assumption_review.md`).
 
 ## Instructions
 Analyze everything produced so far.
@@ -59,8 +43,8 @@ Identify:
 Ask questions using the format in `@shared/questions_format.md`.
 
 Prefer:
-- Binary questions
-- Multiple-choice questions
+- Binary
+- Choice
 
 Avoid open-ended prompts unless necessary.
 
@@ -68,12 +52,7 @@ Avoid open-ended prompts unless necessary.
 Continue until uncertainty is low.
 
 ## Output Artifact
-Produce a document:
-
-**Risk & Assumption Review**
-
-Write to:
-
+Write:
 `artifacts/<project_slug>/03_risk_assumption_review.md`
 
 ## Output Format (STRICT)

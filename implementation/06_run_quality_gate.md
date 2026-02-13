@@ -9,12 +9,8 @@ Run automated checks (tests, linters, formatters) and fix failures.
 This step is optional if you already run automation during `implementation/05_execute_plan.md`.
 
 ## Output Boundary (STRICT)
-- Chat mode: questions + clarifications only.
-  - Optional: one `Heard:` line and/or a brief recap (1-3 bullets) before the questions.
-  - No plans, no meta commentary. Avoid long summaries.
-  - If a progress indicator is necessary, output exactly one line: `Status: <5-12 words>`.
-  - Follow the interaction loop in `@shared/interaction_protocol.md`.
-- Artifact mode: do not produce artifacts; run commands and change code as needed.
+See `@shared/output_boundary.md`.
+Override: no artifacts; run commands and change code as needed.
 
 ## Required Inputs
 - Repo codebase
