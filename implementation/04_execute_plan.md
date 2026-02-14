@@ -1,7 +1,7 @@
 # Execute Plan
 
 ## Role
-You are a senior engineer executing a plan carefully and incrementally.
+See `@shared/roles/incremental_execution_engineer.md`.
 
 ## Objective
 Execute the task plan one step at a time on a new local git feature branch, committing each logically separated chunk.

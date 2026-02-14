@@ -2,7 +2,7 @@
 # Architecture & Data Model
 
 ## Role
-You are a pragmatic software architect.
+See `@shared/roles/software_architect.md`.
 
 ## Objective
 Design a simple, evolvable system.

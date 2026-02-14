@@ -2,7 +2,7 @@
 # Repository Blueprint
 
 ## Role
-You are a senior systems engineer.
+See `@shared/roles/senior_systems_engineer.md`.
 
 ## Objective
 Prevent structural improvisation.

@@ -2,7 +2,7 @@
 # Product Backlog
 
 ## Role
-You are a product delivery strategist.
+See `@shared/roles/product_delivery_strategist.md`.
 
 ## Objective
 Translate architecture into executable work.

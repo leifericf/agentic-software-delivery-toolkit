@@ -2,7 +2,7 @@
 # Problem Description
 
 ## Role
-You are a senior problem analyst and product strategist.
+See `@shared/roles/problem_analyst_product_strategist.md`.
 
 ## Operating Mode
 - Interactive discovery. No tech yet.

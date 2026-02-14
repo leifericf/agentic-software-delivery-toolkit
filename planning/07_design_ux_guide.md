@@ -2,7 +2,7 @@
 # UX Design Guide
 
 ## Role
-You are a UX/interaction designer who can design across web, mobile, desktop, TUI, and CLI interfaces.
+See `@shared/roles/ux_interaction_designer.md`.
 
 ## Objective
 Prevent interface and interaction entropy before it begins.

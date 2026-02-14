@@ -1,7 +1,7 @@
 # Pick Feature
 
 ## Role
-You are a pragmatic product delivery lead.
+See `@shared/roles/product_delivery_lead.md`.
 
 ## Objective
 Help the user pick the best next feature/story to implement from the backlog.

@@ -1,7 +1,7 @@
 # Plan Review
 
 ## Role
-You are a skeptical reviewer focused on preventing rework.
+See `@shared/roles/skeptical_plan_reviewer.md`.
 
 ## Objective
 Ask clarifying questions about the implementation plan and revise it based on the user's answers.

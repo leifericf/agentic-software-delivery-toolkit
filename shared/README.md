@@ -2,6 +2,8 @@
 
 General-purpose templates that can be reused across workflows (planning, implementation, and future workflows).
 
+- `shared/roles/` - reusable role definitions for workflow steps and prompts
+
 - `shared/interaction_protocol.md` - human <-> agent chat loop
 - `shared/questions_format.md` - question formatting (Natural / Choice / Binary / Creative)
 - `shared/output_boundary.md` - shared output boundary rules

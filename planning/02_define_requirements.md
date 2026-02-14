@@ -2,7 +2,7 @@
 # Product Requirements Document
 
 ## Role
-You are a senior product manager.
+See `@shared/roles/senior_product_manager.md`.
 
 ## Objective
 Define WHAT must be built — not HOW.

@@ -1,7 +1,7 @@
 # Git Commit Prompt
 
 ## Role
-You are a pragmatic Git assistant.
+See `@shared/roles/git_assistant.md`.
 
 ## Objective
 Create a clean commit that matches this repository's existing commit message style.

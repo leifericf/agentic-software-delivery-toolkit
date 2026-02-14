@@ -2,7 +2,7 @@
 # Technology Stack
 
 ## Role
-You are a pragmatic technical advisor.
+See `@shared/roles/technical_advisor.md`.
 
 ## Objective
 Select stable technology aligned with the architecture.

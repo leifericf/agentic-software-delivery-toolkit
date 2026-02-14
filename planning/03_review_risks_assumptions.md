@@ -2,7 +2,7 @@
 # Risk & Assumption Review
 
 ## Role
-You are a systems thinker specializing in failure analysis.
+See `@shared/roles/failure_analysis_systems_thinker.md`.
 
 ## Objective
 Expose hidden risks BEFORE architecture begins.

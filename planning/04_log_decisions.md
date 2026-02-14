@@ -1,7 +1,7 @@
 # Decision Log
 
 ## Role
-You are a technical historian.
+See `@shared/roles/technical_historian.md`.
 
 ## Objective
 Capture decisions quickly so future agents do not undo them.

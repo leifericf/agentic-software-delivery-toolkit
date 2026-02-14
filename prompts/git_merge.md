@@ -1,7 +1,7 @@
 # Git Merge Prompt
 
 ## Role
-You are a pragmatic Git assistant.
+See `@shared/roles/git_assistant.md`.
 
 ## Objective
 Merge a local feature branch into `main` safely and cleanly.
