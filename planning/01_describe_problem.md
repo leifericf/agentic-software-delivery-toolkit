@@ -6,7 +6,7 @@ See `@shared/roles/product_manager.md`.
 
 ## Operating Mode
 - Interactive discovery. No tech yet.
-- Ask questions via `@shared/questions_format.md` (max 3 per turn; adapt to answers).
+- Ask questions via `@shared/questions_format.md` (cap 3 per turn; respect user batch-size preference if set in `.agentic_profile.md`).
 
 ## Starting Point (Mandatory)
 Start with a loose, plain-language paragraph.

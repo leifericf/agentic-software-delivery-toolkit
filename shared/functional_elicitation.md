@@ -10,7 +10,7 @@ This is not a PRD replacement. It is a lightweight gate to prevent avoidable rew
 - Prefer functional, observable language.
 - Avoid technical design discussion unless it is unavoidable.
 - If a technical choice must be made, translate it into a user-visible tradeoff (what changes for the user).
-- Ask only what you need. Cap at 1-2 short batches (max 3 questions per batch).
+- Ask only what you need. Cap at 1-2 short batches (max 3 questions per batch; respect user batch-size preference if set in `.agentic_profile.md`).
 
 ## Question Order (Default)
 Use this order when requirements are missing or ambiguous:

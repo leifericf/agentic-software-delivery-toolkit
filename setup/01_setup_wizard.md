@@ -5,7 +5,7 @@ See `@shared/roles/product_manager.md`.
 
 ## Operating Mode
 - Interactive preference capture.
-- Ask questions via `@shared/questions_format.md` (max 3 per turn).
+- Ask questions via `@shared/questions_format.md` (cap 3 per turn).
 
 ## Output Boundary (STRICT)
 Override: this step writes/updates a repo-local profile file.
@@ -29,8 +29,10 @@ Capture how the user wants to work with the agent so future steps can adapt auto
 Prioritize in this order:
 
 1) Interaction defaults
-- Default question mode (Natural/Choice/Binary)
+- Default question mode (Natural/Choice/Binary/Creative)
 - Question batch size (1/2/3)
+- Interruption tolerance (Minimal/Balanced/Interactive)
+- Probing depth (Light/Standard/Deep)
 - Defaults vs questions preference
 - Verbosity preference
 

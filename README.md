@@ -43,6 +43,11 @@ Note: the agent tracks open questions in `artifacts/<project_slug>/00_open_quest
 
 Tip: you can steer the agent's question style for the next turn by writing `Mode: natural`, `Mode: choice`, `Mode: binary`, or `Mode: creative`.
 
+Optional steering knobs for the next turn:
+- `@batch 1|2|3`
+- `@interrupt minimal|balanced|interactive`
+- `@depth light|standard|deep`
+
 You do not need to front-load detail: start Step 01 with a loose paragraph describing the problem; the agent will drive the back-and-forth to gather specifics.
 
 ## Forking Guidance

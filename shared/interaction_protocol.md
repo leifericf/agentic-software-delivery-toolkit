@@ -22,6 +22,8 @@ If a repo-local profile file exists at `.agentic_profile.md`:
 - Do not copy it into project artifacts unless the user explicitly requests it.
 - Never store secrets in it.
 
+Interaction preferences are interpreted via `@shared/interaction_meta_preferences.md`.
+
 ## Progressive Narrowing (Default)
 Default early shape: Explore -> Define -> Converge.
 
@@ -54,7 +56,9 @@ Before asking new questions:
 - Do not re-ask questions that already have a usable answer.
 
 ## Chat Loop (Mandatory)
-1. Ask a small batch (max 3).
+1. Ask a small batch based on the user profile (cap 3).
+   - Default: 2 questions if no profile exists.
+   - If Interruption tolerance is Minimal, prefer 1 question and proceed with explicit assumptions when possible.
 2. Wait for answers.
 3. Optional preface for the next batch: one factual recap (<= 280 chars).
    - Skip if the user answered in a clear, structured way and restating adds noise.
@@ -68,7 +72,9 @@ Stop conditions:
 ## Question Format
 Use `@shared/questions_format.md`.
 
-Default mode: Natural.
+Default mode:
+- If `.agentic_profile.md` exists, use its default question mode.
+- Otherwise: Natural.
 
 Use:
 - Choice when options are clear and speed/parseability matters.
@@ -102,6 +108,11 @@ The user may explicitly set how the next turn should behave:
 - `Mode: natural` | `Mode: choice` | `Mode: binary` | `Mode: creative`
 - Shorthand: `@mode <name>`
 
+Additional optional overrides for the next turn:
+- `@batch 1|2|3`
+- `@interrupt minimal|balanced|interactive`
+- `@depth light|standard|deep`
+
 The agent should follow the override for that turn unless it would block progress.
 
 ## Agent Message Style (Chat Mode)
@@ -111,6 +122,13 @@ The agent should follow the override for that turn unless it would block progres
 - Optional preface (any mode): `Heard: ...` (one line) and/or 1-3 factual recap bullets; keep under ~6 lines.
 - No plans or meta commentary; keep summaries short.
 - No praise/flattery; stay neutral and concrete.
+
+## Ask Vs Assume (Mandatory)
+Follow the decision policy in `@shared/interaction_meta_preferences.md`.
+
+Practical rule:
+- If a missing answer is not blocking, prefer to proceed with an explicit assumption when the user prefers fewer interruptions.
+- When you assume, make assumptions visible and easy to correct (short bullets), then continue.
 
 ## Mixed Chat + Artifact Output
 Sometimes the fastest path is to include a small amount of chat text alongside an artifact.

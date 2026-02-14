@@ -6,7 +6,7 @@ When you need user input, pick the mode that gets new information with the least
 Default: Natural.
 
 ## Shared Rules (All Modes)
-- Ask at most 3 questions per message.
+- Ask at most 3 questions per message (and no more than the user's preferred batch size, if set in `.agentic_profile.md`).
 - Keep questions short and phone-scrollable.
 - Number questions (1, 2, 3, ...). Restart numbering each message.
 - One question per line. Avoid multi-part questions.

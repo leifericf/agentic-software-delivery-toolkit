@@ -12,8 +12,10 @@ Notes:
 - Background / context: <optional>
 
 ## Interaction Preferences
-- Default question mode: Natural | Choice | Binary
+- Default question mode: Natural | Choice | Binary | Creative
 - Question batch size: 1 | 2 | 3
+- Interruption tolerance: Minimal | Balanced | Interactive
+- Probing depth: Light | Standard | Deep
 - Defaults vs questions: Prefer defaults | Prefer questions | Mixed
 - Verbosity: Concise | Balanced | Thorough
 - Feedback style: Direct | Gentle | Mixed
