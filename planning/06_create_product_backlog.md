@@ -5,7 +5,7 @@
 See `@shared/roles/product_manager.md`.
 
 ## Objective
-Translate architecture into executable work.
+Translate the technical design into executable work.
 
 ## Starting Point (Mandatory)
 Do not ask the user to pre-write a detailed backlog.
@@ -21,21 +21,19 @@ See `@shared/output_boundary.md` (Artifact: single `text` fenced block).
 - `artifacts/<project_slug>/01_problem_description.md`
 - `artifacts/<project_slug>/02_product_requirements.md`
 - `artifacts/<project_slug>/03_risk_assumption_review.md`
-- `artifacts/<project_slug>/04_decision_log.md`
-- `artifacts/<project_slug>/05_architecture_data_model.md`
-- `artifacts/<project_slug>/06_tech_stack.md`
-- `artifacts/<project_slug>/07_ux_design_guide.md` (if applicable; see `@planning/07_design_ux_guide.md`)
-- `artifacts/<project_slug>/08_ai_operating_model.md`
+- `artifacts/<project_slug>/00_decision_log.md`
+- `artifacts/<project_slug>/04_ux_design_guide.md` (if applicable; see `@planning/04_design_ux_guide.md`)
+- `artifacts/<project_slug>/05_technical_design.md`
 - `artifacts/<project_slug>/00_open_questions.md`
 
 ## Input Gate (Default)
 See `@shared/input_gate.md`.
 
 Exception:
-- `artifacts/<project_slug>/07_ux_design_guide.md` may be missing only if a decision log row in `artifacts/<project_slug>/04_decision_log.md` documents that Step 07 was intentionally skipped due to no user-facing interface.
+- `artifacts/<project_slug>/04_ux_design_guide.md` may be missing only if a decision log row in `artifacts/<project_slug>/00_decision_log.md` documents that UX was intentionally skipped due to no user-facing interface.
 
 ## Open Questions Gate (Mandatory)
-See `@shared/open_questions_gate.md` (Affects: `09_product_backlog.md`).
+See `@shared/open_questions_gate.md` (Affects: `06_product_backlog.md`).
 
 ## Instructions
 1. Review all artifacts.
@@ -45,7 +43,7 @@ See `@shared/open_questions_gate.md` (Affects: `09_product_backlog.md`).
 
 If anything is blocked by missing information, add an unchecked `[Blocking]` item under `## Open` in `artifacts/<project_slug>/00_open_questions.md` and stop.
 
-If producing the backlog requires making new decisions, stop and capture them as decision log row(s) in `artifacts/<project_slug>/04_decision_log.md` first.
+If producing the backlog requires making new decisions, stop and capture them as decision log row(s) in `artifacts/<project_slug>/00_decision_log.md` first.
 
 ## Output Format (STRICT)
 The generated backlog must be human-readable AND consistently structured.
@@ -82,11 +80,11 @@ Example (format only):
 ```
 
 Write:
-`artifacts/<project_slug>/09_product_backlog.md`
+`artifacts/<project_slug>/06_product_backlog.md`
 
 Then ask:
 
 > “Backlog locked?  
-> If yes, tag **@planning/10_design_repo_blueprint.md**.”
+> If yes, tag **@implementation/01_pick_feature.md**.”
 
 (Ask this in a separate Chat mode message after the artifact output.)

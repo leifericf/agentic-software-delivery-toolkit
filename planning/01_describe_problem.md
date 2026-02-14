@@ -39,7 +39,7 @@ If it does not exist, initialize it with this minimal valid structure:
 
 Notes:
 - Use `[Blocking]` only when you truly cannot proceed without the answer.
-- `Affects` should list artifact filenames (e.g. `02_product_requirements.md`, `05_architecture_data_model.md`).
+- `Affects` should list artifact filenames (e.g. `02_product_requirements.md`, `05_technical_design.md`).
 
 If any clarification questions come up during this step, add them as unchecked items under `## Open`.
 
@@ -84,7 +84,7 @@ Then initialize the artifacts directory and shared files:
 ```
 
 3. Create: `artifacts/<project_slug>/00_open_questions.md` if it does not already exist (see structure above)
-4. Create: `artifacts/<project_slug>/04_decision_log.md` with this minimal valid structure:
+4. Create: `artifacts/<project_slug>/00_decision_log.md` with this minimal valid structure:
 
 ```md
 # Decision Log

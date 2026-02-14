@@ -12,8 +12,8 @@ Override: no artifact for this step.
 
 ## Required Inputs
 - `artifacts/<project_slug>/02_product_requirements.md`
-- `artifacts/<project_slug>/04_decision_log.md`
-- `artifacts/<project_slug>/09_product_backlog.md`
+- `artifacts/<project_slug>/00_decision_log.md`
+- `artifacts/<project_slug>/06_product_backlog.md`
 - `artifacts/<project_slug>/00_open_questions.md`
 
 ## Starting Point (Mandatory)

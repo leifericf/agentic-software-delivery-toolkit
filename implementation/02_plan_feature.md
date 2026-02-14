@@ -18,12 +18,10 @@ See `@shared/output_boundary.md` (Artifact: single `md` fenced block).
 
 ## Required Inputs
 - `artifacts/<project_slug>/02_product_requirements.md`
-- `artifacts/<project_slug>/04_decision_log.md`
-- `artifacts/<project_slug>/05_architecture_data_model.md`
-- `artifacts/<project_slug>/06_tech_stack.md`
-- `artifacts/<project_slug>/07_ux_design_guide.md` (if applicable)
-- `artifacts/<project_slug>/08_ai_operating_model.md`
-- `artifacts/<project_slug>/09_product_backlog.md`
+- `artifacts/<project_slug>/00_decision_log.md`
+- `artifacts/<project_slug>/04_ux_design_guide.md` (if applicable)
+- `artifacts/<project_slug>/05_technical_design.md`
+- `artifacts/<project_slug>/06_product_backlog.md`
 - `artifacts/<project_slug>/00_open_questions.md`
 
 ## Starting Point (Mandatory)
@@ -69,9 +67,8 @@ Use this structure (adjust as needed). Prefer clarity over ceremony.
 - Feature slug: <feature_slug>
 - Related:
   - PRD: `artifacts/<project_slug>/02_product_requirements.md`
-  - Architecture: `artifacts/<project_slug>/05_architecture_data_model.md`
-  - Tech stack: `artifacts/<project_slug>/06_tech_stack.md`
-  - Decision log: `artifacts/<project_slug>/04_decision_log.md`
+  - Technical design: `artifacts/<project_slug>/05_technical_design.md`
+  - Decision log: `artifacts/<project_slug>/00_decision_log.md`
 
 ## Context
 - Intended outcome: <short>

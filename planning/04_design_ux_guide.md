@@ -22,13 +22,13 @@ This step is required for most product software, but it may be skipped for proje
 First determine whether any user-facing interface surface is in-scope: Web, Mobile, Desktop, TUI, CLI.
 
 If none apply (e.g., pure library, backend-only service, batch job, data pipeline):
-1. Do NOT produce `artifacts/<project_slug>/07_ux_design_guide.md`.
-2. Add a decision log row to `artifacts/<project_slug>/04_decision_log.md` documenting the skip.
+1. Do NOT produce `artifacts/<project_slug>/04_ux_design_guide.md`.
+2. Add a decision log row to `artifacts/<project_slug>/00_decision_log.md` documenting the skip.
    - Decision: Skip UX design guide (no user-facing interface).
    - Why: No UI surfaces are in-scope.
-   - Tradeoff: Less UX guidance if UI is added later; revisit Step 07.
+   - Tradeoff: Less UX guidance if UI is added later; revisit UX.
 3. In Chat mode, output exactly one line:
-   `Status: UX design guide skipped; tag @planning/08_define_ai_operating_model.md`
+   `Status: UX design guide skipped; tag @planning/05_create_technical_design.md`
 Then stop.
 
 ## Required Inputs
@@ -36,16 +36,14 @@ Then stop.
 - `artifacts/<project_slug>/01_problem_description.md`
 - `artifacts/<project_slug>/02_product_requirements.md`
 - `artifacts/<project_slug>/03_risk_assumption_review.md`
-- `artifacts/<project_slug>/04_decision_log.md`
-- `artifacts/<project_slug>/05_architecture_data_model.md`
-- `artifacts/<project_slug>/06_tech_stack.md`
+- `artifacts/<project_slug>/00_decision_log.md`
 - `artifacts/<project_slug>/00_open_questions.md`
 
 ## Input Gate (Default)
 See `@shared/input_gate.md`.
 
 ## Open Questions Gate (Mandatory)
-See `@shared/open_questions_gate.md` (Affects: `07_ux_design_guide.md`).
+See `@shared/open_questions_gate.md` (Affects: `04_ux_design_guide.md`).
 
 ## Instructions
 First collect visual references: ask for 3-5 references that match the intended look/feel.
@@ -90,7 +88,7 @@ See `@shared/decision_log_update.md`.
 
 ## Output Artifact
 Write:
-`artifacts/<project_slug>/07_ux_design_guide.md`
+`artifacts/<project_slug>/04_ux_design_guide.md`
 
 ## Output Format (STRICT)
 Write the artifact using this exact Markdown structure and headings, in this order.
@@ -104,7 +102,6 @@ Template:
 - Date: YYYY-MM-DD
 - Related:
   - PRD: `artifacts/<project_slug>/02_product_requirements.md`
-  - Tech Stack: `artifacts/<project_slug>/06_tech_stack.md`
 
 ## Visual References
 - Reference 1: <URL or description>
@@ -189,7 +186,7 @@ Template:
 
 Then ask:
 
- > “Approve this UX design guide?  
-> If yes, tag **@planning/08_define_ai_operating_model.md**.”
+  > “Approve this UX design guide?  
+> If yes, tag **@planning/05_create_technical_design.md**.”
 
 (Ask this in a separate Chat mode message after the artifact output.)

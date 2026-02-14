@@ -1,10 +1,12 @@
-# Decision Log
+# Log Decisions (Optional)
 
 ## Role
 See `@shared/roles/quality_engineer.md`.
 
 ## Objective
 Capture decisions quickly so future agents do not undo them.
+
+This prompt updates a single shared artifact: `artifacts/<project_slug>/00_decision_log.md`.
 
 ## Starting Point (Mandatory)
 Do not expect the user to write formal decision docs.
@@ -31,7 +33,7 @@ Append-only living document.
 See `@shared/input_gate.md`.
 
 ## Open Questions Gate (Mandatory)
-See `@shared/open_questions_gate.md` (Affects: `04_decision_log.md`).
+See `@shared/open_questions_gate.md` (Affects: `00_decision_log.md`).
 
 ## Instructions
 1. Review all prior artifacts.
@@ -41,7 +43,7 @@ See `@shared/open_questions_gate.md` (Affects: `04_decision_log.md`).
 
 ## Output Artifact
 Write:
-`artifacts/<project_slug>/04_decision_log.md`
+`artifacts/<project_slug>/00_decision_log.md`
 
 File format (STRICT):
 
@@ -55,6 +57,6 @@ File format (STRICT):
 
 Then ask:
 
-> "Decisions captured correctly? If yes, tag **@planning/05_design_architecture_data_model.md**."
+> "Decisions captured correctly? Continue the workflow."
 
 (Ask this in a separate Chat mode message after the artifact output.)

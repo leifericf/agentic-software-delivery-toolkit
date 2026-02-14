@@ -112,6 +112,6 @@ Template:
 Then ask:
 
 > “Ready to lock decisions?  
-> If yes, tag **@planning/04_log_decisions.md**.”
+> If yes, tag **@planning/04_design_ux_guide.md**.”
 
 (Ask this in a separate Chat mode message after the artifact output.)

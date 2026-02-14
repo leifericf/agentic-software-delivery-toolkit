@@ -13,13 +13,13 @@ Run these **in order**:
 1. `planning/01_describe_problem.md`
 2. `planning/02_define_requirements.md`
 3. `planning/03_review_risks_assumptions.md`
-4. `planning/04_log_decisions.md`
-5. `planning/05_design_architecture_data_model.md`
-6. `planning/06_choose_tech_stack.md`
-7. `planning/07_design_ux_guide.md` (skip only if there are no UI surfaces; the agent records the skip in the decision log)
-8. `planning/08_define_ai_operating_model.md`
-9. `planning/09_create_product_backlog.md`
-10. `planning/10_design_repo_blueprint.md`
+4. `planning/04_design_ux_guide.md` (skip only if there are no UI surfaces; the agent records the skip in the decision log)
+5. `planning/05_create_technical_design.md`
+6. `planning/06_create_product_backlog.md`
+
+After Step 06, planning is complete. To begin delivery, tag `@implementation/01_pick_feature.md`.
+
+Optional: if decisions feel scattered, tag `@shared/log_decisions.md` to reconcile them into `artifacts/<project_slug>/00_decision_log.md`.
 
 ## Standard Artifact Set
 
@@ -27,18 +27,15 @@ Each step produces one primary artifact in `artifacts/<project_slug>/`:
 
 - `artifacts/<project_slug>/00_project_meta.md`
 - `artifacts/<project_slug>/00_open_questions.md`
+- `artifacts/<project_slug>/00_decision_log.md`
 - `artifacts/<project_slug>/01_problem_description.md`
 - `artifacts/<project_slug>/02_product_requirements.md`
 - `artifacts/<project_slug>/03_risk_assumption_review.md`
-- `artifacts/<project_slug>/04_decision_log.md`
-- `artifacts/<project_slug>/05_architecture_data_model.md`
-- `artifacts/<project_slug>/06_tech_stack.md`
-- `artifacts/<project_slug>/07_ux_design_guide.md`
-- `artifacts/<project_slug>/08_ai_operating_model.md`
-- `artifacts/<project_slug>/09_product_backlog.md`
-- `artifacts/<project_slug>/10_repo_blueprint.md`
+- `artifacts/<project_slug>/04_ux_design_guide.md` (if applicable)
+- `artifacts/<project_slug>/05_technical_design.md`
+- `artifacts/<project_slug>/06_product_backlog.md`
 
 ## Shared Rules
 
 - The agent tracks unresolved questions in `artifacts/<project_slug>/00_open_questions.md`.
-- The agent captures decisions (and changes to decisions) in `artifacts/<project_slug>/04_decision_log.md`.
+- The agent captures decisions (and changes to decisions) in `artifacts/<project_slug>/00_decision_log.md`.

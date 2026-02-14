@@ -13,8 +13,9 @@ Override: no artifacts; update repo files directly. When done and automation is 
 ## Required Inputs
 - `artifacts/<project_slug>/tasks/plan-<feature_slug>.md`
 - `artifacts/<project_slug>/00_open_questions.md`
-- `artifacts/<project_slug>/04_decision_log.md`
-- Repo codebase created per `artifacts/<project_slug>/10_repo_blueprint.md`
+- `artifacts/<project_slug>/00_decision_log.md`
+- `artifacts/<project_slug>/05_technical_design.md`
+- Repo codebase (existing, or bootstrapped as part of the plan)
 
 ## Starting Point (Mandatory)
 Do not implement everything at once.
