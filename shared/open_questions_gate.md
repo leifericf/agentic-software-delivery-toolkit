@@ -10,3 +10,4 @@ Before drafting/updating an artifact or starting work:
    - Move the item to `## Resolved` and mark it `[x]`.
 4. If you discover new clarification questions, add them under `## Open`.
    - Use `[Blocking]` only when you truly cannot proceed without the answer.
+   - Prefer user-facing language; add technical detail only when unavoidable.
