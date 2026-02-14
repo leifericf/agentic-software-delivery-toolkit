@@ -28,6 +28,7 @@ Sub-goals:
 
 - A step-by-step planning sequence in `planning/` (interactive templates).
 - An implementation workflow in `implementation/` for picking a feature, planning tasks, and delivering incrementally.
+- Operations templates in `operations/` for incident response, log triage, risk assessment, and retros.
 - A consistent artifact set written to `artifacts/<project_slug>/`.
 - Reusable standalone prompts in `prompts/`.
 
@@ -74,6 +75,7 @@ Prompt templates you can use independently live in `prompts/`.
 - `setup/`: optional welcome/setup wizard (writes `.agentic_profile.md`)
 - `planning/`: interactive planning templates
 - `implementation/`: implementation templates for delivery
+- `operations/`: free-standing templates for production/ops work (incidents, triage, risk)
 - `shared/`: shared templates used by multiple workflows
 - `prompts/`: standalone prompts
 - `artifacts/`: project-specific outputs (directory included; contents ignored by default)
