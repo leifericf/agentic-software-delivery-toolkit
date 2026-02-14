@@ -1,7 +1,7 @@
 # Decision Log
 
 ## Role
-See `@shared/roles/technical_historian.md`.
+See `@shared/roles/quality_engineer.md`.
 
 ## Objective
 Capture decisions quickly so future agents do not undo them.

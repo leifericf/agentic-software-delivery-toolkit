@@ -1,7 +1,7 @@
 # Git Commit Prompt
 
 ## Role
-See `@shared/roles/git_assistant.md`.
+See `@shared/roles/software_engineer.md`.
 
 ## Objective
 Create a clean commit that matches this repository's existing commit message style.

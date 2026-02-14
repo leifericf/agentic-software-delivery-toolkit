@@ -2,7 +2,7 @@
 # Problem Description
 
 ## Role
-See `@shared/roles/problem_analyst_product_strategist.md`.
+See `@shared/roles/product_manager.md`.
 
 ## Operating Mode
 - Interactive discovery. No tech yet.

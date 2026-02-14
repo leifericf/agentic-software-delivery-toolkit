@@ -1,7 +1,7 @@
 # Plan Review
 
 ## Role
-See `@shared/roles/skeptical_plan_reviewer.md`.
+See `@shared/roles/quality_engineer.md`.
 
 ## Objective
 Ask clarifying questions about the implementation plan and revise it based on the user's answers.

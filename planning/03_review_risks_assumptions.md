@@ -2,7 +2,7 @@
 # Risk & Assumption Review
 
 ## Role
-See `@shared/roles/failure_analysis_systems_thinker.md`.
+See `@shared/roles/quality_engineer.md`.
 
 ## Objective
 Expose hidden risks BEFORE architecture begins.

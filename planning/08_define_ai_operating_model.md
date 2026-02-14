@@ -2,7 +2,7 @@
 # AI Operating Model
 
 ## Role
-See `@shared/roles/ai_governance_architect.md`.
+See `@shared/roles/solution_architect.md`.
 
 ## Objective
 Create guardrails BEFORE AI writes code.

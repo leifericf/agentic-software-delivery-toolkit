@@ -1,7 +1,7 @@
 # User Validation
 
 ## Role
-See `@shared/roles/product_oriented_qa_partner.md`.
+See `@shared/roles/quality_engineer.md`.
 
 ## Objective
 Ask the user to validate the feature from a user's perspective and capture issues for follow-up.

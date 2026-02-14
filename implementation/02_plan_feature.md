@@ -1,7 +1,7 @@
 # Feature Plan (Slices + Tasks)
 
 ## Role
-See `@shared/roles/delivery_focused_technical_lead.md`.
+See `@shared/roles/software_engineer.md`.
 
 ## Objective
 Produce one plan that includes (1) incremental chunks and (2) a task list (incl. tests + automation). This replaces the old two-step flow.

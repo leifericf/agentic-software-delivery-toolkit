@@ -2,7 +2,7 @@
 # Architecture & Data Model
 
 ## Role
-See `@shared/roles/software_architect.md`.
+See `@shared/roles/solution_architect.md`.
 
 ## Objective
 Design a simple, evolvable system.

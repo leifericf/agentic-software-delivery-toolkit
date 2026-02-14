@@ -2,7 +2,7 @@
 # UX Design Guide
 
 ## Role
-See `@shared/roles/ux_interaction_designer.md`.
+See `@shared/roles/ux_designer.md`.
 
 ## Objective
 Prevent interface and interaction entropy before it begins.

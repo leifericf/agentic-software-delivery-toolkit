@@ -2,7 +2,7 @@
 # Product Backlog
 
 ## Role
-See `@shared/roles/product_delivery_strategist.md`.
+See `@shared/roles/product_manager.md`.
 
 ## Objective
 Translate architecture into executable work.

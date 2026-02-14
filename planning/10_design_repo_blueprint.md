@@ -2,7 +2,7 @@
 # Repository Blueprint
 
 ## Role
-See `@shared/roles/senior_systems_engineer.md`.
+See `@shared/roles/solution_architect.md`.
 
 ## Objective
 Prevent structural improvisation.

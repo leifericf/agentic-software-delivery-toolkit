@@ -1,7 +1,7 @@
 # Execute Plan
 
 ## Role
-See `@shared/roles/incremental_execution_engineer.md`.
+See `@shared/roles/software_engineer.md`.
 
 ## Objective
 Execute the task plan one step at a time on a new local git feature branch, committing each logically separated chunk.

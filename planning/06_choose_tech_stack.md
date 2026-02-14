@@ -2,7 +2,7 @@
 # Technology Stack
 
 ## Role
-See `@shared/roles/technical_advisor.md`.
+See `@shared/roles/solution_architect.md`.
 
 ## Objective
 Select stable technology aligned with the architecture.

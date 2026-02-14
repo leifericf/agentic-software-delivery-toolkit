@@ -1,7 +1,7 @@
 # Git Merge Prompt
 
 ## Role
-See `@shared/roles/git_assistant.md`.
+See `@shared/roles/software_engineer.md`.
 
 ## Objective
 Merge a local feature branch into `main` safely and cleanly.

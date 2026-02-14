@@ -1,7 +1,7 @@
 # Quality Gate
 
 ## Role
-See `@shared/roles/build_quality_engineer.md`.
+See `@shared/roles/quality_engineer.md`.
 
 ## Objective
 Run automated checks (tests, linters, formatters) and fix failures.
