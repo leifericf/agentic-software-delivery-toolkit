@@ -14,6 +14,14 @@ Intended human <-> AI loop for all workflow steps.
 - Loop: rough input -> questions -> answers -> follow-ups -> artifact.
 - If initial context is thin: ask 1 broad Natural-mode question about the need/problem.
 
+## User Profile (Optional, Recommended)
+If a repo-local profile file exists at `.agentic_profile.md`:
+
+- Treat it as authoritative user preferences for interaction style and defaults.
+- Apply it consistently across steps (verbosity, question mode, default-vs-ask bias).
+- Do not copy it into project artifacts unless the user explicitly requests it.
+- Never store secrets in it.
+
 ## Progressive Narrowing (Default)
 Default early shape: Explore -> Define -> Converge.
 

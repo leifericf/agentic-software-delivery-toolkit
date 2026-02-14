@@ -2,6 +2,8 @@
 
 These templates pick up after `planning/10_design_repo_blueprint.md`.
 
+If present, the agent should apply your `.agentic_profile.md` preferences during implementation.
+
 They are designed for an incremental delivery loop driven by `artifacts/<project_slug>/09_product_backlog.md`, with tasks, tests, and commit boundaries made explicit.
 
 ## Steps

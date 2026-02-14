@@ -2,6 +2,8 @@
 
 The planning workflow is a set of interactive templates for turning a loose problem statement into durable artifacts an implementation agent can reliably build from.
 
+Optional: run `@setup/01_setup_wizard.md` first to create `.agentic_profile.md` (interaction + engineering preferences).
+
 Start rough: you do not need to front-load detail. The agent should pull specifics through back-and-forth questions.
 
 ## Steps

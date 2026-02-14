@@ -228,6 +228,9 @@ project.fragment.lock.json
 artifacts/*
 !artifacts/.gitkeep
 
+# Local agent preferences (intentionally not versioned)
+.agentic_profile.md
+
 # ASP.NET Scaffolding
 ScaffoldingReadMe.txt
 
