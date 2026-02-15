@@ -9,6 +9,8 @@ The implementation workflow then uses those artifacts to pick a feature, plan th
 
 These templates emerged from many hours of experimentation across different LLMs and platforms and are intended to be mostly model-agnostic. Treat them as a starting point: fork this repo and adapt whatever you need as you learn what works for your team and project.
 
+Core motivation: LLMs and "AI platforms" each ship their own conventions for defining agent behavior (roles, skills, system rules, tool policies). That creates a soft lock-in: your hard-earned patterns end up trapped in platform-specific features. This toolkit aims to sidestep that by keeping the core workflow and behavior in plain, portable, text-based prompts and artifacts you control. You can still layer on platform features if you want, but the intent is that your toolkit stays reusable across models and platforms (including future systems where the primary interface is text or audio).
+
 ## Goals
 
 Main goal: help you reliably turn a fuzzy idea into shipped software by giving agents a clear workflow, durable context, and reusable templates that reduce repetition and cost.
