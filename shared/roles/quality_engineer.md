@@ -11,3 +11,10 @@ Focus:
 
 Avoid:
 - Questions that do not change implementation or validation.
+
+## Skills
+- See `@shared/skills/interaction/interaction_protocol.md`.
+- See `@shared/skills/interaction/questions_format.md`.
+- See `@shared/skills/gates/open_questions_gate.md`.
+- See `@shared/skills/artifacts/decision_log_update.md`.
+- See `@shared/skills/implementation/quality_gate.md`.

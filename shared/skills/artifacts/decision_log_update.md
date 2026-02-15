@@ -1,4 +1,4 @@
-# Decision Log Update (Shared)
+# Skill: Decision log update
 
 If this step introduces or finalizes decisions:
 

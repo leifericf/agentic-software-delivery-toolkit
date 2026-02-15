@@ -2,15 +2,8 @@
 
 General-purpose templates that can be reused across workflows (planning, implementation, and future workflows).
 
-- `shared/roles/` - reusable role definitions for workflow steps and prompts
+- `shared/roles/` - reusable role definitions used by workflow steps
+- `shared/skills/` - reusable skill modules referenced by roles and steps
 
-- `shared/interaction_protocol.md` - human <-> agent chat loop
-- `shared/interaction_meta_preferences.md` - meta-preferences that control batching + probing depth
-- `shared/questions_format.md` - question formatting (Natural / Choice / Binary / Creative)
-- `shared/output_boundary.md` - shared output boundary rules
-- `shared/input_gate.md` - shared missing-input handling
-- `shared/open_questions_gate.md` - shared open-questions blocking rules
-- `shared/decision_log_update.md` - shared decision-log update rules
+Standalone shared template:
 - `shared/log_decisions.md` - optional prompt to reconcile/lock decisions
-- `shared/prompt_output_boundary.md` - shared output boundary for standalone prompts
-- `shared/functional_elicitation.md` - functional requirements elicitation gate

@@ -7,7 +7,7 @@ See `@shared/roles/software_engineer.md`.
 Turn production signals (logs, alerts, error reports) into a prioritized, testable hypothesis set and an action plan.
 
 ## Output Boundary (STRICT)
-See `@shared/output_boundary.md` (Artifact: single `md` fenced block).
+See `@shared/skills/gates/output_boundary.md` (Artifact: single `md` fenced block).
 
 ## Starting Point (Mandatory)
 Do not ask the user to paste everything.
@@ -25,15 +25,10 @@ Optional (if available):
 - Dashboard links (metrics/traces)
 
 ## Project Slug (If Needed)
-If `project_slug` is not known, ask for a project name and propose 3-5 slug options.
-
-Slug rules (STRICT):
-- lowercase snake_case
-- letters, numbers, underscores only
-- no spaces
+See `@shared/skills/planning/project_slug.md`.
 
 ## Input Gate (Default)
-See `@shared/input_gate.md`.
+See `@shared/skills/gates/input_gate.md`.
 
 ## Open Questions (Optional)
 If `artifacts/<project_slug>/00_open_questions.md` exists, scan `## Open` and do not re-ask answered questions.
@@ -41,7 +36,7 @@ If `artifacts/<project_slug>/00_open_questions.md` exists, scan `## Open` and do
 If it does not exist, continue; capture unknowns in the triage artifact under `## Open Questions`.
 
 ## Question Style
-Ask questions using the format in `@shared/questions_format.md` (cap 3).
+Ask questions using the format in `@shared/skills/interaction/questions_format.md` (cap 3).
 
 Prefer:
 - Binary (to narrow scope fast)
@@ -51,7 +46,7 @@ Prefer:
 Write:
 `artifacts/<project_slug>/operations/YYYY-MM-DD_log_triage-<issue_slug>.md`
 
-`<issue_slug>` rules (recommended): lowercase snake_case.
+`<issue_slug>` rules: see `@shared/skills/planning/slug_rules.md`.
 
 ## Output Format (STRICT)
 Write the artifact using this exact Markdown structure and headings, in this order.

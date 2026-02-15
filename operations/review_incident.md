@@ -7,7 +7,7 @@ See `@shared/roles/quality_engineer.md`.
 Produce a blameless incident review focused on learning and preventing recurrence.
 
 ## Output Boundary (STRICT)
-See `@shared/output_boundary.md` (Artifact: single `md` fenced block).
+See `@shared/skills/gates/output_boundary.md` (Artifact: single `md` fenced block).
 
 ## Starting Point (Mandatory)
 Do not demand a perfect timeline up front.
@@ -25,15 +25,10 @@ Optional:
 - Metrics/graphs
 
 ## Project Slug (If Needed)
-If `project_slug` is not known, ask for a project name and propose 3-5 slug options.
-
-Slug rules (STRICT):
-- lowercase snake_case
-- letters, numbers, underscores only
-- no spaces
+See `@shared/skills/planning/project_slug.md`.
 
 ## Input Gate (Default)
-See `@shared/input_gate.md`.
+See `@shared/skills/gates/input_gate.md`.
 
 ## Open Questions (Optional)
 If `artifacts/<project_slug>/00_open_questions.md` exists, scan `## Open` and incorporate any resolved answers relevant to this incident.
@@ -41,7 +36,7 @@ If `artifacts/<project_slug>/00_open_questions.md` exists, scan `## Open` and in
 If it does not exist, continue; capture unknowns in the incident review under `## Open Questions`.
 
 ## Question Style
-Ask questions using the format in `@shared/questions_format.md` (cap 3).
+Ask questions using the format in `@shared/skills/interaction/questions_format.md` (cap 3).
 
 Prefer:
 - Binary (facts: did X happen?)
@@ -54,7 +49,7 @@ Avoid:
 Write:
 `artifacts/<project_slug>/operations/YYYY-MM-DD_incident_review-<incident_slug>.md`
 
-`<incident_slug>` rules (recommended): lowercase snake_case.
+`<incident_slug>` rules: see `@shared/skills/planning/slug_rules.md`.
 
 ## Output Format (STRICT)
 Write the artifact using this exact Markdown structure and headings, in this order.

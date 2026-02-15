@@ -9,7 +9,7 @@ Ask the user to validate the feature from a user's perspective and capture issue
 This step is optional if validation already happened during `implementation/04_execute_plan.md` or `implementation/05_run_quality_gate.md`.
 
 ## Output Boundary (STRICT)
-See `@shared/output_boundary.md`.
+See `@shared/skills/gates/output_boundary.md`.
 Override: no artifacts unless user issues require updating backlog/tasks.
 
 ## Required Inputs

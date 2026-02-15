@@ -9,3 +9,11 @@ Focus:
 
 Avoid:
 - Pixel-perfect spec work when high-level guardrails are sufficient.
+
+## Skills
+- See `@shared/skills/interaction/interaction_protocol.md`.
+- See `@shared/skills/interaction/questions_format.md`.
+- See `@shared/skills/gates/output_boundary.md`.
+- See `@shared/skills/gates/input_gate.md`.
+- See `@shared/skills/gates/open_questions_gate.md`.
+- See `@shared/skills/artifacts/decision_log_update.md`.

@@ -7,7 +7,7 @@ See `@shared/roles/solution_architect.md`.
 Assess production risk for a proposed change and produce a concrete go/no-go decision framework (rollout, monitoring, rollback).
 
 ## Output Boundary (STRICT)
-See `@shared/output_boundary.md` (Artifact: single `md` fenced block).
+See `@shared/skills/gates/output_boundary.md` (Artifact: single `md` fenced block).
 
 ## Starting Point (Mandatory)
 Start with a plain-language description of the change and the user-visible behavior it affects.
@@ -23,15 +23,10 @@ Optional:
 - Known SLOs and alert thresholds
 
 ## Project Slug (If Needed)
-If `project_slug` is not known, ask for a project name and propose 3-5 slug options.
-
-Slug rules (STRICT):
-- lowercase snake_case
-- letters, numbers, underscores only
-- no spaces
+See `@shared/skills/planning/project_slug.md`.
 
 ## Input Gate (Default)
-See `@shared/input_gate.md`.
+See `@shared/skills/gates/input_gate.md`.
 
 ## Open Questions (Optional)
 If `artifacts/<project_slug>/00_open_questions.md` exists, scan `## Open` and incorporate any answered items relevant to this change.
@@ -39,7 +34,7 @@ If `artifacts/<project_slug>/00_open_questions.md` exists, scan `## Open` and in
 If it does not exist, continue; capture unknowns in the risk assessment under `## Open Questions`.
 
 ## Question Style
-Ask questions using the format in `@shared/questions_format.md` (cap 3).
+Ask questions using the format in `@shared/skills/interaction/questions_format.md` (cap 3).
 
 Prefer:
 - Choice (select rollout strategy / blast radius)
@@ -49,7 +44,7 @@ Prefer:
 Write:
 `artifacts/<project_slug>/operations/YYYY-MM-DD_production_risk_assessment-<change_slug>.md`
 
-`<change_slug>` rules (recommended): lowercase snake_case.
+`<change_slug>` rules: see `@shared/skills/planning/slug_rules.md`.
 
 ## Output Format (STRICT)
 Write the artifact using this exact Markdown structure and headings, in this order.

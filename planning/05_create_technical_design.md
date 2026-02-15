@@ -17,7 +17,7 @@ Do not require a fully specified design up front.
 - Prefer simplicity and a small number of moving parts.
 
 ## Output Boundary (STRICT)
-See `@shared/output_boundary.md` (Artifact: single `md` fenced block).
+See `@shared/skills/gates/output_boundary.md` (Artifact: single `md` fenced block).
 
 ## Required Inputs
 - `artifacts/<project_slug>/00_project_meta.md`
@@ -29,13 +29,13 @@ See `@shared/output_boundary.md` (Artifact: single `md` fenced block).
 - `artifacts/<project_slug>/00_open_questions.md`
 
 ## Input Gate (Default)
-See `@shared/input_gate.md`.
+See `@shared/skills/gates/input_gate.md`.
 
 Exception:
-- `artifacts/<project_slug>/04_ux_design_guide.md` may be missing only if a decision log row in `artifacts/<project_slug>/00_decision_log.md` documents that UX was intentionally skipped due to no user-facing interface.
+- See `@shared/skills/planning/ux_optional_input_exception.md`.
 
 ## Open Questions Gate (Mandatory)
-See `@shared/open_questions_gate.md` (Affects: `05_technical_design.md`).
+See `@shared/skills/gates/open_questions_gate.md` (Affects: `05_technical_design.md`).
 
 ## Architectural Philosophy
 - Prefer simplicity.
@@ -46,17 +46,17 @@ See `@shared/open_questions_gate.md` (Affects: `05_technical_design.md`).
 
 ## Instructions
 1. Review all inputs.
-2. Ask (via `@shared/questions_format.md`) only the smallest set of clarifications needed to lock:
+2. Ask (via `@shared/skills/interaction/questions_format.md`) only the smallest set of clarifications needed to lock:
    - System boundaries and key flows
    - Data durability, integrity, and retention
    - External integrations and failure behavior
    - Operational posture (hosting, environments, deployment frequency)
    - Team constraints (language familiarity, operational tolerance)
    - Repo conventions required for implementation (commands + CI outline)
-3. When you introduce or finalize decisions, append row(s) per `@shared/decision_log_update.md`.
+3. When you introduce or finalize decisions, append row(s) per `@shared/skills/artifacts/decision_log_update.md`.
 
 ## Decision Log Update (Mandatory)
-See `@shared/decision_log_update.md`.
+See `@shared/skills/artifacts/decision_log_update.md`.
 
 ## Output Artifact
 Write:

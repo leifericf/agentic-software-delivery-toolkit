@@ -4,95 +4,24 @@
 ## Role
 See `@shared/roles/product_manager.md`.
 
-## Operating Mode
-- Interactive discovery. No tech yet.
-- Ask questions via `@shared/questions_format.md` (cap 3 per turn; respect user batch-size preference if set in `.agentic_profile.md`).
+## Skills
+- Question format: See `@shared/skills/interaction/questions_format.md` (cap 3 per turn; respect user batch-size preference if set in `.agentic_profile.md`).
+- Output boundary: See `@shared/skills/gates/output_boundary.md` (Artifact: single `md` fenced block).
+- Project slug: See `@shared/skills/planning/project_slug.md`.
+- Project bootstrap: See `@shared/skills/artifacts/project_bootstrap.md`.
 
 ## Starting Point (Mandatory)
 Start with a loose, plain-language paragraph.
 - Do not ask for exhaustive detail; rough notes/voice dictation are fine.
 - Use follow-ups to make scope/constraints concrete.
 
-## Output Boundary (STRICT)
-See `@shared/output_boundary.md` (Artifact: single `md` fenced block).
-
 ## Inputs
 None required (prior artifacts are optional inputs).
 
-## Open Questions File (Mandatory)
-After `project_slug` is locked, ensure `artifacts/<project_slug>/00_open_questions.md` exists.
-
-If it does not exist, initialize it with this minimal valid structure:
-
-```md
-# Open Questions
-
-## Open
-
-- [ ] [Blocking] [Affects: <artifact_filename>.md] <question> (Answer: TBD)
-- [ ] [Affects: <artifact_filename>.md] <question> (Answer: TBD)
-
-## Resolved
-
-- [x] [Affects: <artifact_filename>.md] <question> (Answer: <answer>) (Date: YYYY-MM-DD)
-```
-
-Notes:
-- Use `[Blocking]` only when you truly cannot proceed without the answer.
-- `Affects` should list artifact filenames (e.g. `02_product_requirements.md`, `05_technical_design.md`).
-
-If any clarification questions come up during this step, add them as unchecked items under `## Open`.
-
-## Project Slug + Artifact Bootstrapping (Mandatory)
-1) Ask for a human-friendly project name.
-2) Suggest a derived `project_slug` and have the user choose.
-
-Slug rules (STRICT):
-- lowercase snake_case
-- letters, numbers, underscores only
-- no spaces
-
-Slug selection (MANDATORY):
-- Provide 3-5 slug options using the format in `@shared/questions_format.md`.
-- Include an option for a custom slug.
-- Validate the chosen/custom slug against the slug rules.
-
-Then initialize the artifacts directory and shared files:
-
-1. Create: `artifacts/<project_slug>/`
-2. Create: `artifacts/<project_slug>/00_project_meta.md` with this minimal valid structure (fill in Project Name and Project Slug):
-
-```md
-# Project Meta
-
-## Identity
-- Project Name: <Project Name>
-- Project Slug: <project_slug>
-
-## Ownership
-- Owner: <name or role>
-
-## Dates
-- Started: YYYY-MM-DD
-
-## Links
-- Repository: <optional>
-- Docs: <optional>
-
-## Notes
-- <optional>
-```
-
-3. Create: `artifacts/<project_slug>/00_open_questions.md` if it does not already exist (see structure above)
-4. Create: `artifacts/<project_slug>/00_decision_log.md` with this minimal valid structure:
-
-```md
-# Decision Log
-
-| Date | Decision | Why | Tradeoff |
-| --- | --- | --- | --- |
-| YYYY-MM-DD | <decision> | <why> | <tradeoff> |
-```
+## Project Setup (Mandatory)
+Before drafting the problem description artifact:
+- Lock `project_slug` using `@shared/skills/planning/project_slug.md`.
+- Bootstrap `artifacts/<project_slug>/` using `@shared/skills/artifacts/project_bootstrap.md`.
 
 ## Objective
 Build a clear definition of the problem to solve and the constraints that shape the solution.
@@ -115,7 +44,7 @@ Continue the back-and-forth until BOTH conditions are met:
 - The problem is clearly understood.
 - The user confirms the summary is accurate.
 
-If the user asks to park/drop questions, follow `@shared/questions_format.md` and record parked items in `artifacts/<project_slug>/00_open_questions.md`.
+If the user asks to park/drop questions, follow `@shared/skills/interaction/questions_format.md` and record parked items in `artifacts/<project_slug>/00_open_questions.md`.
 
 ## Output Artifact
 Write:

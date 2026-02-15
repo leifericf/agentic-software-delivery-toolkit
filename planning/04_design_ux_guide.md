@@ -14,22 +14,10 @@ Do not require detailed UI specs up front.
 - If not, start from a 1-2 sentence direction and refine via questions.
 
 ## Output Boundary (STRICT)
-See `@shared/output_boundary.md` (Artifact: single `md` fenced block).
+See `@shared/skills/gates/output_boundary.md` (Artifact: single `md` fenced block).
 
 ## Applicability Gate (Mandatory)
-This step is required for most product software, but it may be skipped for projects with no user-facing interface.
-
-First determine whether any user-facing interface surface is in-scope: Web, Mobile, Desktop, TUI, CLI.
-
-If none apply (e.g., pure library, backend-only service, batch job, data pipeline):
-1. Do NOT produce `artifacts/<project_slug>/04_ux_design_guide.md`.
-2. Add a decision log row to `artifacts/<project_slug>/00_decision_log.md` documenting the skip.
-   - Decision: Skip UX design guide (no user-facing interface).
-   - Why: No UI surfaces are in-scope.
-   - Tradeoff: Less UX guidance if UI is added later; revisit UX.
-3. In Chat mode, output exactly one line:
-   `Status: UX design guide skipped; tag @planning/05_create_technical_design.md`
-Then stop.
+See `@shared/skills/planning/ux_applicability_gate.md`.
 
 ## Required Inputs
 - `artifacts/<project_slug>/00_project_meta.md`
@@ -40,10 +28,10 @@ Then stop.
 - `artifacts/<project_slug>/00_open_questions.md`
 
 ## Input Gate (Default)
-See `@shared/input_gate.md`.
+See `@shared/skills/gates/input_gate.md`.
 
 ## Open Questions Gate (Mandatory)
-See `@shared/open_questions_gate.md` (Affects: `04_ux_design_guide.md`).
+See `@shared/skills/gates/open_questions_gate.md` (Affects: `04_ux_design_guide.md`).
 
 ## Instructions
 First collect visual references: ask for 3-5 references that match the intended look/feel.
@@ -65,7 +53,7 @@ Example textual descriptions:
 - "Dark and gloomy with bold red accents, high contrast typography, moody gradients"
 - "Warm editorial: off-white paper background, serif headings, generous line height"
 
-If the user cannot provide references, ask them to pick a direction using the format in `@shared/questions_format.md` (e.g. Minimal / Editorial / Playful / Enterprise / Retro / Luxury).
+If the user cannot provide references, ask them to pick a direction using the format in `@shared/skills/interaction/questions_format.md` (e.g. Minimal / Editorial / Playful / Enterprise / Retro / Luxury).
 
 Ask questions about:
 - Primary interface surfaces
@@ -79,12 +67,12 @@ Also ask about:
 - Input modalities: Keyboard-only | Keyboard+Mouse | Touch | Mixed
 - Offline/latency constraints: Low | Medium | High
 
-Ask questions using the format in `@shared/questions_format.md`.
+Ask questions using the format in `@shared/skills/interaction/questions_format.md`.
 
 Do NOT assume toolkits unless already selected.
 
 ## Decision Log Update (Mandatory)
-See `@shared/decision_log_update.md`.
+See `@shared/skills/artifacts/decision_log_update.md`.
 
 ## Output Artifact
 Write:

@@ -15,7 +15,7 @@ Do not expect the user to write formal decision docs.
 - Convert to short table rows; iterate until accurate.
 
 ## Output Boundary (STRICT)
-See `@shared/output_boundary.md` (Artifact: single `md` fenced block).
+See `@shared/skills/gates/output_boundary.md` (Artifact: single `md` fenced block).
 
 ## Artifact Behavior
 Append-only living document.
@@ -30,16 +30,16 @@ Append-only living document.
 - `artifacts/<project_slug>/00_open_questions.md`
 
 ## Input Gate (Default)
-See `@shared/input_gate.md`.
+See `@shared/skills/gates/input_gate.md`.
 
 ## Open Questions Gate (Mandatory)
-See `@shared/open_questions_gate.md` (Affects: `00_decision_log.md`).
+See `@shared/skills/gates/open_questions_gate.md` (Affects: `00_decision_log.md`).
 
 ## Instructions
 1. Review all prior artifacts.
 2. Extract decisions already made.
 3. Ask if any major decisions remain unresolved.
-4. Use the question format in `@shared/questions_format.md` to finalize them.
+4. Use the question format in `@shared/skills/interaction/questions_format.md` to finalize them.
 
 ## Output Artifact
 Write:

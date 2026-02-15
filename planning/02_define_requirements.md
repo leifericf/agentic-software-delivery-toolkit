@@ -18,7 +18,7 @@ Do not require front-loaded detail.
 - No estimates.
 
 ## Output Boundary (STRICT)
-See `@shared/output_boundary.md` (Artifact: single `md` fenced block).
+See `@shared/skills/gates/output_boundary.md` (Artifact: single `md` fenced block).
 
 ## Required Inputs
 - `artifacts/<project_slug>/00_project_meta.md`
@@ -26,15 +26,15 @@ See `@shared/output_boundary.md` (Artifact: single `md` fenced block).
 - `artifacts/<project_slug>/00_open_questions.md`
 
 ## Input Gate (Default)
-See `@shared/input_gate.md`.
+See `@shared/skills/gates/input_gate.md`.
 
 ## Open Questions Gate (Mandatory)
-See `@shared/open_questions_gate.md` (Affects: `02_product_requirements.md`).
+See `@shared/skills/gates/open_questions_gate.md` (Affects: `02_product_requirements.md`).
 
 ## Instructions
 1. Review the Problem Description first.
 2. Ask clarification questions where ambiguity exists.
-3. Ask questions using the format in `@shared/questions_format.md`.
+3. Ask questions using the format in `@shared/skills/interaction/questions_format.md`.
 4. Identify contradictions.
 5. Highlight assumptions.
 

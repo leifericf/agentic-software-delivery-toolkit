@@ -1,5 +1,5 @@
  
-# Interaction Meta-Preferences
+# Skill: Interaction meta-preferences
 
 This document defines a small, persistent set of interaction preferences that reduce interruption fatigue while keeping rigor.
 

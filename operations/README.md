@@ -27,5 +27,4 @@ To avoid collisions and keep things sortable, prefix artifacts with a date:
 - `YYYY-MM-DD_root_cause_analysis-<incident_slug>.md`
 
 Slug rules (recommended):
-- lowercase snake_case
-- letters, numbers, underscores only
+See `@shared/skills/planning/slug_rules.md`.

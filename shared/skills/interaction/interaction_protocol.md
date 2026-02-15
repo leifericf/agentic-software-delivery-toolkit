@@ -1,5 +1,5 @@
  
-# Interaction Protocol
+# Skill: Interaction protocol
 
 Intended human <-> AI loop for all workflow steps.
 
@@ -22,7 +22,7 @@ If a repo-local profile file exists at `.agentic_profile.md`:
 - Do not copy it into project artifacts unless the user explicitly requests it.
 - Never store secrets in it.
 
-Interaction preferences are interpreted via `@shared/interaction_meta_preferences.md`.
+Interaction preferences are interpreted via `@shared/skills/interaction/interaction_meta_preferences.md`.
 
 ## Progressive Narrowing (Default)
 Default early shape: Explore -> Define -> Converge.
@@ -70,7 +70,7 @@ Stop conditions:
 - Do not ask questions just to keep the conversation going.
 
 ## Question Format
-Use `@shared/questions_format.md`.
+Use `@shared/skills/interaction/questions_format.md`.
 
 Default mode:
 - If `.agentic_profile.md` exists, use its default question mode.
@@ -124,7 +124,7 @@ The agent should follow the override for that turn unless it would block progres
 - No praise/flattery; stay neutral and concrete.
 
 ## Ask Vs Assume (Mandatory)
-Follow the decision policy in `@shared/interaction_meta_preferences.md`.
+Follow the decision policy in `@shared/skills/interaction/interaction_meta_preferences.md`.
 
 Practical rule:
 - If a missing answer is not blocking, prefer to proceed with an explicit assumption when the user prefers fewer interruptions.

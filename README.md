@@ -32,7 +32,7 @@ Sub-goals:
 - An implementation workflow in `implementation/` for picking a feature, planning tasks, and delivering incrementally.
 - Operations templates in `operations/` for incident response, log triage, risk assessment, and retros.
 - A consistent artifact set written to `artifacts/<project_slug>/`.
-- Reusable standalone prompts in `prompts/`.
+- Reusable skills in `shared/skills/` (gates, interaction, git, etc).
 
 ## Quickstart
 
@@ -65,12 +65,10 @@ You do not need to front-load detail: start Step 01 with a loose paragraph descr
 - Planning: `planning/README.md`
 - Implementation: `implementation/README.md`
 
-## Standalone Prompts
+## Git Skills
 
-Prompt templates you can use independently live in `prompts/`.
-
-- `prompts/git_commit.md`
-- `prompts/git_merge.md`
+- `shared/skills/git/git_commit.md`
+- `shared/skills/git/git_merge.md`
 
 ## Repo Layout
 
@@ -79,7 +77,7 @@ Prompt templates you can use independently live in `prompts/`.
 - `implementation/`: implementation templates for delivery
 - `operations/`: free-standing templates for production/ops work (incidents, triage, risk)
 - `shared/`: shared templates used by multiple workflows
-- `prompts/`: standalone prompts
+- `shared/skills/`: reusable skill modules (referenced by roles/steps)
 - `artifacts/`: project-specific outputs (directory included; contents ignored by default)
 
 ## License

@@ -1,4 +1,4 @@
-# Prompt Output Boundary (Shared)
+# Skill: Prompt output boundary
 
 For standalone prompts (not workflow steps):
 

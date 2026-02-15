@@ -7,7 +7,7 @@ See `@shared/roles/product_manager.md`.
 Help the user pick the best next feature/story to implement from the backlog.
 
 ## Output Boundary (STRICT)
-See `@shared/output_boundary.md`.
+See `@shared/skills/gates/output_boundary.md`.
 Override: no artifact for this step.
 
 ## Required Inputs
@@ -28,7 +28,7 @@ Before selecting, check `artifacts/<project_slug>/00_open_questions.md`.
 If any unchecked `[Blocking]` item affects backlog selection or core scope, stop and ask for an answer.
 
 ## Questions (Mandatory)
-Ask using `@shared/questions_format.md`:
+Ask using `@shared/skills/interaction/questions_format.md`:
 
 - What outcome matters most right now?
 - Any deadlines or sequencing constraints?

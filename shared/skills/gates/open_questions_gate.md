@@ -1,4 +1,4 @@
-# Open Questions Gate (Shared)
+# Skill: Open questions gate
 
 Before drafting/updating an artifact or starting work:
 

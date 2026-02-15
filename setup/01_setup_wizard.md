@@ -5,12 +5,12 @@ See `@shared/roles/product_manager.md`.
 
 ## Operating Mode
 - Interactive preference capture.
-- Ask questions via `@shared/questions_format.md` (cap 3 per turn).
+- Ask questions via `@shared/skills/interaction/questions_format.md` (cap 3 per turn).
 
 ## Output Boundary (STRICT)
 Override: this step writes/updates a repo-local profile file.
 
-- Chat mode: follow `@shared/output_boundary.md`.
+- Chat mode: follow `@shared/skills/gates/output_boundary.md`.
 - Artifact mode: output exactly one `md` fenced code block containing the full contents of `.agentic_profile.md`.
 
 ## Inputs

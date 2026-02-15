@@ -1,5 +1,5 @@
 
-# Functional Elicitation (Shared)
+# Skill: Functional elicitation
 
 ## Purpose
 Help the agent capture story requirements in user-facing language before planning or implementation.

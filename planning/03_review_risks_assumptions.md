@@ -14,7 +14,7 @@ Do not ask the user to enumerate risks exhaustively.
 - Use targeted questions to confirm/reject/refine.
 
 ## Output Boundary (STRICT)
-See `@shared/output_boundary.md` (Artifact: single `md` fenced block).
+See `@shared/skills/gates/output_boundary.md` (Artifact: single `md` fenced block).
 
 ## Required Inputs
 - `artifacts/<project_slug>/00_project_meta.md`
@@ -23,10 +23,10 @@ See `@shared/output_boundary.md` (Artifact: single `md` fenced block).
 - `artifacts/<project_slug>/00_open_questions.md`
 
 ## Input Gate (Default)
-See `@shared/input_gate.md`.
+See `@shared/skills/gates/input_gate.md`.
 
 ## Open Questions Gate (Mandatory)
-See `@shared/open_questions_gate.md` (Affects: `03_risk_assumption_review.md`).
+See `@shared/skills/gates/open_questions_gate.md` (Affects: `03_risk_assumption_review.md`).
 
 ## Instructions
 Analyze everything produced so far.
@@ -40,7 +40,7 @@ Identify:
 - Organizational risks
 
 ## Question Style
-Ask questions using the format in `@shared/questions_format.md`.
+Ask questions using the format in `@shared/skills/interaction/questions_format.md`.
 
 Prefer:
 - Binary

@@ -1,13 +1,10 @@
-# Git Commit Prompt
-
-## Role
-See `@shared/roles/software_engineer.md`.
+# Skill: Git commit
 
 ## Objective
 Create a clean commit that matches this repository's existing commit message style.
 
 ## Output Boundary (STRICT)
-See `@shared/prompt_output_boundary.md`.
+See `@shared/skills/gates/prompt_output_boundary.md`.
 
 ## Safety Rules (Mandatory)
 - Do not commit secrets (e.g. `.env`, credentials, API keys).

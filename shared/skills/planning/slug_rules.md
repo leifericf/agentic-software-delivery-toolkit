@@ -1,0 +1,8 @@
+# Skill: Slug rules
+
+Use when you need a slug for files, incidents, changes, or projects.
+
+## Rules (strict)
+- lowercase snake_case
+- letters, numbers, underscores only
+- no spaces

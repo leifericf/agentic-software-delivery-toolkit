@@ -4,6 +4,8 @@ These files define reusable agent roles used across workflow steps and standalon
 
 Workflow steps should keep their `## Role` section lean and reference one of these files instead.
 
+Roles may also bundle reusable skills (see `@shared/skills/README.md`).
+
 Convention:
 - Each role file is a short, expandable definition.
 - Workflow steps reference roles via: `See @shared/roles/<role_file>.md`.

@@ -1,4 +1,4 @@
-# Output Boundary (Shared)
+# Skill: Output boundary
 
 Applies to workflow step templates unless they explicitly override it.
 
@@ -7,7 +7,7 @@ Applies to workflow step templates unless they explicitly override it.
 - Optional preface: one `Heard:` line and/or 1-3 short recap bullets.
 - No plans or meta commentary. Avoid long summaries.
 - If needed: output exactly one line: `Status: <5-12 words>`.
-- Follow `@shared/interaction_protocol.md`.
+- Follow `@shared/skills/interaction/interaction_protocol.md`.
 
 ## Artifact mode
 - Output exactly one fenced code block containing the full artifact file contents.

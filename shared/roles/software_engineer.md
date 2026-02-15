@@ -11,3 +11,12 @@ Focus:
 Avoid:
 - Big-bang implementation.
 - Re-litigating product scope (hand off to Product manager) unless blockers appear.
+
+## Skills
+- See `@shared/skills/interaction/interaction_protocol.md`.
+- See `@shared/skills/interaction/questions_format.md`.
+- See `@shared/skills/gates/open_questions_gate.md`.
+- See `@shared/skills/implementation/functional_elicitation.md`.
+- See `@shared/skills/git/git_commit.md`.
+- See `@shared/skills/git/git_merge.md`.
+- See `@shared/skills/implementation/quality_gate.md`.

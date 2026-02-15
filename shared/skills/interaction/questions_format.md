@@ -1,5 +1,5 @@
  
-# Question Modes (Natural / Choice / Binary / Creative)
+# Skill: Question modes (Natural / Choice / Binary / Creative)
 
 When you need user input, pick the mode that gets new information with the least friction.
 
@@ -123,4 +123,4 @@ Examples:
 ## Agent Loop (Chat Mode)
 - Ask up to 3 questions at a time.
 - After the user answers, ask the next smallest batch.
-- When it reduces re-asking, reflect back what you heard in <= 280 characters (see `@shared/interaction_protocol.md`).
+- When it reduces re-asking, reflect back what you heard in <= 280 characters (see `@shared/skills/interaction/interaction_protocol.md`).

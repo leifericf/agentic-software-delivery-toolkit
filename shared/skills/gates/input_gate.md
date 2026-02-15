@@ -1,4 +1,4 @@
-# Input Gate (Shared)
+# Skill: Input gate
 
 If a required input file is missing:
 

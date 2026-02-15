@@ -7,7 +7,7 @@ See `@shared/roles/software_engineer.md`.
 Execute the task plan one step at a time on a new local git feature branch, committing each logically separated chunk.
 
 ## Output Boundary (STRICT)
-See `@shared/output_boundary.md`.
+See `@shared/skills/gates/output_boundary.md`.
 Override: no artifacts; update repo files directly. When done and automation is green, you may output a short validation script (2-6 steps).
 
 ## Required Inputs
@@ -24,12 +24,12 @@ Do not implement everything at once.
 - Keep changes small and verifiable.
 
 ## Open Questions Gate (Mandatory)
-See `@shared/open_questions_gate.md` (Blockers: any `[Blocking]` item affecting the chunk you are about to do).
+See `@shared/skills/gates/open_questions_gate.md` (Blockers: any `[Blocking]` item affecting the chunk you are about to do).
 
 ## Git Rules
 - Create a new local feature branch before making changes.
 - Commit after each chunk (or meaningful sub-chunk), with a message that explains intent.
-- Follow `prompts/git_commit.md`.
+- Follow `@shared/skills/git/git_commit.md`.
 - Do not push unless explicitly asked.
 
 ## Task Hygiene

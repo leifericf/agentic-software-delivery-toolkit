@@ -11,7 +11,7 @@ The default review lens is functional correctness (user-facing acceptance). Tech
 This step is optional. Use it when the task plan has unclear acceptance criteria, risky migrations, external dependencies, or any decision that would be expensive to change later.
 
 ## Output Boundary (STRICT)
-See `@shared/output_boundary.md` (Artifact: single `md` fenced block).
+See `@shared/skills/gates/output_boundary.md` (Artifact: single `md` fenced block).
 
 ## Required Inputs
 - `artifacts/<project_slug>/tasks/plan-<feature_slug>.md`
@@ -27,12 +27,12 @@ Assume the plan has missing details.
 - Prefer plain language a non-technical product owner can answer.
 - Avoid technical design debates.
 - If a technical detail is unavoidable, ask about the user-visible tradeoff.
-- Use `@shared/questions_format.md`.
+- Use `@shared/skills/interaction/questions_format.md`.
 
 ## Instructions
 1. Read the plan and treat `## Functional Snapshot` and `## Conditions of Done` as the source of truth.
 2. Check `artifacts/<project_slug>/00_open_questions.md` and do not re-ask already-answered questions.
-3. Ask the smallest set of questions needed to remove ambiguity, using the order in `@shared/functional_elicitation.md`.
+3. Ask the smallest set of questions needed to remove ambiguity, using the order in `@shared/skills/implementation/functional_elicitation.md`.
 4. Focus on gaps that will cause rework:
    - Success criteria not observable/testable
    - User flow ambiguity

@@ -14,7 +14,7 @@ Do not ask the user to pre-write a detailed backlog.
 - Iterate to confirm priority, sequencing, and scope.
 
 ## Output Boundary (STRICT)
-See `@shared/output_boundary.md` (Artifact: single `text` fenced block).
+See `@shared/skills/gates/output_boundary.md` (Artifact: single `text` fenced block).
 
 ## Required Inputs
 - `artifacts/<project_slug>/00_project_meta.md`
@@ -27,17 +27,17 @@ See `@shared/output_boundary.md` (Artifact: single `text` fenced block).
 - `artifacts/<project_slug>/00_open_questions.md`
 
 ## Input Gate (Default)
-See `@shared/input_gate.md`.
+See `@shared/skills/gates/input_gate.md`.
 
 Exception:
-- `artifacts/<project_slug>/04_ux_design_guide.md` may be missing only if a decision log row in `artifacts/<project_slug>/00_decision_log.md` documents that UX was intentionally skipped due to no user-facing interface.
+- See `@shared/skills/planning/ux_optional_input_exception.md`.
 
 ## Open Questions Gate (Mandatory)
-See `@shared/open_questions_gate.md` (Affects: `06_product_backlog.md`).
+See `@shared/skills/gates/open_questions_gate.md` (Affects: `06_product_backlog.md`).
 
 ## Instructions
 1. Review all artifacts.
-2. Ask via `@shared/questions_format.md`.
+2. Ask via `@shared/skills/interaction/questions_format.md`.
 3. Check for missing capabilities.
 4. Validate priority assumptions.
 

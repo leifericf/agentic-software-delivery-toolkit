@@ -1,13 +1,10 @@
-# Git Merge Prompt
-
-## Role
-See `@shared/roles/software_engineer.md`.
+# Skill: Git merge
 
 ## Objective
 Merge a local feature branch into `main` safely and cleanly.
 
 ## Output Boundary (STRICT)
-See `@shared/prompt_output_boundary.md`.
+See `@shared/skills/gates/prompt_output_boundary.md`.
 
 ## Safety Rules (Mandatory)
 - Do not run destructive git commands (e.g. `reset --hard`, force push).

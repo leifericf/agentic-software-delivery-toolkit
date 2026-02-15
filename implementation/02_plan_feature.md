@@ -14,7 +14,7 @@ Lock functional requirements in plain language before decomposing into tasks.
 - If you must ask about a technical choice, translate it into a user-visible tradeoff.
 
 ## Output Boundary (STRICT)
-See `@shared/output_boundary.md` (Artifact: single `md` fenced block).
+See `@shared/skills/gates/output_boundary.md` (Artifact: single `md` fenced block).
 
 ## Required Inputs
 - `artifacts/<project_slug>/02_product_requirements.md`
@@ -43,13 +43,13 @@ Before you draft chunks/tasks, ensure the plan includes a crisp functional snaps
 1. Read the backlog item being implemented and scan the PRD for relevant requirements.
 2. Check `artifacts/<project_slug>/00_open_questions.md` and incorporate any resolved answers.
 3. If functional requirements are missing or ambiguous, ask a short question batch using:
-   - `@shared/questions_format.md`
-   - `@shared/functional_elicitation.md` (question order + "good enough to start" checklist)
+   - `@shared/skills/interaction/questions_format.md`
+   - `@shared/skills/implementation/functional_elicitation.md` (question order + "good enough to start" checklist)
 
 Do not proceed to planning tasks until you can write the `## Functional Snapshot` section (below) in plain language.
 
 ## Open Questions Gate (Mandatory)
-See `@shared/open_questions_gate.md` (Blockers: any `[Blocking]` item affecting this feature).
+See `@shared/skills/gates/open_questions_gate.md` (Blockers: any `[Blocking]` item affecting this feature).
 
 ## Output Artifact
 Write:
