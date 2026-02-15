@@ -1,7 +1,7 @@
 
 # Agentic Software Delivery Toolkit
 
-Workflows and prompt templates for planning and implementing software with LLM-powered agents.
+Prompt-driven workflows and reusable prompt templates for planning and building software with LLM-powered agents.
 
 The planning workflow is intentionally **pre-coding**: it helps you elicit constraints, make decisions explicit, and produce durable artifacts before you generate (or modify) a codebase.
 
