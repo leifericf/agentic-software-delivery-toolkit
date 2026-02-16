@@ -2,7 +2,7 @@
 
 If this step introduces or finalizes decisions:
 
-- Append one or more rows to `artifacts/<project_slug>/00_decision_log.md` using this table format:
+- Append one or more rows to `artifacts/<project_slug>/decision_log.md` using this table format:
 
 ```md
 # Decision Log

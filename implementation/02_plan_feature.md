@@ -17,12 +17,12 @@ Lock functional requirements in plain language before decomposing into tasks.
 See `@shared/skills/gates/output_boundary.md` (Artifact: single `md` fenced block).
 
 ## Required Inputs
-- `artifacts/<project_slug>/02_product_requirements.md`
-- `artifacts/<project_slug>/00_decision_log.md`
-- `artifacts/<project_slug>/04_ux_design_guide.md` (if applicable)
-- `artifacts/<project_slug>/05_technical_design.md`
-- `artifacts/<project_slug>/06_product_backlog.md`
-- `artifacts/<project_slug>/00_open_questions.md`
+- `artifacts/<project_slug>/product_requirements.md`
+- `artifacts/<project_slug>/decision_log.md`
+- `artifacts/<project_slug>/ux_design_guide.md` (if applicable)
+- `artifacts/<project_slug>/technical_design.md`
+- `artifacts/<project_slug>/product_backlog.md`
+- `artifacts/<project_slug>/open_questions.md`
 
 ## Starting Point (Mandatory)
 Do not require exhaustive design.
@@ -41,7 +41,7 @@ Do not require exhaustive design.
 Before you draft chunks/tasks, ensure the plan includes a crisp functional snapshot of the story.
 
 1. Read the backlog item being implemented and scan the PRD for relevant requirements.
-2. Check `artifacts/<project_slug>/00_open_questions.md` and incorporate any resolved answers.
+2. Check `artifacts/<project_slug>/open_questions.md` and incorporate any resolved answers.
 3. If functional requirements are missing or ambiguous, ask a short question batch using:
    - `@shared/skills/interaction/questions_format.md`
    - `@shared/skills/implementation/functional_elicitation.md` (question order + "good enough to start" checklist)
@@ -66,9 +66,9 @@ Use this structure (adjust as needed). Prefer clarity over ceremony.
 - Backlog item: <epic/story name>
 - Feature slug: <feature_slug>
 - Related:
-  - PRD: `artifacts/<project_slug>/02_product_requirements.md`
-  - Technical design: `artifacts/<project_slug>/05_technical_design.md`
-  - Decision log: `artifacts/<project_slug>/00_decision_log.md`
+  - PRD: `artifacts/<project_slug>/product_requirements.md`
+  - Technical design: `artifacts/<project_slug>/technical_design.md`
+  - Decision log: `artifacts/<project_slug>/decision_log.md`
 
 ## Context
 - Intended outcome: <short>

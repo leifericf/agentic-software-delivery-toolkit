@@ -17,16 +17,16 @@ Do not ask the user to enumerate risks exhaustively.
 See `@shared/skills/gates/output_boundary.md` (Artifact: single `md` fenced block).
 
 ## Required Inputs
-- `artifacts/<project_slug>/00_project_meta.md`
-- `artifacts/<project_slug>/01_problem_description.md`
-- `artifacts/<project_slug>/02_product_requirements.md`
-- `artifacts/<project_slug>/00_open_questions.md`
+- `artifacts/<project_slug>/project_meta.md`
+- `artifacts/<project_slug>/problem_description.md`
+- `artifacts/<project_slug>/product_requirements.md`
+- `artifacts/<project_slug>/open_questions.md`
 
 ## Input Gate (Default)
 See `@shared/skills/gates/input_gate.md`.
 
 ## Open Questions Gate (Mandatory)
-See `@shared/skills/gates/open_questions_gate.md` (Affects: `03_risk_assumption_review.md`).
+See `@shared/skills/gates/open_questions_gate.md` (Affects: `risk_assumption_review.md`).
 
 ## Instructions
 Analyze everything produced so far.
@@ -53,7 +53,7 @@ Continue until uncertainty is low.
 
 ## Output Artifact
 Write:
-`artifacts/<project_slug>/03_risk_assumption_review.md`
+`artifacts/<project_slug>/risk_assumption_review.md`
 
 ## Output Format (STRICT)
 Write the artifact using this exact Markdown structure and headings, in this order.
@@ -70,10 +70,10 @@ Template:
 ## Metadata
 - Date: YYYY-MM-DD
 - Reviewed Artifacts:
-  - `artifacts/<project_slug>/01_problem_description.md`
-  - `artifacts/<project_slug>/02_product_requirements.md`
+  - `artifacts/<project_slug>/problem_description.md`
+  - `artifacts/<project_slug>/product_requirements.md`
 - Open Questions:
-  - `artifacts/<project_slug>/00_open_questions.md`
+  - `artifacts/<project_slug>/open_questions.md`
 
 ## Confirmed Truths
 - <statement>

@@ -20,18 +20,18 @@ See `@shared/skills/gates/output_boundary.md` (Artifact: single `md` fenced bloc
 See `@shared/skills/planning/ux_applicability_gate.md`.
 
 ## Required Inputs
-- `artifacts/<project_slug>/00_project_meta.md`
-- `artifacts/<project_slug>/01_problem_description.md`
-- `artifacts/<project_slug>/02_product_requirements.md`
-- `artifacts/<project_slug>/03_risk_assumption_review.md`
-- `artifacts/<project_slug>/00_decision_log.md`
-- `artifacts/<project_slug>/00_open_questions.md`
+- `artifacts/<project_slug>/project_meta.md`
+- `artifacts/<project_slug>/problem_description.md`
+- `artifacts/<project_slug>/product_requirements.md`
+- `artifacts/<project_slug>/risk_assumption_review.md`
+- `artifacts/<project_slug>/decision_log.md`
+- `artifacts/<project_slug>/open_questions.md`
 
 ## Input Gate (Default)
 See `@shared/skills/gates/input_gate.md`.
 
 ## Open Questions Gate (Mandatory)
-See `@shared/skills/gates/open_questions_gate.md` (Affects: `04_ux_design_guide.md`).
+See `@shared/skills/gates/open_questions_gate.md` (Affects: `ux_design_guide.md`).
 
 ## Instructions
 First collect visual references: ask for 3-5 references that match the intended look/feel.
@@ -76,7 +76,7 @@ See `@shared/skills/artifacts/decision_log_update.md`.
 
 ## Output Artifact
 Write:
-`artifacts/<project_slug>/04_ux_design_guide.md`
+`artifacts/<project_slug>/ux_design_guide.md`
 
 ## Output Format (STRICT)
 Write the artifact using this exact Markdown structure and headings, in this order.
@@ -89,7 +89,7 @@ Template:
 ## Metadata
 - Date: YYYY-MM-DD
 - Related:
-  - PRD: `artifacts/<project_slug>/02_product_requirements.md`
+  - PRD: `artifacts/<project_slug>/product_requirements.md`
 
 ## Visual References
 - Reference 1: <URL or description>

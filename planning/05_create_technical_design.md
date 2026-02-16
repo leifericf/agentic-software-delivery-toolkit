@@ -20,13 +20,13 @@ Do not require a fully specified design up front.
 See `@shared/skills/gates/output_boundary.md` (Artifact: single `md` fenced block).
 
 ## Required Inputs
-- `artifacts/<project_slug>/00_project_meta.md`
-- `artifacts/<project_slug>/01_problem_description.md`
-- `artifacts/<project_slug>/02_product_requirements.md`
-- `artifacts/<project_slug>/03_risk_assumption_review.md`
-- `artifacts/<project_slug>/00_decision_log.md`
-- `artifacts/<project_slug>/04_ux_design_guide.md` (if applicable; see `@planning/04_design_ux_guide.md`)
-- `artifacts/<project_slug>/00_open_questions.md`
+- `artifacts/<project_slug>/project_meta.md`
+- `artifacts/<project_slug>/problem_description.md`
+- `artifacts/<project_slug>/product_requirements.md`
+- `artifacts/<project_slug>/risk_assumption_review.md`
+- `artifacts/<project_slug>/decision_log.md`
+- `artifacts/<project_slug>/ux_design_guide.md` (if applicable; see `@planning/04_design_ux_guide.md`)
+- `artifacts/<project_slug>/open_questions.md`
 
 ## Input Gate (Default)
 See `@shared/skills/gates/input_gate.md`.
@@ -35,7 +35,7 @@ Exception:
 - See `@shared/skills/planning/ux_optional_input_exception.md`.
 
 ## Open Questions Gate (Mandatory)
-See `@shared/skills/gates/open_questions_gate.md` (Affects: `05_technical_design.md`).
+See `@shared/skills/gates/open_questions_gate.md` (Affects: `technical_design.md`).
 
 ## Architectural Philosophy
 - Prefer simplicity.
@@ -60,7 +60,7 @@ See `@shared/skills/artifacts/decision_log_update.md`.
 
 ## Output Artifact
 Write:
-`artifacts/<project_slug>/05_technical_design.md`
+`artifacts/<project_slug>/technical_design.md`
 
 ## Output Format (STRICT)
 Write the artifact using this exact Markdown structure and headings, in this order.
@@ -71,11 +71,11 @@ Write the artifact using this exact Markdown structure and headings, in this ord
 ## Metadata
 - Date: YYYY-MM-DD
 - Related:
-  - PRD: `artifacts/<project_slug>/02_product_requirements.md`
-  - Risk review: `artifacts/<project_slug>/03_risk_assumption_review.md`
-  - Decision log: `artifacts/<project_slug>/00_decision_log.md`
-  - UX guide: `artifacts/<project_slug>/04_ux_design_guide.md` (if applicable)
-  - Open questions: `artifacts/<project_slug>/00_open_questions.md`
+  - PRD: `artifacts/<project_slug>/product_requirements.md`
+  - Risk review: `artifacts/<project_slug>/risk_assumption_review.md`
+  - Decision log: `artifacts/<project_slug>/decision_log.md`
+  - UX guide: `artifacts/<project_slug>/ux_design_guide.md` (if applicable)
+  - Open questions: `artifacts/<project_slug>/open_questions.md`
 
 ## System Shape
 <1-2 paragraphs describing the overall shape>

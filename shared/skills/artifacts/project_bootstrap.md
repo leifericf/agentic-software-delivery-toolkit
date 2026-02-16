@@ -5,7 +5,7 @@ Use when starting a new project and you need to initialize `artifacts/<project_s
 ## Procedure
 1. Ensure `project_slug` is locked (see `@shared/skills/planning/project_slug.md`).
 2. Create: `artifacts/<project_slug>/`
-3. Create: `artifacts/<project_slug>/00_project_meta.md` with this minimal structure:
+3. Create: `artifacts/<project_slug>/project_meta.md` with this minimal structure:
 
 ```md
 # Project Meta
@@ -28,7 +28,7 @@ Use when starting a new project and you need to initialize `artifacts/<project_s
 - <optional>
 ```
 
-4. Create: `artifacts/<project_slug>/00_open_questions.md` (if it does not already exist) with this minimal structure:
+4. Create: `artifacts/<project_slug>/open_questions.md` (if it does not already exist) with this minimal structure:
 
 ```md
 # Open Questions
@@ -45,9 +45,9 @@ Use when starting a new project and you need to initialize `artifacts/<project_s
 
 Notes:
 - Use `[Blocking]` only when you truly cannot proceed without the answer.
-- `Affects` should list artifact filenames (e.g. `02_product_requirements.md`, `05_technical_design.md`).
+- `Affects` should list artifact filenames (e.g. `product_requirements.md`, `technical_design.md`).
 
-5. Create: `artifacts/<project_slug>/00_decision_log.md` with this minimal structure:
+5. Create: `artifacts/<project_slug>/decision_log.md` with this minimal structure:
 
 ```md
 # Decision Log

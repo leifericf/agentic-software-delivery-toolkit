@@ -44,11 +44,11 @@ Continue the back-and-forth until BOTH conditions are met:
 - The problem is clearly understood.
 - The user confirms the summary is accurate.
 
-If the user asks to park/drop questions, follow `@shared/skills/interaction/questions_format.md` and record parked items in `artifacts/<project_slug>/00_open_questions.md`.
+If the user asks to park/drop questions, follow `@shared/skills/interaction/questions_format.md` and record parked items in `artifacts/<project_slug>/open_questions.md`.
 
 ## Output Artifact
 Write:
-`artifacts/<project_slug>/01_problem_description.md`
+`artifacts/<project_slug>/problem_description.md`
 
 ## Output Format (STRICT)
 Write the artifact using this exact Markdown structure and headings, in this order.
@@ -63,7 +63,7 @@ Template:
 # Problem Description: <Project Name>
 
 ## Metadata
-- Project Meta: `artifacts/<project_slug>/00_project_meta.md`
+- Project Meta: `artifacts/<project_slug>/project_meta.md`
 - Project Slug: <project_slug>
 - Date: YYYY-MM-DD
 - Owner: <name or role>
@@ -120,8 +120,8 @@ Template:
   - Why it helps: <short>
 
 ## References
-- `artifacts/<project_slug>/00_project_meta.md`
-- `artifacts/<project_slug>/00_open_questions.md`
+- `artifacts/<project_slug>/project_meta.md`
+- `artifacts/<project_slug>/open_questions.md`
 ```
 
 After generating the document, ask:

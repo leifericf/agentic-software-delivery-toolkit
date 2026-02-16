@@ -15,7 +15,7 @@ Override: no artifacts unless user issues require updating backlog/tasks.
 ## Required Inputs
 - Implemented feature branch
 - `artifacts/<project_slug>/tasks/plan-<feature_slug>.md`
-- `artifacts/<project_slug>/06_product_backlog.md`
+- `artifacts/<project_slug>/product_backlog.md`
 
 ## Instructions
 1. Give the user a short script for how to test (2-6 steps) based on what was implemented.

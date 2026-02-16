@@ -31,7 +31,7 @@ See `@shared/skills/planning/project_slug.md`.
 See `@shared/skills/gates/input_gate.md`.
 
 ## Open Questions (Optional)
-If `artifacts/<project_slug>/00_open_questions.md` exists, scan `## Open` and do not re-ask answered questions.
+If `artifacts/<project_slug>/open_questions.md` exists, scan `## Open` and do not re-ask answered questions.
 
 If it does not exist, continue; capture unknowns in the triage artifact under `## Open Questions`.
 

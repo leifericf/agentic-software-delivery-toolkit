@@ -19,23 +19,23 @@ Run these **in order**:
 
 After Step 06, planning is complete. To begin delivery, tag `@implementation/01_pick_feature.md`.
 
-Optional: if decisions feel scattered, tag `@shared/log_decisions.md` to reconcile them into `artifacts/<project_slug>/00_decision_log.md`.
+Optional: if decisions feel scattered, tag `@shared/log_decisions.md` to reconcile them into `artifacts/<project_slug>/decision_log.md`.
 
 ## Standard Artifact Set
 
 Each step produces one primary artifact in `artifacts/<project_slug>/`:
 
-- `artifacts/<project_slug>/00_project_meta.md`
-- `artifacts/<project_slug>/00_open_questions.md`
-- `artifacts/<project_slug>/00_decision_log.md`
-- `artifacts/<project_slug>/01_problem_description.md`
-- `artifacts/<project_slug>/02_product_requirements.md`
-- `artifacts/<project_slug>/03_risk_assumption_review.md`
-- `artifacts/<project_slug>/04_ux_design_guide.md` (if applicable)
-- `artifacts/<project_slug>/05_technical_design.md`
-- `artifacts/<project_slug>/06_product_backlog.md`
+- `artifacts/<project_slug>/project_meta.md`
+- `artifacts/<project_slug>/open_questions.md`
+- `artifacts/<project_slug>/decision_log.md`
+- `artifacts/<project_slug>/problem_description.md`
+- `artifacts/<project_slug>/product_requirements.md`
+- `artifacts/<project_slug>/risk_assumption_review.md`
+- `artifacts/<project_slug>/ux_design_guide.md` (if applicable)
+- `artifacts/<project_slug>/technical_design.md`
+- `artifacts/<project_slug>/product_backlog.md`
 
 ## Shared Rules
 
-- The agent tracks unresolved questions in `artifacts/<project_slug>/00_open_questions.md`.
-- The agent captures decisions (and changes to decisions) in `artifacts/<project_slug>/00_decision_log.md`.
+- The agent tracks unresolved questions in `artifacts/<project_slug>/open_questions.md`.
+- The agent captures decisions (and changes to decisions) in `artifacts/<project_slug>/decision_log.md`.

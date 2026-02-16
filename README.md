@@ -43,7 +43,7 @@ Sub-goals:
 5. Proceed in order through `planning/06_create_product_backlog.md`.
 6. After planning is complete, tag `@implementation/01_pick_feature.md` to start delivery.
 
-Note: the agent tracks open questions in `artifacts/<project_slug>/00_open_questions.md` and captures decisions in `artifacts/<project_slug>/00_decision_log.md`. You can paste answers into the open questions file and ask the agent to incorporate them into the relevant artifacts.
+Note: the agent tracks open questions in `artifacts/<project_slug>/open_questions.md` and captures decisions in `artifacts/<project_slug>/decision_log.md`. You can paste answers into the open questions file and ask the agent to incorporate them into the relevant artifacts.
 
 Tip: you can steer the agent's question style for the next turn by writing `Mode: natural`, `Mode: choice`, `Mode: binary`, or `Mode: creative`.
 

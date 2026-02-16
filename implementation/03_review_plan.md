@@ -15,7 +15,7 @@ See `@shared/skills/gates/output_boundary.md` (Artifact: single `md` fenced bloc
 
 ## Required Inputs
 - `artifacts/<project_slug>/tasks/plan-<feature_slug>.md`
-- `artifacts/<project_slug>/00_open_questions.md`
+- `artifacts/<project_slug>/open_questions.md`
 
 ## Starting Point (Mandatory)
 Assume the plan has missing details.
@@ -31,7 +31,7 @@ Assume the plan has missing details.
 
 ## Instructions
 1. Read the plan and treat `## Functional Snapshot` and `## Conditions of Done` as the source of truth.
-2. Check `artifacts/<project_slug>/00_open_questions.md` and do not re-ask already-answered questions.
+2. Check `artifacts/<project_slug>/open_questions.md` and do not re-ask already-answered questions.
 3. Ask the smallest set of questions needed to remove ambiguity, using the order in `@shared/skills/implementation/functional_elicitation.md`.
 4. Focus on gaps that will cause rework:
    - Success criteria not observable/testable

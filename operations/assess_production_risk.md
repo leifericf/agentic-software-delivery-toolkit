@@ -29,7 +29,7 @@ See `@shared/skills/planning/project_slug.md`.
 See `@shared/skills/gates/input_gate.md`.
 
 ## Open Questions (Optional)
-If `artifacts/<project_slug>/00_open_questions.md` exists, scan `## Open` and incorporate any answered items relevant to this change.
+If `artifacts/<project_slug>/open_questions.md` exists, scan `## Open` and incorporate any answered items relevant to this change.
 
 If it does not exist, continue; capture unknowns in the risk assessment under `## Open Questions`.
 

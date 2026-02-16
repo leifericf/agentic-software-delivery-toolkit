@@ -11,10 +11,10 @@ See `@shared/skills/gates/output_boundary.md`.
 Override: no artifact for this step.
 
 ## Required Inputs
-- `artifacts/<project_slug>/02_product_requirements.md`
-- `artifacts/<project_slug>/00_decision_log.md`
-- `artifacts/<project_slug>/06_product_backlog.md`
-- `artifacts/<project_slug>/00_open_questions.md`
+- `artifacts/<project_slug>/product_requirements.md`
+- `artifacts/<project_slug>/decision_log.md`
+- `artifacts/<project_slug>/product_backlog.md`
+- `artifacts/<project_slug>/open_questions.md`
 
 ## Starting Point (Mandatory)
 Do not ask the user to pick perfectly.
@@ -23,7 +23,7 @@ Do not ask the user to pick perfectly.
 - Prefer smallest end-user-visible value with low risk and clear acceptance criteria.
 
 ## Open Questions Gate (Mandatory)
-Before selecting, check `artifacts/<project_slug>/00_open_questions.md`.
+Before selecting, check `artifacts/<project_slug>/open_questions.md`.
 
 If any unchecked `[Blocking]` item affects backlog selection or core scope, stop and ask for an answer.
 

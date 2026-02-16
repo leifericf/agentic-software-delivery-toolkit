@@ -54,4 +54,4 @@ Before drafting a plan or starting a chunk, confirm you can answer these in plai
 - What integrations exist and what happens when they fail (if applicable)?
 - What is the MVI and what is explicitly deferred?
 
-If any item is unknown and blocks correct delivery, add it to `artifacts/<project_slug>/00_open_questions.md` as `[Blocking]` and stop.
+If any item is unknown and blocks correct delivery, add it to `artifacts/<project_slug>/open_questions.md` as `[Blocking]` and stop.

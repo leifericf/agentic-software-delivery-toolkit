@@ -21,15 +21,15 @@ Do not require front-loaded detail.
 See `@shared/skills/gates/output_boundary.md` (Artifact: single `md` fenced block).
 
 ## Required Inputs
-- `artifacts/<project_slug>/00_project_meta.md`
-- `artifacts/<project_slug>/01_problem_description.md`
-- `artifacts/<project_slug>/00_open_questions.md`
+- `artifacts/<project_slug>/project_meta.md`
+- `artifacts/<project_slug>/problem_description.md`
+- `artifacts/<project_slug>/open_questions.md`
 
 ## Input Gate (Default)
 See `@shared/skills/gates/input_gate.md`.
 
 ## Open Questions Gate (Mandatory)
-See `@shared/skills/gates/open_questions_gate.md` (Affects: `02_product_requirements.md`).
+See `@shared/skills/gates/open_questions_gate.md` (Affects: `product_requirements.md`).
 
 ## Instructions
 1. Review the Problem Description first.
@@ -38,7 +38,7 @@ See `@shared/skills/gates/open_questions_gate.md` (Affects: `02_product_requirem
 4. Identify contradictions.
 5. Highlight assumptions.
 
-When you identify unclear requirements, add them to `artifacts/<project_slug>/00_open_questions.md` under `## Open`.
+When you identify unclear requirements, add them to `artifacts/<project_slug>/open_questions.md` under `## Open`.
 
 Do not include an "Open Questions" section in the PRD.
 
@@ -47,7 +47,7 @@ Iterate until scope is crisp and easy to remember.
 
 ## Output Artifact
 Write:
-`artifacts/<project_slug>/02_product_requirements.md`
+`artifacts/<project_slug>/product_requirements.md`
 
 ## Output Format (STRICT)
 The generated PRD must use this exact Markdown structure and headings, in this order.

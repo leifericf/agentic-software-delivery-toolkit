@@ -59,7 +59,7 @@ When information is missing, classify it:
 
 1) Blocking (cannot proceed safely/correctly)
 - Always ask.
-- If the user cannot answer, park it as `[Blocking]` in `artifacts/<project_slug>/00_open_questions.md` and stop.
+- If the user cannot answer, park it as `[Blocking]` in `artifacts/<project_slug>/open_questions.md` and stop.
 
 2) High-impact (changes scope, correctness, security, or cost)
 - Ask if Interruption tolerance is Balanced/Interactive *or* Probing depth is Deep *or* Defaults vs questions is Prefer questions.

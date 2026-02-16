@@ -17,14 +17,14 @@ Do not ask the user to pre-write a detailed backlog.
 See `@shared/skills/gates/output_boundary.md` (Artifact: single `text` fenced block).
 
 ## Required Inputs
-- `artifacts/<project_slug>/00_project_meta.md`
-- `artifacts/<project_slug>/01_problem_description.md`
-- `artifacts/<project_slug>/02_product_requirements.md`
-- `artifacts/<project_slug>/03_risk_assumption_review.md`
-- `artifacts/<project_slug>/00_decision_log.md`
-- `artifacts/<project_slug>/04_ux_design_guide.md` (if applicable; see `@planning/04_design_ux_guide.md`)
-- `artifacts/<project_slug>/05_technical_design.md`
-- `artifacts/<project_slug>/00_open_questions.md`
+- `artifacts/<project_slug>/project_meta.md`
+- `artifacts/<project_slug>/problem_description.md`
+- `artifacts/<project_slug>/product_requirements.md`
+- `artifacts/<project_slug>/risk_assumption_review.md`
+- `artifacts/<project_slug>/decision_log.md`
+- `artifacts/<project_slug>/ux_design_guide.md` (if applicable; see `@planning/04_design_ux_guide.md`)
+- `artifacts/<project_slug>/technical_design.md`
+- `artifacts/<project_slug>/open_questions.md`
 
 ## Input Gate (Default)
 See `@shared/skills/gates/input_gate.md`.
@@ -33,7 +33,7 @@ Exception:
 - See `@shared/skills/planning/ux_optional_input_exception.md`.
 
 ## Open Questions Gate (Mandatory)
-See `@shared/skills/gates/open_questions_gate.md` (Affects: `06_product_backlog.md`).
+See `@shared/skills/gates/open_questions_gate.md` (Affects: `product_backlog.md`).
 
 ## Instructions
 1. Review all artifacts.
@@ -41,9 +41,9 @@ See `@shared/skills/gates/open_questions_gate.md` (Affects: `06_product_backlog.
 3. Check for missing capabilities.
 4. Validate priority assumptions.
 
-If anything is blocked by missing information, add an unchecked `[Blocking]` item under `## Open` in `artifacts/<project_slug>/00_open_questions.md` and stop.
+If anything is blocked by missing information, add an unchecked `[Blocking]` item under `## Open` in `artifacts/<project_slug>/open_questions.md` and stop.
 
-If producing the backlog requires making new decisions, stop and capture them as decision log row(s) in `artifacts/<project_slug>/00_decision_log.md` first.
+If producing the backlog requires making new decisions, stop and capture them as decision log row(s) in `artifacts/<project_slug>/decision_log.md` first.
 
 ## Output Format (STRICT)
 The generated backlog must be human-readable AND consistently structured.
@@ -80,7 +80,7 @@ Example (format only):
 ```
 
 Write:
-`artifacts/<project_slug>/06_product_backlog.md`
+`artifacts/<project_slug>/product_backlog.md`
 
 Then ask:
 
