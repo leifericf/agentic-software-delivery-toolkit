@@ -45,6 +45,8 @@ Sub-goals:
 
 Note: the agent tracks open questions in `artifacts/<project_slug>/open_questions.md` and captures decisions in `artifacts/<project_slug>/decision_log.md`. You can paste answers into the open questions file and ask the agent to incorporate them into the relevant artifacts.
 
+Note: the agent keeps `artifacts/<project_slug>/product_backlog.md` up to date as a living document (captures new ideas in `Inbox (untriaged)` and moves shipped items to `In product (shipped)`).
+
 Tip: you can steer the agent's question style for the next turn by writing `Mode: natural`, `Mode: choice`, `Mode: binary`, or `Mode: creative`.
 
 Optional steering knobs for the next turn:

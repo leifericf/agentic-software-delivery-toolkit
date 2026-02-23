@@ -21,6 +21,7 @@ Do not ask the user to pick perfectly.
 
 - Present a short shortlist.
 - Prefer smallest end-user-visible value with low risk and clear acceptance criteria.
+- Treat `artifacts/<project_slug>/product_backlog.md` as a living document with buckets (e.g. `Now / Next`, `Later`, `Inbox (untriaged)`, `In product (shipped)`).
 
 ## Open Questions Gate (Mandatory)
 Before selecting, check `artifacts/<project_slug>/open_questions.md`.
@@ -34,6 +35,12 @@ Ask using `@shared/skills/interaction/questions_format.md`:
 - Any deadlines or sequencing constraints?
 - Any stories that are intentionally deferred?
 - Preferred shape of the first increment (thin vertical slice vs internal foundation)?
+
+Before you present the shortlist:
+
+- Scan `Inbox (untriaged)` in `artifacts/<project_slug>/product_backlog.md`.
+- Promote 0-2 items into `Now / Next` if they clearly match what the user cares about right now; otherwise move them to `Later` or leave them in the inbox if too vague.
+- If the backlog feels stale or the inbox is growing, recommend tagging **@implementation/07_triage_backlog.md**.
 
 Then ask the user to choose a single story/feature to implement next (a story ID or a short name).
 

@@ -37,6 +37,10 @@ Do not require exhaustive design.
   - One edge-case behavior
   - One integration/dependency outcome when applicable
 
+Backlog hygiene (during planning):
+- If unrelated "later" ideas come up while discussing the feature, capture them as short items under `Inbox (untriaged)` in `artifacts/<project_slug>/product_backlog.md`.
+- Do not expand the current feature's scope unless the user explicitly changes what "done" means (Conditions of Done).
+
 ## Functional Elicitation Gate (Mandatory)
 Before you draft chunks/tasks, ensure the plan includes a crisp functional snapshot of the story.
 

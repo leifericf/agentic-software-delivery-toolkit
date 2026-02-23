@@ -39,3 +39,4 @@ Each step produces one primary artifact in `artifacts/<project_slug>/`:
 
 - The agent tracks unresolved questions in `artifacts/<project_slug>/open_questions.md`.
 - The agent captures decisions (and changes to decisions) in `artifacts/<project_slug>/decision_log.md`.
+- The agent treats `artifacts/<project_slug>/product_backlog.md` as a living document (includes `Inbox (untriaged)` and `In product (shipped)`).

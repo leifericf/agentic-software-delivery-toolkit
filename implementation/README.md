@@ -19,9 +19,11 @@ Optional steps (use when needed):
 - `implementation/03_review_plan.md` - Extra plan clarification when risk/ambiguity is high
 - `implementation/05_run_quality_gate.md` - Dedicated automation run/fix pass
 - `implementation/06_validate_with_user.md` - Dedicated user validation + issue capture pass
+- `implementation/07_triage_backlog.md` - Triage + reprioritize the backlog (incl. inbox cleanup)
 
 ## Shared Rules
 
 - The agent keeps `artifacts/<project_slug>/open_questions.md` and `artifacts/<project_slug>/decision_log.md` up to date.
+- The agent keeps `artifacts/<project_slug>/product_backlog.md` up to date (capture new ideas in `Inbox (untriaged)` and move shipped items to `In product (shipped)`).
 - If requirements change during implementation, update the relevant artifacts and add a decision log row.
 - Planning includes a short functional elicitation gate before task decomposition (see `implementation/02_plan_feature.md`).
