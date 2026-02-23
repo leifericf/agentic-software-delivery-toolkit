@@ -30,7 +30,7 @@ Assume the plan has missing details.
 - Use `@shared/skills/interaction/questions_format.md`.
 
 ## Instructions
-1. Read the plan and treat `## Functional Snapshot` and `## Conditions of Done` as the source of truth.
+1. Read the plan and treat `## Functional Snapshot` and `## Executable Specification (Gherkin)` as the source of truth.
 2. Check `artifacts/<project_slug>/open_questions.md` and do not re-ask already-answered questions.
 3. Ask the smallest set of questions needed to remove ambiguity, using the order in `@shared/skills/implementation/functional_elicitation.md`.
 4. Focus on gaps that will cause rework:

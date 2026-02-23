@@ -51,7 +51,7 @@ The generated backlog must be human-readable AND consistently structured.
 Keep it simple:
 - Use one backlog file as a living document that also shows what is already in the product.
 - No IDs; no special fields/blocks.
-- No Conditions of Done here (add later when the item is selected for implementation).
+- No executable specifications or acceptance checklists here (add later when the item is selected for implementation).
 - Priority is order within the `Now / Next` bucket.
 
 Backlog buckets (required, in this order):

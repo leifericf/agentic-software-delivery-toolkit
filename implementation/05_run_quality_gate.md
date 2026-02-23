@@ -20,6 +20,7 @@ Override: no artifacts; run commands and change code as needed.
 Assume automation will fail on first run.
 
 - Run the repo's standard commands (format, lint, test, build if present).
+- If a BDD suite is present/configured, run it as part of automation.
 - Fix issues with the smallest safe change.
 - Add tests when you find uncovered behavior.
 

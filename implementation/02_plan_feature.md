@@ -30,16 +30,19 @@ Do not require exhaustive design.
 - Draft slices and tasks directly from the artifacts.
 - Ask only what is needed to avoid wrong assumptions.
 - Aim for 2-6 chunks; each chunk independently testable.
-- When you select a story from the backlog to implement, define its Conditions of Done in this plan (3-7 short, testable bullets).
-- Conditions of Done must be user-observable. Include at least:
-  - One happy-path outcome
-  - One "must never happen"
-  - One edge-case behavior
-  - One integration/dependency outcome when applicable
+- When you select a story from the backlog to implement, write an executable specification in Gherkin for that story.
+  - See `@shared/skills/implementation/bdd_gherkin.md`.
+  - Target: 3-7 scenarios for the MVI.
+  - Scenarios must be user-observable and testable.
+  - Include at least:
+    - One happy-path outcome
+    - One "must never happen"
+    - One key edge-case behavior
+    - One integration/dependency failure or degraded behavior when applicable
 
 Backlog hygiene (during planning):
 - If unrelated "later" ideas come up while discussing the feature, capture them as short items under `Inbox (untriaged)` in `artifacts/<project_slug>/product_backlog.md`.
-- Do not expand the current feature's scope unless the user explicitly changes what "done" means (Conditions of Done).
+- Do not expand the current feature's scope unless the user explicitly changes what "done" means (the executable specification).
 
 ## Functional Elicitation Gate (Mandatory)
 Before you draft chunks/tasks, ensure the plan includes a crisp functional snapshot of the story.
@@ -51,6 +54,8 @@ Before you draft chunks/tasks, ensure the plan includes a crisp functional snaps
    - `@shared/skills/implementation/functional_elicitation.md` (question order + "good enough to start" checklist)
 
 Do not proceed to planning tasks until you can write the `## Functional Snapshot` section (below) in plain language.
+
+Do not proceed to task decomposition until you can write the `## Executable Specification (Gherkin)` section (below) with unambiguous scenarios.
 
 ## Open Questions Gate (Mandatory)
 See `@shared/skills/gates/open_questions_gate.md` (Blockers: any `[Blocking]` item affecting this feature).
@@ -104,10 +109,27 @@ Use this structure (adjust as needed). Prefer clarity over ceremony.
 - Deferred:
   - <explicitly not in this feature>
 
-## Conditions of Done
-- <short, testable, user-observable condition>
-- <short, testable, user-observable condition>
-- <short, testable, user-observable condition>
+## Executable Specification (Gherkin)
+
+```gherkin
+Feature: <short capability name>
+  <1-2 sentence narrative of value>
+
+  Scenario: <happy path>
+    Given <precondition>
+    When <action>
+    Then <observable outcome>
+
+  Scenario: <must never happen>
+    Given <precondition>
+    When <action>
+    Then <unacceptable outcome is prevented and user sees expected behavior>
+
+  Scenario: <key edge case>
+    Given <precondition>
+    When <action>
+    Then <expected behavior>
+```
 
 ## Chunks
 - <chunk name> (optional: `CH-001: <chunk name>`)
@@ -125,6 +147,7 @@ Use this structure (adjust as needed). Prefer clarity over ceremony.
 - Prefer small, reviewable commits that map to chunks.
 - Each chunk should (a) deliver user value, (b) be testable, and (c) reduce risk.
 - Plan only the next chunk in full detail; keep later chunks lighter.
+- The executable specification is the feature-level acceptance contract; implementation should make it runnable (BDD suite) and green.
 
 ## Assumptions (User-Facing)
 - <assumption made to proceed>

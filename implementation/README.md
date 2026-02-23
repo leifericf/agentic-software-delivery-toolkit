@@ -6,6 +6,8 @@ If present, the agent should apply your `.agentic_profile.md` preferences during
 
 They are designed for an incremental delivery loop driven by `artifacts/<project_slug>/product_backlog.md`, with tasks, tests, and commit boundaries made explicit.
 
+If you adopt BDD, the executable specification (Gherkin) for the selected backlog item is written during feature planning and made runnable/green during execution.
+
 ## Steps
 
 Lean loop (default):
@@ -27,3 +29,4 @@ Optional steps (use when needed):
 - The agent keeps `artifacts/<project_slug>/product_backlog.md` up to date (capture new ideas in `Inbox (untriaged)` and move shipped items to `In product (shipped)`).
 - If requirements change during implementation, update the relevant artifacts and add a decision log row.
 - Planning includes a short functional elicitation gate before task decomposition (see `implementation/02_plan_feature.md`).
+- When present, treat the plan's `## Executable Specification (Gherkin)` as the feature-level acceptance contract.
