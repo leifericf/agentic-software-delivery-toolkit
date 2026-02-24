@@ -48,6 +48,8 @@ Default ignores: `.agentic/.gitignore` keeps `.agentic/.agentic_profile.md` loca
 
 3. (Optional) Run `@.agentic/setup/01_setup_wizard.md` to create `.agentic/.agentic_profile.md` (local preferences; gitignored by default).
 4. Start with `@.agentic/planning/01_describe_problem.md` in your agent chat (tag the file if your tool supports it; otherwise copy/paste its contents).
+   - Windows note: some tools (including OpenCode) treat `@<path>` as a file-include and expect `/` separators even on Windows.
+     Use `@.agentic/planning/01_describe_problem.md` (not `@.agentic\planning\01_describe_problem.md`).
 5. Proceed in order through `@.agentic/planning/06_create_product_backlog.md`.
 6. After planning is complete, tag `@.agentic/implementation/01_pick_feature.md` to start delivery.
 

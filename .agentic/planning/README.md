@@ -6,6 +6,9 @@ Optional: run `@.agentic/setup/01_setup_wizard.md` first to create `.agentic/.ag
 
 Start rough: you do not need to front-load detail. The agent should pull specifics through back-and-forth questions.
 
+Windows note: if your tool supports `@<path>` file-includes (e.g. OpenCode), it may require `/` separators even on Windows.
+Use `@.agentic/planning/01_describe_problem.md` (not `@.agentic\planning\01_describe_problem.md`).
+
 ## Steps
 
 Run these **in order**:

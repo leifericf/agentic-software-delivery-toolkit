@@ -8,6 +8,9 @@ This toolkit is designed to be copied into an existing project repo at: `.agenti
 
 Optional: tag `@.agentic/setup/01_setup_wizard.md` to generate local preferences at `.agentic/.agentic_profile.md`.
 
+Windows note: if your chat tool supports `@<path>` file-includes (e.g. OpenCode), it may require `/` separators even on Windows.
+Use `@.agentic/planning/01_describe_problem.md` (not `@.agentic\planning\01_describe_problem.md`).
+
 Then start planning:
 - `@.agentic/planning/01_describe_problem.md`
 
