@@ -223,13 +223,13 @@ BenchmarkDotNet.Artifacts/
 # .NET Core
 project.lock.json
 project.fragment.lock.json
-# Planning outputs live in /artifacts. Keep the directory tracked, but ignore
-# generated contents by default.
-artifacts/*
-!artifacts/.gitkeep
+# Toolkit artifacts live in /.agentic/artifacts. Keep the directory tracked, but
+# ignore generated contents by default in this distribution repo.
+.agentic/artifacts/*
+!.agentic/artifacts/.gitkeep
 
 # Local agent preferences (intentionally not versioned)
-.agentic_profile.md
+.agentic/.agentic_profile.md
 
 # ASP.NET Scaffolding
 ScaffoldingReadMe.txt

@@ -28,24 +28,32 @@ Sub-goals:
 
 ## What You Get
 
-- A step-by-step planning sequence in `planning/` (interactive templates).
-- An implementation workflow in `implementation/` for picking a feature, planning tasks, and delivering incrementally.
-- Operations templates in `operations/` for incident response, log triage, risk assessment, and retros.
-- A consistent artifact set written to `artifacts/<project_slug>/`.
-- Reusable skills in `shared/skills/` (gates, interaction, git, etc).
+- A project-local `.agentic/` bundle you copy into an existing repo.
+- A step-by-step planning sequence in `.agentic/planning/` (interactive templates).
+- An implementation workflow in `.agentic/implementation/` for picking a feature, planning tasks, and delivering incrementally.
+- Operations templates in `.agentic/operations/` for incident response, log triage, risk assessment, and retros.
+- A consistent artifact set written to `.agentic/artifacts/`.
+- Reusable roles + skills in `.agentic/shared/`.
 
-## Quickstart
+## Install (Copy Into Your Repo)
 
-1. Fork this repo and make it your own.
-2. (Optional) Run `@setup/01_setup_wizard.md` to create `.agentic_profile.md` (local preferences; gitignored by default).
-3. Start with `@planning/01_describe_problem.md` in your agent chat (tag the file if your tool supports it, otherwise copy/paste its contents).
-4. Step 01 will capture your project name, define the project slug, and bootstrap `artifacts/<project_slug>/`.
-5. Proceed in order through `planning/06_create_product_backlog.md`.
-6. After planning is complete, tag `@implementation/01_pick_feature.md` to start delivery.
+This repo is a distribution source. You should not run the workflows here.
 
-Note: the agent tracks open questions in `artifacts/<project_slug>/open_questions.md` and captures decisions in `artifacts/<project_slug>/decision_log.md`. You can paste answers into the open questions file and ask the agent to incorporate them into the relevant artifacts.
+Assumption: one project per repo (artifacts live in `.agentic/artifacts/`).
 
-Note: the agent keeps `artifacts/<project_slug>/product_backlog.md` up to date as a living document (captures new ideas in `Inbox (untriaged)` and moves shipped items to `In product (shipped)`).
+1. Copy `.agentic/` into the root of your project repo.
+2. Commit `.agentic/` (templates + durable artifacts live here).
+
+Default ignores: `.agentic/.gitignore` keeps `.agentic/.agentic_profile.md` local and ignores `.agentic/artifacts/operations/**` by default.
+
+3. (Optional) Run `@.agentic/setup/01_setup_wizard.md` to create `.agentic/.agentic_profile.md` (local preferences; gitignored by default).
+4. Start with `@.agentic/planning/01_describe_problem.md` in your agent chat (tag the file if your tool supports it; otherwise copy/paste its contents).
+5. Proceed in order through `@.agentic/planning/06_create_product_backlog.md`.
+6. After planning is complete, tag `@.agentic/implementation/01_pick_feature.md` to start delivery.
+
+Note: the agent tracks open questions in `.agentic/artifacts/open_questions.md` and captures decisions in `.agentic/artifacts/decision_log.md`.
+
+Note: the agent keeps `.agentic/artifacts/product_backlog.md` up to date as a living document.
 
 Tip: you can steer the agent's question style for the next turn by writing `Mode: natural`, `Mode: choice`, `Mode: binary`, or `Mode: creative`.
 
@@ -64,23 +72,33 @@ You do not need to front-load detail: start Step 01 with a loose paragraph descr
 
 ## Workflows
 
-- Planning: `planning/README.md`
-- Implementation: `implementation/README.md`
+- Planning: `.agentic/planning/README.md`
+- Implementation: `.agentic/implementation/README.md`
 
 ## Git Skills
 
-- `shared/skills/git/git_commit.md`
-- `shared/skills/git/git_merge.md`
+- `.agentic/shared/skills/git/git_commit.md`
+- `.agentic/shared/skills/git/git_merge.md`
 
 ## Repo Layout
 
-- `setup/`: optional welcome/setup wizard (writes `.agentic_profile.md`)
-- `planning/`: interactive planning templates
-- `implementation/`: implementation templates for delivery
-- `operations/`: free-standing templates for production/ops work (incidents, triage, risk)
-- `shared/`: shared templates used by multiple workflows
-- `shared/skills/`: reusable skill modules (referenced by roles/steps)
-- `artifacts/`: project-specific outputs (directory included; contents ignored by default)
+- `.agentic/`: copy this into your project repo
+  - `setup/`: optional welcome/setup wizard (writes `.agentic/.agentic_profile.md`)
+  - `planning/`: interactive planning templates
+  - `implementation/`: implementation templates for delivery
+  - `operations/`: free-standing templates for production/ops work (incidents, triage, risk)
+  - `shared/`: shared templates used by multiple workflows
+  - `artifacts/`: durable project context (committed by default)
+
+## Advanced: Symlinks (macOS/Linux)
+
+If you work on many repos locally, you can keep one clone of this toolkit and symlink the template folders into each project.
+
+Important: Git commits symlinks as pointers (not the target contents). If you commit the symlink, teammates will usually get a broken link. Use this mode for local-only setups; teams should copy + commit `.agentic/`.
+
+Recommended: keep artifacts local and symlink only templates (do not symlink `.agentic/artifacts/`).
+
+Windows note (symlinks): if you want to use symlinks, using WSL is recommended.
 
 ## License
 

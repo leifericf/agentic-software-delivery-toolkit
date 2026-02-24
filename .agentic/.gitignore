@@ -1,0 +1,5 @@
+# Per-user agent preferences (keep local)
+.agentic_profile.md
+
+# Ops artifacts can contain logs/customer data; ignore by default
+artifacts/operations/**
