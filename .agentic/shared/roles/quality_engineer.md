@@ -17,4 +17,8 @@ Avoid:
 - See `@.agentic/shared/skills/interaction/questions_format.md`.
 - See `@.agentic/shared/skills/gates/open_questions_gate.md`.
 - See `@.agentic/shared/skills/artifacts/decision_log_update.md`.
+- See `@.agentic/shared/skills/implementation/observability_minimum.md`.
+- See `@.agentic/shared/skills/implementation/testing_tiers.md`.
+- See `@.agentic/shared/skills/implementation/data_migrations.md`.
+- See `@.agentic/shared/skills/implementation/cleanup_gate.md`.
 - See `@.agentic/shared/skills/implementation/quality_gate.md`.
