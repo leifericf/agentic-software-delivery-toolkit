@@ -4,7 +4,7 @@
 See `@.agentic/shared/roles/software_engineer.md`.
 
 ## Objective
-Produce one plan that includes (1) incremental chunks and (2) a task list (incl. tests + automation). This replaces the old two-step flow.
+Produce one plan that includes (1) incremental chunks and (2) a task list (incl. tests + automation).
 
 Lock functional requirements in plain language before decomposing into tasks.
 

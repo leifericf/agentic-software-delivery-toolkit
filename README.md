@@ -42,7 +42,7 @@ This repo is a distribution source. You should not run the workflows here.
 Assumption: one project per repo (artifacts live in `.agentic/artifacts/`).
 
 1. Copy `.agentic/` into the root of your project repo.
-2. Commit `.agentic/` (templates + durable artifacts live here).
+2. Commit `.agentic/` (templates + durable artifacts live here; ops artifacts under `.agentic/artifacts/operations/` are ignored by default).
 
 Default ignores: `.agentic/.gitignore` keeps `.agentic/.agentic_profile.md` local and ignores `.agentic/artifacts/operations/**` by default.
 
@@ -90,7 +90,7 @@ You do not need to front-load detail: start Step 01 with a loose paragraph descr
   - `implementation/`: implementation templates for delivery
   - `operations/`: free-standing templates for production/ops work (incidents, triage, risk)
   - `shared/`: shared templates used by multiple workflows
-  - `artifacts/`: durable project context (committed by default)
+  - `artifacts/`: durable project context (committed by default; except `.agentic/artifacts/operations/` which is ignored by default)
 
 ## Advanced: Symlinks (macOS/Linux)
 
@@ -104,4 +104,4 @@ Windows note (symlinks): if you want to use symlinks, using WSL is recommended.
 
 ## License
 
-See `LICENSE`.
+See `LICENSE.txt`.
