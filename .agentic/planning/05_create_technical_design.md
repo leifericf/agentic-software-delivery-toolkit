@@ -53,7 +53,10 @@ See `@.agentic/shared/skills/gates/open_questions_gate.md` (Affects: `technical_
    - Operational posture (hosting, environments, deployment frequency)
    - Team constraints (language familiarity, operational tolerance)
    - Repo conventions required for implementation (commands + CI outline)
-3. When you introduce or finalize decisions, append row(s) per `@.agentic/shared/skills/artifacts/decision_log_update.md`.
+3. Set global posture and conventions (do not overfit to a single feature):
+   - Observability: choose defaults (logging/metrics/tracing) and conventions; per-feature observability is planned in `.agentic/implementation/02_plan_feature.md`.
+   - Testing: choose a pragmatic baseline and CI expectations; per-feature test tier selection is planned in `.agentic/implementation/02_plan_feature.md`.
+4. When you introduce or finalize decisions, append row(s) per `@.agentic/shared/skills/artifacts/decision_log_update.md`.
 
 ## Decision Log Update (Mandatory)
 See `@.agentic/shared/skills/artifacts/decision_log_update.md`.
@@ -152,11 +155,13 @@ Write the artifact using this exact Markdown structure and headings, in this ord
 - Logging: <choice>
 - Metrics: <choice>
 - Tracing: <choice or ->
+- Notes: Define defaults here; feature-specific observability belongs in `.agentic/implementation/02_plan_feature.md`.
 
 ### Testing Posture
 - Unit: <short>
 - Integration: <short>
 - E2E: <short>
+- Notes: Define defaults here; per-feature test tiers belong in `.agentic/implementation/02_plan_feature.md`.
 
 ## Repository & Delivery Conventions
 
