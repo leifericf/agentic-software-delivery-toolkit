@@ -40,6 +40,13 @@ Do not require exhaustive design.
     - One key edge-case behavior
     - One integration/dependency failure or degraded behavior when applicable
 
+Embedded overlap gates (keep lightweight; `N/A` is allowed when truly not applicable):
+- Observability: See `@.agentic/shared/skills/implementation/observability_minimum.md`.
+- Testing tiers: See `@.agentic/shared/skills/implementation/testing_tiers.md`.
+- Data/migrations: See `@.agentic/shared/skills/implementation/data_migrations.md`.
+- Cleanup gate: See `@.agentic/shared/skills/implementation/cleanup_gate.md`.
+- Rollout/verify (if shipping): See `@.agentic/shared/skills/implementation/rollout_verify.md`.
+
 Backlog hygiene (during planning):
 - If unrelated "later" ideas come up while discussing the feature, capture them as short items under `Inbox (untriaged)` in `.agentic/artifacts/product_backlog.md`.
 - Do not expand the current feature's scope unless the user explicitly changes what "done" means (the executable specification).
@@ -130,6 +137,51 @@ Feature: <short capability name>
     When <action>
     Then <expected behavior>
 ```
+
+## Baseline Gate (Automatic)
+- Start from a clean, green trunk (`main`). If trunk is not green, stop and fix/triage first.
+- Sync latest `main` before branching.
+
+## Architecture Fit (This Feature)
+- Touch points: <key components/boundaries this story affects>
+- Compatibility notes: <what must remain backward-compatible and why>
+
+## Observability (Minimum Viable)
+- Applicability: Required | N/A (Reason: <one line>)
+- Failure modes (3-6):
+  - <failure mode> -> <expected degraded behavior>
+- Logs (structured): <what events + key fields; confirm no sensitive data>
+- Signals/metrics: <1-3 key signals to watch>
+
+## Testing Strategy (Tier 0/1/2)
+- Tier 0 (required): <what will be covered by unit/contract tests>
+- Tier 1 (if applicable): <what needs deterministic integration testing>
+- Tier 2 (if applicable): <what requires sandbox/third-party validation>
+
+## Data & Migrations (If Applicable)
+- Applicability: N/A | Schema only | Backfill | Expand/contract
+- Up migration: <yes + approach>
+- Down migration: <yes/no + why>
+- Backfill plan (if any): <idempotent/restartable notes>
+- Rollback considerations: <what happens if deploy/migration is reverted>
+
+## Rollout & Verify (If Applicable)
+- Applicability: Required | N/A (Reason: <one line>)
+- Strategy: Feature flag | Canary | Staged | All-at-once
+- Verify (smoke path): <2-6 steps>
+- Signals to watch: <1-3>
+- Optional: risk assessment artifact: `.agentic/operations/assess_production_risk.md`
+
+## Cleanup Before Merge
+- Remove: <temporary flags/debug logs/spike code/transitional scaffolding>
+- If anything temporary remains: <decision log row + follow-up backlog item>
+
+## Definition of Done (This Feature)
+- `## Executable Specification (Gherkin)` is runnable and green (when present)
+- Tier 0 is green; Tier 1 is green when applicable
+- Observability requirements implemented (or explicitly `N/A`)
+- Cleanup gate satisfied
+- Backlog updated (move shipped item to `In product (shipped)` when accepted)
 
 ## Chunks
 - <chunk name> (optional: `CH-001: <chunk name>`)
