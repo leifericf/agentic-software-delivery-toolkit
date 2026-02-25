@@ -24,6 +24,12 @@ Do not implement everything at once.
 - Work chunk-by-chunk.
 - Keep changes small and verifiable.
 
+## Automatic Preflight (Embedded)
+Before you create a feature branch or start coding:
+- Confirm you are starting from a clean, green trunk (`main`). If trunk is not green, stop and fix/triage first.
+- Sync latest `main` locally.
+- If the repo has a fast default check (tests/lint), run it once to confirm baseline.
+
 ## Open Questions Gate (Mandatory)
 See `@.agentic/shared/skills/gates/open_questions_gate.md` (Blockers: any `[Blocking]` item affecting the chunk you are about to do).
 
@@ -50,6 +56,12 @@ Keep the backlog a living document:
 ## Automation (Folded In)
 Run the project's standard commands during/after execution (format, lint, test, and build if present).
 
+Respect the plan's embedded gates:
+- Observability: if the plan's `## Observability (Minimum Viable)` is not `N/A`, implement it as part of the relevant chunk (do not defer until the end).
+- Testing tiers: follow the plan's `## Testing Strategy (Tier 0/1/2)` and keep Tier 0 green; run Tier 1 when applicable.
+- Data/migrations: if the plan includes `## Data & Migrations`, implement safely and include rollback considerations.
+- Cleanup: satisfy `@.agentic/shared/skills/implementation/cleanup_gate.md` before declaring done.
+
 If the plan includes `## Executable Specification (Gherkin)`, make it executable:
 
 - Materialize the Gherkin into `features/<feature_slug>.feature` (unless the repo already has an established convention).
@@ -59,6 +71,16 @@ If the plan includes `## Executable Specification (Gherkin)`, make it executable
 - Prefer running fast checks per chunk, then the full suite at the end.
 - Fix issues with the smallest safe change.
 - If automation reveals uncovered behavior, add tests.
+
+## Automatic Reconcile & Cleanup (Embedded)
+Before you say the feature is done:
+- Check off completed tasks in `.agentic/artifacts/tasks/plan-<feature_slug>.md`.
+- Ensure the plan's `## Cleanup Before Merge` is satisfied (remove temporary flags/debug logs/spike artifacts).
+- If the plan's `## Rollout & Verify` is not `N/A` and the change is shipping, optionally tag `.agentic/operations/assess_production_risk.md` and follow its rollout/monitoring/rollback structure.
+- Keep `.agentic/artifacts/product_backlog.md` consistent:
+  - When accepted and automation is green, move the implemented backlog item to `In product (shipped)`.
+  - Capture net-new ideas under `Inbox (untriaged)`.
+- If decisions changed, append row(s) to `.agentic/artifacts/decision_log.md`.
 
 Then ask:
 
