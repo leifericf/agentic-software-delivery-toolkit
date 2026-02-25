@@ -1,6 +1,6 @@
 # Shared Role Definitions
 
-These files define reusable agent roles used across workflow steps and standalone prompts.
+Reusable agent roles used across workflow steps and standalone prompts.
 
 Workflow steps should keep their `## Role` section lean and reference one of these files instead.
 
@@ -10,7 +10,7 @@ Convention:
 - Each role file is a short, expandable definition.
 - Workflow steps reference roles via: `See @.agentic/shared/roles/<role_file>.md`.
 
-## Core roles (default)
+## Core Roles (Default)
 
 - `@.agentic/shared/roles/product_manager.md`
 - `@.agentic/shared/roles/solution_architect.md`

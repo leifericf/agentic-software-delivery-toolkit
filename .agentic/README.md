@@ -1,17 +1,15 @@
 # Agentic Toolkit (Project-Local)
 
-This directory contains the Agentic workflow prompts/templates and the durable planning/implementation artifacts they produce.
-
-This toolkit is designed to be copied into an existing project repo at: `.agentic/`.
+Copy this folder into a project repo as `.agentic/`.
 
 ## Start
 
-Optional: tag `@.agentic/setup/01_setup_wizard.md` to generate local preferences at `.agentic/.agentic_profile.md`.
+Optional: Tag `@.agentic/setup/01_setup_wizard.md` to generate local preferences in `.agentic/.agentic_profile.md`.
 
-Windows note: if your chat tool supports `@<path>` file-includes (e.g. OpenCode), it may require `/` separators even on Windows.
+Windows note: some tools treat `@<path>` as a file include and require `/` separators.
 Use `@.agentic/planning/01_describe_problem.md` (not `@.agentic\planning\01_describe_problem.md`).
 
-Then start planning:
+Then tag:
 - `@.agentic/planning/01_describe_problem.md`
 
 ## Committing
@@ -24,7 +22,7 @@ Ignored by default via `.agentic/.gitignore`:
 
 ## Updating
 
-To update the toolkit, replace only these directories:
+To update the toolkit, replace only:
 - `.agentic/planning/`
 - `.agentic/implementation/`
 - `.agentic/operations/`
@@ -37,12 +35,12 @@ Do not overwrite:
 
 ## Advanced: Symlinks (macOS/Linux)
 
-If you work on many repos locally, you can keep one clone of the toolkit and symlink the template folders into each project.
+If you work on many repos locally, you can keep one clone of the toolkit and symlink template folders into each project.
 
-Important: Git commits symlinks as pointers (not the target contents). If you commit the symlink, teammates will usually get a broken link. Use this mode for local-only setups; teams should copy + commit `.agentic/`.
+Important: Git commits symlinks as pointers (not contents). This is best for local-only setups.
 
 Recommended: keep artifacts local and symlink only templates (do not symlink `.agentic/artifacts/`).
 
-## Windows note (symlinks)
+## Windows Note (Symlinks)
 
-On Windows, symlink behavior depends on your environment and settings. If you want to use symlinks, using WSL is recommended.
+If you want symlinks on Windows, using WSL is recommended.

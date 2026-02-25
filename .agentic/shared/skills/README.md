@@ -2,7 +2,7 @@
 
 Reusable markdown modules that can be referenced by roles, workflow steps, and standalone prompts.
 
-Convention:
+Conventions:
 - Reference a skill with: `See @.agentic/shared/skills/<path>.md`.
 - Skill files should be role-agnostic (skills do not reference roles).
 - Roles bundle skills (one role -> many skills).

@@ -1,13 +1,11 @@
 # Operations Templates
 
-Free-standing templates for post-development and production work.
+Free-standing templates for post-development and production work (not sequential steps).
 
-These are not sequential steps. Pick the template you need.
-
-## How To Use
+## How to Use
 
 - Tag one of the files below in your agent chat (or copy/paste its contents).
-- Artifacts are written under: `.agentic/artifacts/operations/`.
+- Artifacts are written to: `.agentic/artifacts/operations/`.
 
 ## Templates
 
@@ -16,7 +14,7 @@ These are not sequential steps. Pick the template you need.
 - `.agentic/operations/review_incident.md` - incident review (blameless retro) with action items
 - `.agentic/operations/analyze_root_cause.md` - root cause analysis with preventative controls
 
-## Artifact Naming (Recommended)
+## Artifact Naming
 
 To avoid collisions and keep things sortable, prefix artifacts with a date:
 

@@ -16,13 +16,7 @@ Default path (use this unless you have a reason not to):
 2. `.agentic/implementation/02_plan_feature.md` - Create a single plan file (slices + tasks + embedded gates)
 3. `.agentic/implementation/04_execute_plan.md` - Execute chunk-by-chunk (automation + validation folded in)
 
-Embedded (automatic) rigor happens inside `02` and `04` to avoid extra manual steps:
-- Baseline/trunk hygiene preflight
-- Minimum viable observability (when applicable)
-- Testing tiers (Tier 0/1/2) selection and execution
-- Data/migrations planning when applicable
-- Cleanup gate before "done"
-- Optional rollout/verify hook when shipping
+Embedded rigor lives inside `02` and `04` (no extra steps): baseline preflight, observability, testing tiers, data/migrations, cleanup gate, and rollout/verify when shipping.
 
 Escape hatches (use only when needed):
 

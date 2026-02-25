@@ -1,12 +1,12 @@
 # Planning Workflow
 
-The planning workflow is a set of interactive templates for turning a loose problem statement into durable artifacts an implementation agent can reliably build from.
+Turn a loose problem statement into durable artifacts in `.agentic/artifacts/`.
 
-Optional: run `@.agentic/setup/01_setup_wizard.md` first to create `.agentic/.agentic_profile.md` (interaction + engineering preferences).
+Optional: Tag `@.agentic/setup/01_setup_wizard.md` first to create `.agentic/.agentic_profile.md`.
 
-Start rough: you do not need to front-load detail. The agent should pull specifics through back-and-forth questions.
+Start rough: you do not need to front-load detail. The agent should pull specifics through questions.
 
-Windows note: if your tool supports `@<path>` file-includes (e.g. OpenCode), it may require `/` separators even on Windows.
+Windows note: some tools treat `@<path>` as a file include and require `/` separators.
 Use `@.agentic/planning/01_describe_problem.md` (not `@.agentic\planning\01_describe_problem.md`).
 
 ## Steps
@@ -24,9 +24,9 @@ After Step 06, planning is complete. To begin delivery, tag `@.agentic/implement
 
 Optional: if decisions feel scattered, tag `@.agentic/shared/log_decisions.md` to reconcile them into `.agentic/artifacts/decision_log.md`.
 
-## Standard Artifact Set
+## Artifacts
 
-Each step produces one primary artifact in `.agentic/artifacts/`:
+Outputs (one primary artifact per step):
 
 - `.agentic/artifacts/project_meta.md`
 - `.agentic/artifacts/open_questions.md`
