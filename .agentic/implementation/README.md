@@ -10,17 +10,25 @@ If you adopt BDD, the executable specification (Gherkin) for the selected backlo
 
 ## Steps
 
-Lean loop (default):
+Default path (use this unless you have a reason not to):
 
 1. `.agentic/implementation/01_pick_feature.md` - Pick the right next feature/story
-2. `.agentic/implementation/02_plan_feature.md` - Create slices + task list (single plan file)
-3. `.agentic/implementation/04_execute_plan.md` - Implement incrementally; run automation; hand off for user validation
+2. `.agentic/implementation/02_plan_feature.md` - Create a single plan file (slices + tasks + embedded gates)
+3. `.agentic/implementation/04_execute_plan.md` - Execute chunk-by-chunk (automation + validation folded in)
 
-Optional steps (use when needed):
+Embedded (automatic) rigor happens inside `02` and `04` to avoid extra manual steps:
+- Baseline/trunk hygiene preflight
+- Minimum viable observability (when applicable)
+- Testing tiers (Tier 0/1/2) selection and execution
+- Data/migrations planning when applicable
+- Cleanup gate before "done"
+- Optional rollout/verify hook when shipping
+
+Escape hatches (use only when needed):
 
 - `.agentic/implementation/03_review_plan.md` - Extra plan clarification when risk/ambiguity is high
-- `.agentic/implementation/05_run_quality_gate.md` - Dedicated automation run/fix pass
-- `.agentic/implementation/06_validate_with_user.md` - Dedicated user validation + issue capture pass
+- `.agentic/implementation/05_run_quality_gate.md` - Dedicated automation run/fix pass (if you want a separate pass)
+- `.agentic/implementation/06_validate_with_user.md` - Dedicated user validation + issue capture pass (if you want a separate pass)
 - `.agentic/implementation/07_triage_backlog.md` - Triage + reprioritize the backlog (incl. inbox cleanup)
 
 ## Shared Rules
