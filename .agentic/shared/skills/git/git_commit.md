@@ -24,6 +24,7 @@ The user provides a goal like: "commit my changes".
 2. Decide what should be included in the commit.
    - If there are unrelated changes, call them out and ask whether to include them.
    - If any file likely contains secrets, warn and exclude it.
+   - If you are executing a task plan, include the corresponding checkbox updates in `.agentic/artifacts/tasks/plan-<feature_slug>.md` in the SAME commit as the work that completed the task.
 3. Draft a one-line commit message that matches the repo style.
 4. Stage only the intended files (`git add <paths>`).
 5. Create the commit (`git commit -m "<message>"`).

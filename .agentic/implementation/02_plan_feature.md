@@ -197,6 +197,7 @@ Feature: <short capability name>
 - Include unit/integration tests where appropriate.
 - Include any migrations, backfills, or feature flags explicitly.
 - Prefer small, reviewable commits that map to chunks.
+- Write tasks so execution can be "commit-per-task": each leaf checkbox should be completable in a single commit, and execution will check it off in the same commit as the change.
 - Each chunk should (a) deliver user value, (b) be testable, and (c) reduce risk.
 - Plan only the next chunk in full detail; keep later chunks lighter.
 - The executable specification is the feature-level acceptance contract; implementation should make it runnable (BDD suite) and green.
@@ -210,17 +211,17 @@ Feature: <short capability name>
 3. <step>
 
 ## Tasks
-- [ ] Create and checkout a new branch (e.g. `feature/<feature_slug>`)
+- [ ] T-001 Create and checkout a new branch (e.g. `feature/<feature_slug>`)
 
 - [ ] Implement: <chunk name>
-  - [ ] <task>
-  - [ ] <task>
-  - [ ] Tests: <what to add>
+  - [ ] T-010 <leaf task that can be finished in one commit>
+  - [ ] T-011 <leaf task that can be finished in one commit>
+  - [ ] T-012 Tests: <what to add>
 
 - [ ] Quality gate
-  - [ ] Run formatters
-  - [ ] Run linters
-  - [ ] Run tests
+  - [ ] T-900 Run formatters
+  - [ ] T-901 Run linters
+  - [ ] T-902 Run tests
 
 ## Open Questions
 - <any non-blocking questions to capture or ->

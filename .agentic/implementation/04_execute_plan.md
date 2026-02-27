@@ -36,12 +36,24 @@ See `@.agentic/shared/skills/gates/open_questions_gate.md` (Blockers: any `[Bloc
 ## Git Rules
 - Create a new local feature branch before making changes.
 - Commit after each chunk (or meaningful sub-chunk), with a message that explains intent.
+- Commits map to tasks: each implementation commit should complete exactly one leaf task (or the smallest safe sub-task).
 - Follow `@.agentic/shared/skills/git/git_commit.md`.
 - Do not push unless explicitly asked.
 
 ## Task Hygiene
-- As you complete tasks, check them off in `.agentic/artifacts/tasks/plan-<feature_slug>.md`.
+- Treat `.agentic/artifacts/tasks/plan-<feature_slug>.md` as the execution ledger.
+- Every time a task is completed, check it off (`[x]`) in `.agentic/artifacts/tasks/plan-<feature_slug>.md` in the SAME commit as the code/tests/docs that completed it.
+- Do not batch checkbox updates into a separate "tasklist" commit.
+- If a task turns out to be too large for one commit, split it into smaller leaf tasks in the plan first (keeping previously completed items checked), then proceed chunk-by-chunk.
 - If the plan needs adjustment, update the task file and call it out to the user.
+
+## Execution Loop (Mandatory)
+Repeat until done:
+1. Pick the next unchecked leaf task from `.agentic/artifacts/tasks/plan-<feature_slug>.md`.
+2. Implement only what is needed to complete that task.
+3. Run the smallest relevant automation for that task.
+4. Update the plan file and check off the completed task.
+5. Commit the code changes AND the plan checkbox update together.
 
 ## Backlog Hygiene (Mandatory)
 

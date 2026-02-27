@@ -6,6 +6,8 @@ If present, the agent should apply your `.agentic/.agentic_profile.md` preferenc
 
 They are designed for an incremental delivery loop driven by `.agentic/artifacts/product_backlog.md`, with tasks, tests, and commit boundaries made explicit.
 
+During execution, the agent treats `.agentic/artifacts/tasks/plan-<feature_slug>.md` as the execution ledger and checks off completed tasks in the same commit as the work.
+
 If you adopt BDD, the executable specification (Gherkin) for the selected backlog item is written during feature planning and made runnable/green during execution.
 
 ## Steps
