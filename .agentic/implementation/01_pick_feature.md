@@ -40,7 +40,7 @@ Before you present the shortlist:
 
 - Scan `Inbox (untriaged)` in `.agentic/artifacts/product_backlog.md`.
 - Promote 0-2 items into `Now / Next` if they clearly match what the user cares about right now; otherwise move them to `Later` or leave them in the inbox if too vague.
-- If the backlog feels stale or the inbox is growing, recommend tagging **@.agentic/implementation/07_triage_backlog.md**.
+- If the backlog feels stale or the inbox is growing, recommend tagging **@.agentic/implementation/06_triage_backlog.md**.
 
 Then ask the user to choose a single story/feature to implement next (a story ID or a short name).
 

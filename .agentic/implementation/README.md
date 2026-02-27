@@ -23,9 +23,8 @@ Embedded rigor lives inside `02` and `04` (no extra steps): baseline preflight, 
 Escape hatches (use only when needed):
 
 - `.agentic/implementation/03_review_plan.md` - Extra plan clarification when risk/ambiguity is high
-- `.agentic/implementation/05_run_quality_gate.md` - Dedicated automation run/fix pass (if you want a separate pass)
-- `.agentic/implementation/06_validate_with_user.md` - Dedicated user validation + issue capture pass (if you want a separate pass)
-- `.agentic/implementation/07_triage_backlog.md` - Triage + reprioritize the backlog (incl. inbox cleanup)
+- `.agentic/implementation/05_validate_with_user.md` - Dedicated user validation + issue capture pass (if you want a separate pass)
+- `.agentic/implementation/06_triage_backlog.md` - Triage + reprioritize the backlog (incl. inbox cleanup)
 
 ## Shared Rules
 
@@ -39,4 +38,4 @@ Escape hatches (use only when needed):
 - `02_plan_feature.md` plan template includes baseline/observability/testing/data/cleanup/rollout sections with `N/A` exits.
 - `04_execute_plan.md` enforces preflight + reconcile/cleanup before declaring done.
 - Overlap skills exist under `.agentic/shared/skills/implementation/` and are referenced by roles/steps.
-- Default path remains `01 -> 02 -> 04`; `05` and `06` stay optional escape hatches.
+- Default path remains `01 -> 02 -> 04`; `06` stays an optional escape hatch.

@@ -6,7 +6,7 @@ See `@.agentic/shared/roles/quality_engineer.md`.
 ## Objective
 Ask the user to validate the feature from a user's perspective and fix any issues found.
 
-This step is optional if validation already happened during `.agentic/implementation/04_execute_plan.md` or `.agentic/implementation/05_run_quality_gate.md`.
+This step is optional if validation already happened during `.agentic/implementation/04_execute_plan.md`.
 
 ## Output Boundary (STRICT)
 See `@.agentic/shared/skills/gates/output_boundary.md`.

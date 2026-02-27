@@ -37,6 +37,7 @@ See `@.agentic/shared/skills/gates/open_questions_gate.md` (Blockers: any `[Bloc
 - Create a new local feature branch before making changes.
 - Commit after each chunk (or meaningful sub-chunk), with a message that explains intent.
 - Commits map to tasks: each implementation commit should complete exactly one leaf task (or the smallest safe sub-task).
+- Do not commit if the relevant automation for the task is failing.
 - Follow `@.agentic/shared/skills/git/git_commit.md`.
 - Do not push unless explicitly asked.
 
@@ -51,7 +52,8 @@ See `@.agentic/shared/skills/gates/open_questions_gate.md` (Blockers: any `[Bloc
 Repeat until done:
 1. Pick the next unchecked leaf task from `.agentic/artifacts/tasks/plan-<feature_slug>.md`.
 2. Implement only what is needed to complete that task.
-3. Run the smallest relevant automation for that task.
+3. Run the smallest relevant automation for that task (formatters/linters/tests as applicable) and fix failures.
+   - See `@.agentic/shared/skills/implementation/quality_gate.md`.
 4. Update the plan file and check off the completed task.
 5. Commit the code changes AND the plan checkbox update together.
 
@@ -67,6 +69,10 @@ Keep the backlog a living document:
 
 ## Automation (Folded In)
 Run the project's standard commands during/after execution (format, lint, test, and build if present).
+
+Per-task automation rule (Mandatory):
+- Before committing each task, run the smallest relevant subset of the quality gate for the work you just did, and fix failures.
+- Prefer fast checks per task; run the full suite at the end (and any time risk warrants it).
 
 Respect the plan's embedded gates:
 - Observability: if the plan's `## Observability (Minimum Viable)` is not `N/A`, implement it as part of the relevant chunk (do not defer until the end).
@@ -100,5 +106,4 @@ Then ask:
 
 If the user wants a dedicated pass for automation or validation, they can optionally tag:
 
-- **@.agentic/implementation/05_run_quality_gate.md**
-- **@.agentic/implementation/06_validate_with_user.md**
+- **@.agentic/implementation/05_validate_with_user.md**
