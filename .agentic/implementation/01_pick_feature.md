@@ -31,10 +31,26 @@ If any unchecked `[Blocking]` item affects backlog selection or core scope, stop
 ## Questions (Mandatory)
 Ask using `@.agentic/shared/skills/interaction/questions_format.md`:
 
-- What outcome matters most right now?
-- Any deadlines or sequencing constraints?
-- Any stories that are intentionally deferred?
-- Preferred shape of the first increment (thin vertical slice vs internal foundation)?
+Ask a short batch (max 3) tailored to the current backlog + PRD context.
+
+Use these as *themes*, not hard-coded questions:
+- Outcome to optimize for (helps choose between competing stories)
+- Sequencing/prerequisite constraints (ordering dependencies; not timelines)
+- Preferred shape of the first increment (thin vertical slice vs foundation-first)
+
+Guidelines:
+- Prefer **Choice mode** when you can offer 3-5 mutually-exclusive options that match the backlog's real branches.
+- Do not copy/paste a fixed option list; derive options from the user's backlog language.
+- Always include "Write your own answer" and "Can't answer / N/A" in Choice mode.
+
+Example (Choice mode; rewrite options to match this backlog):
+
+1) What outcome should we optimize for with the next feature?
+A) <option derived from backlog>
+B) <option derived from backlog>
+C) <option derived from backlog>
+D) Write your own answer
+E) Can't answer / N/A
 
 Before you present the shortlist:
 

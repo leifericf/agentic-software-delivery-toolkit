@@ -20,10 +20,13 @@ See `@.agentic/shared/skills/gates/open_questions_gate.md` (Blockers: any `[Bloc
 
 ## Instructions
 1. Read `.agentic/artifacts/product_backlog.md`.
-2. Ask a short prioritization question batch using `@.agentic/shared/skills/interaction/questions_format.md`:
-   - What outcome matters most right now?
-   - Any deadlines or sequencing constraints?
-   - Anything intentionally deferred?
+2. Ask a short prioritization question batch (max 3) using `@.agentic/shared/skills/interaction/questions_format.md`.
+   - Tailor the questions and (if using Choice mode) the options to the *actual* branches implied by this backlog.
+   - Use these as themes, not hard-coded questions:
+     - Outcome to optimize for (what "better" means right now)
+     - Sequencing/prerequisite constraints that should affect ordering (not timelines)
+     - Any non-timeline constraints that affect prioritization (e.g., compliance, security, operational limits, infra/tooling spend caps, AI agent usage limits)
+   - If you use **Choice mode**, always include "Write your own answer" and "Can't answer / N/A".
 3. Triage and rewrite the backlog so it stays clean and actionable:
    - Keep these top-level buckets (required, in this order):
      - `Now / Next`

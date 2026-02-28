@@ -12,6 +12,15 @@ Default: Natural.
 - One question per line. Avoid multi-part questions.
 - Never ask questions just to placate the user or keep the conversation going.
 - If the user can't answer something, treat it as real information.
+- The question text and (for Choice mode) the options must be tailored to the current context; examples in templates are illustrative, not a fixed script.
+- If asking about "budget", treat it as non-labor constraints (e.g., infra/tooling spend caps, AI agent usage/credits), not people/time.
+
+## Interactive Form Mode (When Available)
+If the runtime supports an interactive question UI, prefer it for **Choice** and **Binary** questions.
+
+- The UI is triggered by using the runtime's structured question mechanism (not by markdown formatting).
+- If you only print text, it will stay as plain chat text (no tabs/form view).
+- Fall back to the text formats below when the interactive UI/tool is not available.
 
 ## When To Use Which
 
@@ -58,7 +67,6 @@ Example:
 
 1) Is SSO required? (Y/N/DK/NA)
 2) Must this run on-prem? (Y/N/DK/NA)
-3) Is there a fixed deadline? (Y/N/DK/NA)
 
 ## Natural Mode
 
@@ -74,7 +82,7 @@ Example:
 
 1) Who is the primary user, and what job are they hiring this for?
 2) What are the top 1-3 workflows they do today?
-3) Any hard constraints? (deadline, budget, on-prem, compliance)
+3) Any hard constraints? (infra/tooling spend, AI agent usage limits, on-prem, compliance, security)
 
 ## Creative Mode
 
