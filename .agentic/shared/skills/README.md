@@ -15,3 +15,4 @@ Directory guide:
 - `planning/` - planning helpers (bootstrapping, UX gates)
 - `implementation/` - implementation helpers (functional elicitation, automation)
 - `git/` - git procedure modules
+- `release/` - release/versioning helpers

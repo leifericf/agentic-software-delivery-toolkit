@@ -11,7 +11,9 @@ See `@.agentic/shared/skills/gates/prompt_output_boundary.md`.
 - Do not amend commits unless the user explicitly requests it.
 - Do not run destructive git commands (e.g. `reset --hard`, force push).
 - Do not push unless the user explicitly asks.
-- Do not disable hooks (no `--no-verify`) unless the user explicitly asks.
+- Never disable or bypass Git hooks. This includes `--no-verify` and equivalent workarounds.
+- If a hook fails, fix the underlying issue and retry. Do not attempt to skip enforcement.
+- If a local `commit-msg` hook enforces Conventional Commits and rejects the message, fix the message and retry.
 
 ## Inputs
 The user provides a goal like: "commit my changes".
@@ -42,14 +44,23 @@ Use Conventional Commits v1.0.0:
 ```
 
 Rules:
-- The header MUST start with a `type` (e.g. `feat`, `fix`, `docs`, `refactor`, `test`, `chore`, `ci`, `build`, `perf`, `revert`).
-- A `scope` MAY be provided in parentheses (use a short noun for the affected area, e.g. `agentic`, `implementation`, `git`).
+- The header MUST start with a `type`: `feat`, `fix`, `docs`, `refactor`, `test`, `chore`, `ci`, `build`, `perf`, `revert`, `style`.
+- A `scope` MAY be provided in parentheses (use a short noun for the affected area, e.g. `auth`, `ci`, `git`).
 - The `description` MUST follow `: ` and be a short, human-readable summary.
 - Breaking changes MUST be indicated with `!` before the `:` and/or a `BREAKING CHANGE:` footer.
 
 Guidance:
 - Prefer a single-line header; add a body/footer only when it adds necessary context.
 - Avoid over-specific file lists; describe the intent.
+- Focus on the "why" rather than the "what" - the diff shows what changed.
+
+## Commit Hygiene (Before Trunk Push)
+Before merging work into trunk and pushing, review local history and clean it up:
+
+1. **Squash intermediate commits**: collapse `WIP`, `fixup!`, `squash!`, and similar work-in-progress commits into logical commits using `git rebase -i`.
+2. **Ensure every commit tells a clear story**: each commit should represent one logical change that can be understood independently.
+3. **Reword vague messages**: if any commit subject is unclear, reword it during interactive rebase.
+4. **Never push intermediate commits to trunk**.
 
 ## Output
 Return:

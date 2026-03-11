@@ -16,6 +16,10 @@ Then tag:
 
 Default: commit `.agentic/` (including `.agentic/artifacts/`) so your team shares the same prompts and durable context.
 
+Enforcement rule for AI agents:
+- Never bypass Git hooks. Do not use `--no-verify` (or similar workarounds) for commits or pushes.
+- If a hook rejects an action, fix the root cause and retry.
+
 Ignored by default via `.agentic/.gitignore`:
 - `.agentic/.agentic_profile.md` (per-user preferences)
 - `.agentic/artifacts/operations/**` (often contains logs/customer data)

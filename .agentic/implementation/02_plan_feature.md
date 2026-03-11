@@ -46,6 +46,7 @@ Embedded overlap gates (keep lightweight; `N/A` is allowed when truly not applic
 - Data/migrations: See `@.agentic/shared/skills/implementation/data_migrations.md`.
 - Cleanup gate: See `@.agentic/shared/skills/implementation/cleanup_gate.md`.
 - Rollout/verify (if shipping): See `@.agentic/shared/skills/implementation/rollout_verify.md`.
+- Release/versioning (if release is requested): See `@.agentic/shared/skills/release/semver_release.md`.
 
 Backlog hygiene (during planning):
 - If unrelated "later" ideas come up while discussing the feature, capture them as short items under `Inbox (untriaged)` in `.agentic/artifacts/product_backlog.md`.
@@ -139,8 +140,10 @@ Feature: <short capability name>
 ```
 
 ## Baseline Gate (Automatic)
-- Start from a clean, green trunk (`main`). If trunk is not green, stop and fix/triage first.
-- Sync latest `main` before branching.
+- Start from a clean, green trunk (`main` or `master`). If trunk is not green, stop and fix/triage first.
+- Sync latest trunk before branching.
+- Local feature branches are allowed and encouraged for development.
+- Never publish feature branches to remote unless project policy explicitly allows it.
 
 ## Architecture Fit (This Feature)
 - Touch points: <key components/boundaries this story affects>
@@ -175,6 +178,9 @@ Feature: <short capability name>
 ## Cleanup Before Merge
 - Remove: <temporary flags/debug logs/spike code/transitional scaffolding>
 - If anything temporary remains: <decision log row + follow-up backlog item>
+- Squash intermediate commits (`WIP`, `fixup!`, `squash!`) into logical commits via `git rebase -i`
+- Ensure all commit messages follow Conventional Commits v1.0.0
+- Rebase onto trunk and merge with `git merge --ff-only` (no merge commits)
 
 ## Definition of Done (This Feature)
 - `## Executable Specification (Gherkin)` is runnable and green (when present)
@@ -201,6 +207,11 @@ Feature: <short capability name>
 - Each chunk should (a) deliver user value, (b) be testable, and (c) reduce risk.
 - Plan only the next chunk in full detail; keep later chunks lighter.
 - The executable specification is the feature-level acceptance contract; implementation should make it runnable (BDD suite) and green.
+- If the user requests a release, add blocking clarification tasks in this order:
+  1. **Release type gate**: ask whether this is a **release candidate** (for validation) or a **proper release** (for production readiness). Block until answered.
+  2. **SemVer recommendation gate**: review changes since the last release tag, present a short summary, and gently suggest `major`, `minor`, or `patch` with reasoning. The user makes the final decision. Block until answered.
+  3. If **proper release**: add tasks to run the project's release bump workflow, update release notes/metadata, and create a `vX.Y.Z` tag.
+  4. If **release candidate**: add tasks to create a `vX.Y.Z-rc.N` tag, plus any project-specific RC steps if required.
 
 ## Assumptions (User-Facing)
 - <assumption made to proceed>
@@ -211,7 +222,7 @@ Feature: <short capability name>
 3. <step>
 
 ## Tasks
-- [ ] T-001 Create and checkout a new branch (e.g. `feature/<feature_slug>`)
+- [ ] T-001 Create and checkout a local branch (e.g. `feature/<feature_slug>`)
 
 - [ ] Implement: <chunk name>
   - [ ] T-010 <leaf task that can be finished in one commit>
@@ -222,6 +233,11 @@ Feature: <short capability name>
   - [ ] T-900 Run formatters
   - [ ] T-901 Run linters
   - [ ] T-902 Run tests
+
+- [ ] Merge to trunk
+  - [ ] T-950 Squash intermediate commits into logical commits (`git rebase -i`)
+  - [ ] T-951 Ensure all commits follow Conventional Commits
+  - [ ] T-952 Rebase onto trunk and merge (`git merge --ff-only`)
 
 ## Open Questions
 - <any non-blocking questions to capture or ->
