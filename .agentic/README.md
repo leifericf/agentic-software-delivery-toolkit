@@ -12,6 +12,18 @@ Use `@.agentic/planning/01_describe_problem.md` (not `@.agentic\planning\01_desc
 Then tag:
 - `@.agentic/planning/01_describe_problem.md`
 
+## Runtime Policy (For Agents)
+
+- Treat this toolkit as required operating policy, not optional reference material.
+- On every request, load and follow the task-relevant `.agentic` sections before acting.
+- If `.agentic` guidance conflicts with repository-level framework rules, defer to the repository policy.
+- Minimum routing by task type:
+  - Implementation -> `@.agentic/implementation/README.md`
+  - Committing changes -> `@.agentic/shared/skills/git/git_commit.md`
+  - Branch integration -> `@.agentic/shared/skills/git/git_merge.md`
+  - Release prep/tagging -> `@.agentic/shared/skills/release/semver_release.md`
+  - Planning/operations -> matching files in `.agentic/planning/` or `.agentic/operations/`
+
 ## Committing
 
 Default: commit `.agentic/` (including `.agentic/artifacts/`) so your team shares the same prompts and durable context.

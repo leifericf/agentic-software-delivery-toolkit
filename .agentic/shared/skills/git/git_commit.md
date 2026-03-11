@@ -28,9 +28,11 @@ The user provides a goal like: "commit my changes".
    - If any file likely contains secrets, warn and exclude it.
    - If you are executing a task plan, include the corresponding checkbox updates in `.agentic/artifacts/tasks/plan-<feature_slug>.md` in the SAME commit as the work that completed the task.
 3. Draft a Conventional Commit message (header always; body/footers only when needed).
+   - Validate header format: `^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\([a-z0-9][a-z0-9_-]*\))?(!)?: [^ ].+`.
+   - If invalid, rewrite before committing.
 4. Stage only the intended files (`git add <paths>`).
 5. Create the commit (`git commit -m "<message>"`).
-6. Verify success (`git status`).
+6. Verify success (`git status`) and re-check created subject (`git log -1 --format=%s`) is Conventional Commit-compliant.
 
 ## Commit Message Style (STRICT)
 Use Conventional Commits v1.0.0:
@@ -53,6 +55,7 @@ Guidance:
 - Prefer a single-line header; add a body/footer only when it adds necessary context.
 - Avoid over-specific file lists; describe the intent.
 - Focus on the "why" rather than the "what" - the diff shows what changed.
+- Never include plan-internal identifiers (e.g. chunk IDs like `CH-001`, task IDs like `T-003`) in commit messages.
 
 ## Commit Hygiene (Before Trunk Push)
 Before merging work into trunk and pushing, review local history and clean it up:

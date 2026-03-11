@@ -16,9 +16,12 @@ Override: no artifacts unless needed to update the task plan or backlog. Ensure 
 - Implemented feature branch
 - `.agentic/artifacts/tasks/plan-<feature_slug>.md`
 - `.agentic/artifacts/product_backlog.md`
+- Maintained manual scenario artifacts when present (for example `docs/qa/manual-test-scenarios.json` and derived outputs)
 
 ## Instructions
-1. Give the user a short script for how to test (2-6 steps) based on what was implemented.
+1. Give the user a concrete validation script for what changed.
+   - Prefer referencing/updating the project's maintained manual scenario artifact when available.
+   - If no maintained artifact exists yet, provide a focused 2-6 step script and note it should be promoted into a maintained artifact.
 2. Ask them to try it end-to-end.
 3. When they report issues:
    - Clarify reproduction steps.
@@ -30,6 +33,9 @@ Override: no artifacts unless needed to update the task plan or backlog. Ensure 
    - Capture them under `Inbox (untriaged)` in `.agentic/artifacts/product_backlog.md` unless the user explicitly wants them prioritized now.
 5. If the feature is accepted as working end-to-end:
    - Ensure the implemented backlog item is moved into `In product (shipped)` in `.agentic/artifacts/product_backlog.md`.
+6. Keep manual scenarios current:
+   - If user-visible behavior changed, ensure the maintained scenario source artifact is updated in the same feature work.
+   - If new functionality shipped, ensure at least one net-new scenario is added for it.
 
 Then ask:
 

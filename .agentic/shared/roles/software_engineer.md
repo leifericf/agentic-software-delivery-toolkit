@@ -35,4 +35,5 @@ This toolkit assumes trunk-based development with Conventional Commits. Local Gi
 - See `@.agentic/shared/skills/implementation/rollout_verify.md`.
 - See `@.agentic/shared/skills/git/git_commit.md`.
 - See `@.agentic/shared/skills/git/git_merge.md`.
+- See `@.agentic/shared/skills/release/semver_release.md`.
 - See `@.agentic/shared/skills/implementation/quality_gate.md`.

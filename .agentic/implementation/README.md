@@ -33,9 +33,11 @@ Escape hatches (use only when needed):
 - If requirements change during implementation, update the relevant artifacts and add a decision log row.
 - Planning includes a short functional elicitation gate before task decomposition (see `.agentic/implementation/02_plan_feature.md`).
 - When present, treat the plan's `## Executable Specification (Gherkin)` as the feature-level acceptance contract.
+- For bug fixes: identify why existing automation did not catch the bug and add/adjust tests in the same work to prevent recurrence.
 
 ## Maintainer Sanity Checks (When Updating Templates)
 - `02_plan_feature.md` plan template includes baseline/observability/testing/data/cleanup/rollout sections with `N/A` exits.
 - `04_execute_plan.md` enforces preflight + reconcile/cleanup before declaring done.
 - Overlap skills exist under `.agentic/shared/skills/implementation/` and are referenced by roles/steps.
 - Default path remains `01 -> 02 -> 04`; `06` stays an optional escape hatch.
+- Planning/execution/validation steps maintain manual test scenarios for changed user-visible flows, and add new scenarios for net-new functionality.

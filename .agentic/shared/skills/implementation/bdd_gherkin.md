@@ -1,7 +1,7 @@
 # Skill: BDD + Gherkin executable specifications
 
 ## Purpose
-Help the agent write and use an executable specification for a single selected backlog item.
+Help the agent write and use a Gherkin specification for a single selected backlog item.
 
 This skill is intentionally implementation-agnostic: use the most idiomatic BDD runner for the repo's language and existing test stack.
 
@@ -15,7 +15,8 @@ This skill is intentionally implementation-agnostic: use the most idiomatic BDD 
   - Prefer concrete example values.
 
 ## Recommended Structure (Gherkin)
-- One feature file per implemented backlog item: `features/<feature_slug>.feature`.
+- Keep canonical Gherkin in `## Executable Specification (Gherkin)` inside `.agentic/artifacts/tasks/plan-<feature_slug>.md`.
+- If the repo has an established executable BDD convention, mirror the same scenarios there as needed.
 - Use `Feature:` and a short narrative.
 - Use `Background:` only for truly shared preconditions.
 - Use `Rule:` to group business rules when helpful.
@@ -34,7 +35,11 @@ This skill is intentionally implementation-agnostic: use the most idiomatic BDD 
 - Prefer asserting externally visible state (API response, persisted state, rendered user-facing text) over internal implementation details.
 - Include at least one "must never happen" scenario (error, access control, invariant, data loss, double-charge, etc.).
 
+## Relationship to E2E / Journey Tests
+BDD specifications define feature-level acceptance through structured scenarios. They complement (not replace) multi-page E2E journey tests when user flows cross pages or boundaries.
+
 ## Making It Executable (Automation)
 - If the repo already has a BDD runner, follow its conventions (file location, step definitions, hooks).
-- Otherwise, choose the most idiomatic runner for the stack and wire it into the repo's standard automation so that "automation is green" includes the BDD suite.
+- Do not introduce a new BDD runner by default; use plan-artifact Gherkin as the acceptance contract unless the repo explicitly requires executable BDD.
+- When executable BDD is required, wire it into standard automation so that "automation is green" includes the BDD suite.
 - Keep step definitions reusable and intention-revealing; avoid one-off steps that bake in incidental details.

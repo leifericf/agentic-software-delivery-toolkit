@@ -30,6 +30,16 @@ Before you create a feature branch or start coding:
 - Sync latest `main` locally.
 - If the repo has a fast default check (tests/lint), run it once to confirm baseline.
 
+## Bugfix Preflight (Mandatory for Bug Work)
+If the work is a bug fix (or includes bug fixing), do this before implementing the fix:
+
+- Identify why the bug was not caught by existing automated checks (tests, lint, CI, precommit, E2E/journey).
+- Decide the smallest automation change that would have caught it.
+  - Prefer modifying an existing suite over adding a new one.
+  - If a new test is needed, pick the lowest tier that can reproduce it reliably (Tier 0 first; E2E/journey when the failure spans pages/sessions).
+- Add/adjust tests in the same work as the fix unless there is a clear, documented reason it cannot be automated.
+- When feasible, write the regression test first (red/green) to prove the gap and prevent recurrence.
+
 ## Open Questions Gate (Mandatory)
 See `@.agentic/shared/skills/gates/open_questions_gate.md` (Blockers: any `[Blocking]` item affecting the chunk you are about to do).
 
@@ -37,8 +47,11 @@ See `@.agentic/shared/skills/gates/open_questions_gate.md` (Blockers: any `[Bloc
 - Create a new local feature branch before making changes.
 - Commit after each chunk (or meaningful sub-chunk), with a message that explains intent.
 - Commits map to tasks: each implementation commit should complete exactly one leaf task (or the smallest safe sub-task).
+- All commit messages must follow Conventional Commits v1.0.0.
+- Do not include plan-internal identifiers in commit messages (e.g. chunk IDs, task IDs).
 - Do not commit if the relevant automation for the task is failing.
 - Follow `@.agentic/shared/skills/git/git_commit.md`.
+- Prefer rebase + fast-forward integration (no merge commits by default). Follow `@.agentic/shared/skills/git/git_merge.md`.
 - Do not push unless explicitly asked.
 
 ## Task Hygiene
@@ -67,6 +80,13 @@ Keep the backlog a living document:
 - If you discover net-new feature work that is truly out of scope for this plan, capture it in the backlog (`Inbox (untriaged)` or reprioritize into `Now / Next`/`Later`).
 - Do not add bug reports to the backlog. Fix bugs relevant to the feature immediately unless the user explicitly suppresses the fix; if suppressed, capture it as a follow-up task in `.agentic/artifacts/tasks/plan-<feature_slug>.md`.
 
+## Manual Test Script Hygiene (Mandatory)
+- If the feature changes user-visible behavior, update the maintained manual scenario source artifact in the same feature work (for example `docs/qa/manual-test-scenarios.json`).
+- Regenerate any derived manual testing outputs in the same feature work when the project uses them (for example `docs/qa/<gitsha>-manual-test-scenarios.xlsx`).
+- Keep scenario updates concrete: preconditions, steps, expected outcomes, and evidence capture notes.
+- Add new scenarios for newly introduced flows; update existing scenarios for changed flows.
+- If no manual scenario update is needed, record a short explicit reason in plan/task notes.
+
 ## Automation (Folded In)
 Run the project's standard commands during/after execution (format, lint, test, and build if present).
 
@@ -80,11 +100,14 @@ Respect the plan's embedded gates:
 - Data/migrations: if the plan includes `## Data & Migrations`, implement safely and include rollback considerations.
 - Cleanup: satisfy `@.agentic/shared/skills/implementation/cleanup_gate.md` before declaring done.
 
-If the plan includes `## Executable Specification (Gherkin)`, make it executable:
+If the plan includes `## Executable Specification (Gherkin)`:
 
-- Materialize the Gherkin into `features/<feature_slug>.feature` (unless the repo already has an established convention).
-- Use the most idiomatic BDD runner for the repo's language/test stack (or the existing one), and wire it into the repo's standard automation.
-- Treat "automation is green" as including the BDD suite.
+- Treat the plan artifact Gherkin as the acceptance contract.
+- Keep scenarios current as implementation evolves.
+- Only materialize into executable BDD files when the repo has an established BDD runner/convention.
+- When executable BDD is present, treat "automation is green" as including that suite.
+
+- If the repo has E2E/journey tests and the feature changes behavior already covered by those tests, update those E2E tests in the same feature work.
 
 - Prefer running fast checks per chunk, then the full suite at the end.
 - Fix issues with the smallest safe change.

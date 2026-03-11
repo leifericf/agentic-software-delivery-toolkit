@@ -24,3 +24,12 @@ If the feature changes schema, stored data shape, or requires backfill, this ski
 - Implement migrations in the repo's established mechanism.
 - Keep changes reversible where possible.
 - Include tests that cover the new data behavior (Tier 0 and Tier 1 when applicable).
+
+## Safety Notes
+- Prefer schema migrations and data backfills as separate deploy steps.
+  - Schema migration: add columns/indexes/constraints.
+  - Backfill migration/job: populate or transform data in idempotent batches.
+- Be explicit when a down migration is fragile.
+  - Re-adding strict constraints in down migrations can fail if incompatible rows were written after rollout.
+  - If strict down requires cleanup/backfill first, document that prerequisite in migration and rollout notes.
+- Avoid combining large data rewrites with DDL in one migration unless absolutely necessary.

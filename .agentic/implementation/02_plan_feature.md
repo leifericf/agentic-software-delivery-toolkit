@@ -30,7 +30,7 @@ Do not require exhaustive design.
 - Draft slices and tasks directly from the artifacts.
 - Ask only what is needed to avoid wrong assumptions.
 - Aim for 2-6 chunks; each chunk independently testable.
-- When you select a story from the backlog to implement, write an executable specification in Gherkin for that story.
+- When you select a story from the backlog to implement, write a Gherkin specification for that story.
   - See `@.agentic/shared/skills/implementation/bdd_gherkin.md`.
   - Target: 3-7 scenarios for the MVI.
   - Scenarios must be user-observable and testable.
@@ -161,6 +161,20 @@ Feature: <short capability name>
 - Tier 1 (if applicable): <what needs deterministic integration testing>
 - Tier 2 (if applicable): <what requires sandbox/third-party validation>
 
+When the product has user-visible flows and an E2E/journey suite exists (or is being introduced):
+- Include an E2E strategy: which journeys to add or update for this feature.
+- State the expectation for updating existing E2E tests if the feature changes behavior they cover.
+
+## Manual Validation Impact
+- Manual scenario source artifact: <path, e.g. `docs/qa/manual-test-scenarios.json` | N/A with reason>
+- Derived validation artifact(s): <path, e.g. `docs/qa/<gitsha>-manual-test-scenarios.xlsx` | N/A>
+- Affected scenarios:
+  - <scenario id/name> - <update needed: yes/no>
+- New scenarios required:
+  - <scenario id/name or N/A>
+- Tester-visible behavior changes:
+  - <what a human tester will notice>
+
 ## Data & Migrations (If Applicable)
 - Applicability: N/A | Schema only | Backfill | Expand/contract
 - Up migration: <yes + approach>
@@ -183,11 +197,12 @@ Feature: <short capability name>
 - Rebase onto trunk and merge with `git merge --ff-only` (no merge commits)
 
 ## Definition of Done (This Feature)
-- `## Executable Specification (Gherkin)` is runnable and green (when present)
+- `## Executable Specification (Gherkin)` is complete and current in the plan artifact; if the repo has executable BDD configured, that suite is runnable and green
 - Tier 0 is green; Tier 1 is green when applicable
 - Observability requirements implemented (or explicitly `N/A`)
 - Cleanup gate satisfied
 - Backlog updated (move shipped item to `In product (shipped)` when accepted)
+- Manual scenarios updated for affected user-visible flows, with net-new scenarios added for net-new functionality (or explicitly `N/A` with reason)
 
 ## Chunks
 - <chunk name> (optional: `CH-001: <chunk name>`)
@@ -206,7 +221,7 @@ Feature: <short capability name>
 - Write tasks so execution can be "commit-per-task": each leaf checkbox should be completable in a single commit, and execution will check it off in the same commit as the change.
 - Each chunk should (a) deliver user value, (b) be testable, and (c) reduce risk.
 - Plan only the next chunk in full detail; keep later chunks lighter.
-- The executable specification is the feature-level acceptance contract; implementation should make it runnable (BDD suite) and green.
+- The executable specification is the feature-level acceptance contract; keep it current in the plan artifact and mirror to an executable BDD suite only when the repo uses one.
 - If the user requests a release, add blocking clarification tasks in this order:
   1. **Release type gate**: ask whether this is a **release candidate** (for validation) or a **proper release** (for production readiness). Block until answered.
   2. **SemVer recommendation gate**: review changes since the last release tag, present a short summary, and gently suggest `major`, `minor`, or `patch` with reasoning. The user makes the final decision. Block until answered.
