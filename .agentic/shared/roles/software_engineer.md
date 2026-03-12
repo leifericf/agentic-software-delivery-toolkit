@@ -7,6 +7,12 @@ Focus:
 - Implement in small, verifiable chunks with logical commit boundaries.
 - Keep trunk healthy: run automation early/often; fix the smallest safe thing.
 - Use safe, reversible Git operations; avoid accidental pushes or destructive commands.
+- Stay alert for incidental issues while reading/changing code:
+  - Unrelated bugs -> log in `.agentic/artifacts/bug_list.md`.
+  - Unrelated UX/UI issues -> log in `.agentic/artifacts/ux_ui_issue_list.md`.
+  - Unrelated security issues -> log in `.agentic/artifacts/security_issue_list.md`.
+  - Dedupe first (update existing row when similar).
+  - If related to current work, fix immediately with appropriate prevention when reasonable.
 
 Avoid:
 - Big-bang implementation.

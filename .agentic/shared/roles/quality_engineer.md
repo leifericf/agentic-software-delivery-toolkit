@@ -8,6 +8,11 @@ Focus:
 - Keep decision history accurate and intention-preserving.
 - Run quality gates (format/lint/test/build) and fix failures with the smallest safe change.
 - Support user validation: turn issues into actionable follow-ups with clear repro + AC.
+- When you notice issues during other work, capture unrelated issues in the matching living artifact (dedupe first; update existing row if similar):
+  - Bugs -> `.agentic/artifacts/bug_list.md`
+  - UX/UI -> `.agentic/artifacts/ux_ui_issue_list.md`
+  - Security -> `.agentic/artifacts/security_issue_list.md`
+  - Ensure related issues are fixed immediately with prevention when feasible.
 
 Avoid:
 - Questions that do not change implementation or validation.

@@ -19,6 +19,8 @@ Then tag:
 - If `.agentic` guidance conflicts with repository-level framework rules, defer to the repository policy.
 - Minimum routing by task type:
   - Implementation -> `@.agentic/implementation/README.md`
+  - Issue discovery (preflight) -> `@.agentic/prompts/find_all_issues.md`
+  - Issue remediation -> `@.agentic/prompts/fix_all_issues.md`
   - Committing changes -> `@.agentic/shared/skills/git/git_commit.md`
   - Branch integration -> `@.agentic/shared/skills/git/git_merge.md`
   - Release prep/tagging -> `@.agentic/shared/skills/release/semver_release.md`

@@ -16,10 +16,13 @@ Override: no artifacts unless needed to update the task plan or backlog. Ensure 
 - Implemented feature branch
 - `.agentic/artifacts/tasks/plan-<feature_slug>.md`
 - `.agentic/artifacts/product_backlog.md`
-- Maintained manual scenario artifacts when present (for example `docs/qa/manual-test-scenarios.json` and derived outputs)
+- `.agentic/artifacts/bug_list.md`
+- `.agentic/artifacts/ux_ui_issue_list.md`
+- `.agentic/artifacts/security_issue_list.md`
+- Manual scenario artifacts if present (e.g. `docs/qa/manual-test-scenarios.json` and `docs/qa/<gitsha>-manual-test-scenarios.xlsx`)
 
 ## Instructions
-1. Give the user a concrete validation script for what changed.
+1. Give the user a concrete validation script for what changed:
    - Prefer referencing/updating the project's maintained manual scenario artifact when available.
    - If no maintained artifact exists yet, provide a focused 2-6 step script and note it should be promoted into a maintained artifact.
 2. Ask them to try it end-to-end.
@@ -27,7 +30,11 @@ Override: no artifacts unless needed to update the task plan or backlog. Ensure 
    - Clarify reproduction steps.
    - Fix issues relevant to the implemented feature immediately.
    - If an issue appears unrelated to the feature you just implemented, do not switch scope silently; ask the user whether to address it now or defer it.
-   - Do not add bug reports to the backlog.
+   - Do not add issue reports (bugs/UX/UI/security) to the backlog.
+   - If deferred, log the issue in the correct living artifact:
+     - Bugs -> `.agentic/artifacts/bug_list.md`
+     - UX/UI -> `.agentic/artifacts/ux_ui_issue_list.md`
+     - Security -> `.agentic/artifacts/security_issue_list.md`
    - If the user explicitly suppresses a fix for now, capture it as a follow-up task in `.agentic/artifacts/tasks/plan-<feature_slug>.md`.
 4. When they report net-new feature ideas:
    - Capture them under `Inbox (untriaged)` in `.agentic/artifacts/product_backlog.md` unless the user explicitly wants them prioritized now.

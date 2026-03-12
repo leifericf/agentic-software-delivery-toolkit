@@ -30,6 +30,10 @@ Escape hatches (use only when needed):
 
 - The agent keeps `.agentic/artifacts/open_questions.md` and `.agentic/artifacts/decision_log.md` up to date.
 - The agent keeps `.agentic/artifacts/product_backlog.md` up to date (capture new ideas in `Inbox (untriaged)` and move shipped items to `In product (shipped)`).
+- The agent keeps issue artifacts up to date and separate from the product backlog:
+  - Bugs -> `.agentic/artifacts/bug_list.md`
+  - UX/UI -> `.agentic/artifacts/ux_ui_issue_list.md`
+  - Security -> `.agentic/artifacts/security_issue_list.md`
 - If requirements change during implementation, update the relevant artifacts and add a decision log row.
 - Planning includes a short functional elicitation gate before task decomposition (see `.agentic/implementation/02_plan_feature.md`).
 - When present, treat the plan's `## Executable Specification (Gherkin)` as the feature-level acceptance contract.

@@ -8,7 +8,7 @@ Execute the task plan one step at a time on a new local git feature branch, comm
 
 ## Output Boundary (STRICT)
 See `@.agentic/shared/skills/gates/output_boundary.md`.
-Override: no new artifacts; update repo files directly. Keep `.agentic/artifacts/product_backlog.md` up to date as you go. When done and automation is green, you may output a short validation script (2-6 steps).
+Override: no new artifacts; update repo files directly. Keep `.agentic/artifacts/product_backlog.md`, `.agentic/artifacts/bug_list.md`, `.agentic/artifacts/ux_ui_issue_list.md`, and `.agentic/artifacts/security_issue_list.md` up to date as you go. When done and automation is green, you may output a short validation script (2-6 steps).
 
 ## Required Inputs
 - `.agentic/artifacts/tasks/plan-<feature_slug>.md`
@@ -16,6 +16,9 @@ Override: no new artifacts; update repo files directly. Keep `.agentic/artifacts
 - `.agentic/artifacts/decision_log.md`
 - `.agentic/artifacts/technical_design.md`
 - `.agentic/artifacts/product_backlog.md`
+- `.agentic/artifacts/bug_list.md`
+- `.agentic/artifacts/ux_ui_issue_list.md`
+- `.agentic/artifacts/security_issue_list.md`
 - Repo codebase (existing, or bootstrapped as part of the plan)
 
 ## Starting Point (Mandatory)
@@ -31,14 +34,14 @@ Before you create a feature branch or start coding:
 - If the repo has a fast default check (tests/lint), run it once to confirm baseline.
 
 ## Bugfix Preflight (Mandatory for Bug Work)
-If the work is a bug fix (or includes bug fixing), do this before implementing the fix:
+If the work you are about to do is a bug fix (or includes fixing a bug), do this BEFORE you implement the fix:
 
-- Identify why the bug was not caught by existing automated checks (tests, lint, CI, precommit, E2E/journey).
-- Decide the smallest automation change that would have caught it.
-  - Prefer modifying an existing suite over adding a new one.
-  - If a new test is needed, pick the lowest tier that can reproduce it reliably (Tier 0 first; E2E/journey when the failure spans pages/sessions).
-- Add/adjust tests in the same work as the fix unless there is a clear, documented reason it cannot be automated.
-- When feasible, write the regression test first (red/green) to prove the gap and prevent recurrence.
+- Identify why the bug was not caught by existing automated tasks (tests, linters, CI jobs, precommit, E2E/journey).
+- Decide the smallest change to automation that would have caught it.
+  - Prefer modifying an existing test suite over adding a new one.
+  - If a new test is needed, pick the lowest tier that can reliably reproduce it (Tier 0 first; journey/E2E when the failure spans pages/sessions).
+- Add/adjust tests in the same work as the fix (no separate follow-up), unless there is a clear, documented reason it cannot be automated.
+- When feasible, write the regression test first (red-green) to prove the gap and prevent recurrence.
 
 ## Open Questions Gate (Mandatory)
 See `@.agentic/shared/skills/gates/open_questions_gate.md` (Blockers: any `[Blocking]` item affecting the chunk you are about to do).
@@ -46,12 +49,11 @@ See `@.agentic/shared/skills/gates/open_questions_gate.md` (Blockers: any `[Bloc
 ## Git Rules
 - Create a new local feature branch before making changes.
 - Commit after each chunk (or meaningful sub-chunk), with a message that explains intent.
-- Commits map to tasks: each implementation commit should complete exactly one leaf task (or the smallest safe sub-task).
-- All commit messages must follow Conventional Commits v1.0.0.
-- Do not include plan-internal identifiers in commit messages (e.g. chunk IDs, task IDs).
+- All commit messages must strictly follow Conventional Commits v1.0.0 (no default exceptions).
+- Each implementation commit should complete exactly one leaf task (or the smallest safe sub-task). Do not embed plan-internal identifiers (chunk IDs, task IDs) in commit messages - messages must stand alone as readable history.
 - Do not commit if the relevant automation for the task is failing.
 - Follow `@.agentic/shared/skills/git/git_commit.md`.
-- Prefer rebase + fast-forward integration (no merge commits by default). Follow `@.agentic/shared/skills/git/git_merge.md`.
+- Prefer rebase + fast-forward branch integration (no merge commits by default); follow `@.agentic/shared/skills/git/git_merge.md`.
 - Do not push unless explicitly asked.
 
 ## Task Hygiene
@@ -78,14 +80,26 @@ Keep the backlog a living document:
 - Do not expand the current feature's scope unless the user explicitly changes `## Executable Specification (Gherkin)` in the plan.
 - When the feature is done and automation is green, move the implemented backlog item from `Now / Next` to `In product (shipped)`.
 - If you discover net-new feature work that is truly out of scope for this plan, capture it in the backlog (`Inbox (untriaged)` or reprioritize into `Now / Next`/`Later`).
-- Do not add bug reports to the backlog. Fix bugs relevant to the feature immediately unless the user explicitly suppresses the fix; if suppressed, capture it as a follow-up task in `.agentic/artifacts/tasks/plan-<feature_slug>.md`.
+- Do not add issue reports (bugs/UX/UI/security) to the backlog.
+
+## Issue Hygiene (Mandatory)
+
+- Be on the lookout for issues while implementing, reviewing code, or debugging test failures.
+- If you discover an issue related to the current feature/task/area, fix it immediately when in scope (include prevention in the same work when reasonable).
+- If you discover an issue unrelated to the current work, do not fix it now; add/update one row in the correct living artifact:
+  - Bugs -> `.agentic/artifacts/bug_list.md`
+  - UX/UI -> `.agentic/artifacts/ux_ui_issue_list.md`
+  - Security -> `.agentic/artifacts/security_issue_list.md`
+  - Duplicate check (mandatory): before adding, scan the table for a similar `summary`, same `area`, and/or matching key terms; if found, update the existing row instead of adding a new one.
+- Only defer a related issue if the user explicitly requests deferral; if deferred, still log it in the correct issue artifact with clear evidence/context.
 
 ## Manual Test Script Hygiene (Mandatory)
-- If the feature changes user-visible behavior, update the maintained manual scenario source artifact in the same feature work (for example `docs/qa/manual-test-scenarios.json`).
-- Regenerate any derived manual testing outputs in the same feature work when the project uses them (for example `docs/qa/<gitsha>-manual-test-scenarios.xlsx`).
-- Keep scenario updates concrete: preconditions, steps, expected outcomes, and evidence capture notes.
+
+- If the feature changes user-visible behavior, update the manual scenario source artifact in the same feature work (for example `docs/qa/manual-test-scenarios.json`).
+- Regenerate any derived manual testing output files (for example `docs/qa/<gitsha>-manual-test-scenarios.xlsx`) in the same feature work.
+- Keep scenario updates concrete: preconditions/steps/expected outcomes/evidence capture notes.
 - Add new scenarios for newly introduced flows; update existing scenarios for changed flows.
-- If no manual scenario update is needed, record a short explicit reason in plan/task notes.
+- If no manual scenario update is needed, record a short explicit reason in the plan/task notes.
 
 ## Automation (Folded In)
 Run the project's standard commands during/after execution (format, lint, test, and build if present).
@@ -104,10 +118,10 @@ If the plan includes `## Executable Specification (Gherkin)`:
 
 - Treat the plan artifact Gherkin as the acceptance contract.
 - Keep scenarios current as implementation evolves.
-- Only materialize into executable BDD files when the repo has an established BDD runner/convention.
-- When executable BDD is present, treat "automation is green" as including that suite.
+- Only materialize into executable BDD files if the repo already has an established BDD runner/convention.
+- When executable BDD is present, treat "automation is green" as including the BDD suite.
 
-- If the repo has E2E/journey tests and the feature changes behavior already covered by those tests, update those E2E tests in the same feature work.
+- If the repo has E2E/journey tests and the current feature changes behavior covered by those tests, update the affected E2E tests in the same feature work. Do not defer E2E test updates to a separate follow-up.
 
 - Prefer running fast checks per chunk, then the full suite at the end.
 - Fix issues with the smallest safe change.

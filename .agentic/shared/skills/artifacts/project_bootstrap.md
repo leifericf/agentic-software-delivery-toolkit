@@ -54,3 +54,27 @@ Notes:
 | --- | --- | --- | --- |
 | YYYY-MM-DD | <decision> | <why> | <tradeoff> |
 ```
+
+5. Create: `.agentic/artifacts/bug_list.md` (if missing) with this minimal structure:
+
+```md
+| severity | priority | fix_complexity | category | area | summary | repro | notes |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+```
+
+6. Create: `.agentic/artifacts/ux_ui_issue_list.md` (if missing) with this minimal structure:
+
+```md
+| severity | priority | fix_complexity | category | area | summary | reasoning | suggested_improvement |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+
+## Out-of-scope notes (probable bugs)
+- None
+```
+
+7. Create: `.agentic/artifacts/security_issue_list.md` (if missing) with this minimal structure:
+
+```md
+| severity | priority | fix_complexity | category | area | summary | threat_scenario | evidence | suggested_mitigation |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+```
