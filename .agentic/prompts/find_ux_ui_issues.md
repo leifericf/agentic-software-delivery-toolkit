@@ -19,6 +19,17 @@ Secondary: `@.agentic/shared/roles/quality_engineer.md`
 - Do not perform bug or security detection. If you notice a probable bug or security issue, list it only under `Out-of-scope notes` in the artifact and route it to the corresponding prompt.
 - Follow repository-level policy (for example `AGENTS.md`) and relevant `@.agentic/` policies when choosing checks and phrasing.
 
+## Deterministic Discovery Protocol (Default)
+- Freeze context: include reviewed commit SHA in recap.
+- Run discovery in fixed phases:
+  1) Core-journey walkthroughs
+  2) Accessibility sweep
+  3) Copy/consistency sweep
+  4) Gap-focused second pass (saturation)
+- Use the same traversal order each run:
+  - primary entry screens -> primary task journeys -> secondary/edge journeys -> empty/loading/error states -> settings/help/recovery flows.
+- Saturation gate (mandatory): run pass 2 on high-risk UX zones (forms, navigation, auth/access, checkout/order submission, dense data tables, mobile nav); only stop when pass 2 yields no clear net-new UX/UI issues.
+
 ## Output Boundary
 - Update (or create) exactly one artifact: `.agentic/artifacts/ux_ui_issue_list.md`.
 - Optional: a brief chat recap (3-8 bullets) of what changed.
@@ -156,16 +167,28 @@ Examples:
      - Systematic: traverse entrypoints first, then primary journeys, then secondary/edge journeys, then settings/help/error-recovery paths.
      - Targeted probes: look for unclear labels, inconsistent terms/patterns, weak hierarchy/readability, missing action feedback, weak empty/loading/error states, accessibility barriers, and poor discoverability.
    - Goal: surface evidence-based UX/UI issues with clear user impact and actionable improvements.
-4. For each issue found:
+4. Run pass-2 saturation (mandatory):
+    - Re-check critical forms, keyboard-only flows, focus order, and screen-reader semantics.
+    - Re-check shared layout/components for repeated UX defects.
+    - If pass 2 finds net-new issues, include them and mark that saturation produced net-new findings in recap.
+5. For each issue found:
    - Duplicate check (mandatory): search for a similar issue by `summary`, same `area`, and/or matching key terms in `reasoning`/`suggested_improvement`.
    - Add a new entry (or update an existing one).
    - Assign Category, Severity, Priority, and Fix Complexity.
    - Keep entries specific and actionable.
    - If validation is missing, set `reasoning` to a concrete `NEEDS_VALIDATION:` request.
-5. Keep it living:
+6. Keep it living:
    - Deduplicate similar reports.
    - Tighten wording and recommendations as evidence improves.
    - Remove issues from `.agentic/artifacts/ux_ui_issue_list.md` in the same commit that implements the fix.
+
+## Required Recap (when chat recap is provided)
+Include:
+- commit SHA reviewed
+- interface surfaces and journeys covered
+- accessibility checks performed
+- whether pass-2 saturation found net-new UX/UI issues
+- count of rows added vs updated
 
 ## Artifact Template: `.agentic/artifacts/ux_ui_issue_list.md`
 If the file does not exist, create it with exactly this structure:

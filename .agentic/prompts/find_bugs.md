@@ -20,6 +20,17 @@ Secondary: `@.agentic/shared/roles/software_engineer.md`
 - Do not log UX/UI, visual polish, or accessibility findings in `.agentic/artifacts/bug_list.md`; route those to `@.agentic/prompts/find_ux_ui_issues.md` and `.agentic/artifacts/ux_ui_issue_list.md`.
 - Do not log security/privacy vulnerabilities in `.agentic/artifacts/bug_list.md`; route those to `@.agentic/prompts/find_security_issues.md` and `.agentic/artifacts/security_issue_list.md`.
 
+## Deterministic Discovery Protocol (Default)
+- Freeze context: include reviewed commit SHA in recap.
+- Run discovery in fixed phases:
+  1) Baseline signals (compile/test/checks)
+  2) Systematic code sweep
+  3) Targeted search probes
+  4) Gap-focused second pass (saturation)
+- Use the same scan order each run:
+  - config/runtime policy -> routing/entrypoints/middleware -> business logic/contexts -> UI/controllers/views/components -> asset/build logic.
+- Saturation gate (mandatory): perform a second pass focused on high-risk areas and previously missed patterns; only stop when pass 2 yields no clear net-new bug candidates.
+
 ## Output Boundary
 - Update (or create) exactly one artifact: `.agentic/artifacts/bug_list.md`.
 - Optional: a brief chat recap (3-8 bullets) of what changed.
@@ -116,16 +127,28 @@ Use exactly one primary category:
      - Systematic: start with entrypoints (routing/controllers/handlers/CLI commands), then data access, then integrations, then user-facing UI.
      - Targeted searches: look for TODO/FIXME, exceptions/panics, error swallowing, missing timeouts, retry loops, non-idempotent side effects, transaction boundaries, authorization checks, and external HTTP calls.
    - Goal: surface evidence-based defects, not style nits; prefer bugs with concrete repro/evidence or a clear, testable hypothesis.
-4. For each bug found:
+4. Run pass-2 saturation (mandatory):
+    - Re-scan highest-risk modules (auth/session, checkout/order flows, external integrations, background jobs, data writes, parsing boundaries).
+    - Re-check prior open bugs to find adjacent variants/regressions.
+    - If pass 2 finds net-new issues, include them and mark that saturation produced net-new findings in recap.
+5. For each bug found:
    - Duplicate check (mandatory): before adding, search the bug list for a similar `summary`, same `area`, and/or matching key terms in `repro`/`notes`. If it already exists, update the existing row instead of adding a new one.
    - Add a new entry (or update an existing one).
    - Assign Category, Severity, Priority, and Fix Complexity.
    - Keep the bug line terse; put the most useful details in `repro` and `notes`.
    - If evidence is missing, set `notes` to a concrete data request.
-5. Keep it living:
+6. Keep it living:
    - Deduplicate similar reports.
    - Tighten repro steps as you learn more.
    - When a bug is later fixed, it must be removed from `.agentic/artifacts/bug_list.md` in the same commit as the fix (see `@.agentic/prompts/fix_issues_by_type.md`).
+
+## Required Recap (when chat recap is provided)
+Include:
+- commit SHA reviewed
+- baseline checks run
+- scope covered (major folders/surfaces)
+- whether pass-2 saturation found net-new bug issues
+- count of rows added vs updated
 
 ## Artifact Template: `.agentic/artifacts/bug_list.md`
 If the file does not exist, create it with exactly this table header:

@@ -12,13 +12,20 @@ Run issue discovery for one selected issue type:
 
 Use this as the single-track discovery entry point.
 
+## Input Contract
+- Supported caller inputs:
+  - Interactive mode: no preselected issue type.
+  - Non-interactive mode: issue type is explicitly provided by caller/context (`bugs|ux_ui|security`).
+
 ## Hard Rules
 - Reuse dedicated track prompts; do not duplicate lower-level logic here:
   - `bugs` -> `@.agentic/prompts/find_bugs.md`
   - `ux_ui` -> `@.agentic/prompts/find_ux_ui_issues.md`
   - `security` -> `@.agentic/prompts/find_security_issues.md`
-- First action is mandatory: ask exactly one targeted question:
-  - `Do you want to find bugs, UX/UI issues, or security issues?`
+- Selection rule (mandatory):
+  - If issue type is not explicitly provided, first action is to ask exactly one targeted question:
+    - `Do you want to find bugs, UX/UI issues, or security issues?`
+  - If issue type is explicitly provided, do not ask; proceed directly.
 - Keep issue-type boundaries strict (no cross-logging between artifacts).
 - Follow repository-level policy (for example `AGENTS.md`) and relevant `@.agentic/` policies.
 
@@ -30,7 +37,7 @@ Use this as the single-track discovery entry point.
 - Optional: brief chat recap (3-8 bullets) of what changed.
 
 ## Issue Type Routing (Mandatory)
-After the user answers, run the corresponding dedicated discovery prompt:
+After selection is known (by user answer or explicit caller input), run the corresponding dedicated discovery prompt:
 
 - `bugs` -> `@.agentic/prompts/find_bugs.md`
 - `ux_ui` -> `@.agentic/prompts/find_ux_ui_issues.md`
@@ -42,3 +49,4 @@ Return:
 - Artifact updated
 - Count of new or updated rows
 - Any unresolved data-request markers (`NEEDS_REPRO` / `NEEDS_VALIDATION` / `NEEDS_EVIDENCE`)
+- Discovery mode used (`interactive` or `non-interactive`)
